@@ -1549,31 +1549,7 @@ void TabPrint::build()
         // end largix 2 settings
 
         // Largix 3 settings
-        optgroup = page->new_optgroup(L("Program Conversion Settings"), 20);
-
-        option = optgroup->get_option("largix_max_angle");
-        option.opt.set_default_value(new ConfigOptionFloat(357.0));
-        optgroup->append_single_option_line(option);
-
-        option = optgroup->get_option("largix_angle_jump");
-        option.opt.set_default_value(new ConfigOptionFloat(300.0));
-        optgroup->append_single_option_line(option);
-
-        option = optgroup->get_option("largix_angle_jump_lr");
-        option.opt.set_default_value(new ConfigOptionFloat(8.0));
-        optgroup->append_single_option_line(option);
-
-        option = optgroup->get_option("largix_laser_rotation_axis_offset");
-        option.opt.set_default_value(new ConfigOptionFloat(-20.0));
-        optgroup->append_single_option_line(option);
-
-        option = optgroup->get_option("largix_laser_rotation_radius");
-        option.opt.set_default_value(new ConfigOptionFloat(80.0));
-        optgroup->append_single_option_line(option);
-
-        option = optgroup->get_option("largix_laser_spot_offset");
-        option.opt.set_default_value(new ConfigOptionFloat(10.0));
-        optgroup->append_single_option_line(option);
+        optgroup = page->new_optgroup(L("Press Wheel"), 20);
 
         option = optgroup->get_option("largix_wheel_axis_offset");
         option.opt.set_default_value(new ConfigOptionFloat(45.0));
@@ -1583,13 +1559,28 @@ void TabPrint::build()
         option.opt.set_default_value(new ConfigOptionFloat(40.0));
         optgroup->append_single_option_line(option);
 
-        option = optgroup->get_option("largix_min_rotation_angle");
-        option.opt.set_default_value(new ConfigOptionFloat(-90.0));
+        option = optgroup->get_option("largix_laser_spot_offset");
+        option.opt.set_default_value(new ConfigOptionFloat(10.0));
         optgroup->append_single_option_line(option);
 
-        option = optgroup->get_option("largix_max_rotation_angle");
-        option.opt.set_default_value(new ConfigOptionFloat(90.0));
+
+        optgroup = page->new_optgroup(L("Laser Rail"), 20);
+
+        option = optgroup->get_option("largix_laser_rotation_axis_offset");
+        option.opt.set_default_value(new ConfigOptionFloat(-20.0));
         optgroup->append_single_option_line(option);
+
+        option = optgroup->get_option("largix_laser_rotation_radius");
+        option.opt.set_default_value(new ConfigOptionFloat(80.0));
+        optgroup->append_single_option_line(option);
+
+        //option = optgroup->get_option("largix_min_rotation_angle");
+        //option.opt.set_default_value(new ConfigOptionFloat(-90.0));
+        //optgroup->append_single_option_line(option);
+
+        //option = optgroup->get_option("largix_max_rotation_angle");
+        //option.opt.set_default_value(new ConfigOptionFloat(90.0));
+        //optgroup->append_single_option_line(option);
 
         // end Largix 3 settings
 

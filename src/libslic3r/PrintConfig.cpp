@@ -317,40 +317,37 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(8.0));
 
     def        = this->add("largix_laser_rotation_axis_offset", coFloat);
-    def->label = L("Offset in millimeters from the printer head");
+    def->label = L("Head Distance");
     def->category = L("Largix");
-    def->tooltip  = L("Offset in millimeters from the printer head to the "
-                     "axis of rotation of the laser");
+    def->tooltip  = L("Head Distance");
     def->sidetext = L("mm");
     def->set_default_value(new ConfigOptionFloat(-20.0));
 
     def        = this->add("largix_laser_rotation_radius", coFloat);
-    def->label = L("Laser rotation radius (not used in the algorithm)");
+    def->label = L("Rotation Radius");
     def->category = L("Largix");
-    def->tooltip  = L("Laser rotation radius (not used in the algorithm)");
+    def->tooltip  = L("Rotation Radius");
     def->sidetext = L("mm");
     def->set_default_value(new ConfigOptionFloat(80.0));
 
     def        = this->add("largix_laser_spot_offset", coFloat);
-    def->label = L("Offset in millimeters from the position of the pressure wheel to the laser");
+    def->label = L("Connect Point Offset");
     def->category = L("Largix");
-    def->tooltip  = L(
-        "Offset in millimeters from the position of the pressure wheel to "
-        "the laser light spot forward along the contour");
+    def->tooltip  = L("Connect Point Offset");
     def->sidetext = L("mm");
     def->set_default_value(new ConfigOptionFloat(10.0));
 
     def           = this->add("largix_wheel_axis_offset", coFloat);
-    def->label    = L("Distance from head to axis of rotation wheel");
+    def->label    = L("Head Distance");
     def->category = L("Largix");
-    def->tooltip  = L("Distance from head to axis of rotation wheel");
+    def->tooltip  = L("Head Distance");
     def->sidetext = L("mm");
     def->set_default_value(new ConfigOptionFloat(45.0));
 
     def           = this->add("largix_wheel_rotation_radius", coFloat);
-    def->label    = L("Wheel rotation radius");
+    def->label    = L("Rotation Radius");
     def->category = L("Largix");
-    def->tooltip  = L("Wheel rotation radius");
+    def->tooltip  = L("Rotation Radius");
     def->sidetext = L("mm");
     def->set_default_value(new ConfigOptionFloat(40.0));
 

@@ -288,6 +288,87 @@ void PrintConfigDef::init_common_params()
     def->min = 1;
     def->max = 1000;
     def->set_default_value(new ConfigOptionInt(2));
+
+    def        = this->add("largix_max_angle", coFloat);
+    def->label    = L("Max angle");
+    def->category = L("Largix");
+    def->tooltip  = L("Max angle.");
+    def->sidetext = L("degree");
+    def->min      = -360;
+    def->max      = 360;
+    def->set_default_value(new ConfigOptionFloat(357.0));
+
+    def           = this->add("largix_angle_jump", coFloat);
+    def->label    = L("Angle jump");
+    def->category = L("Largix");
+    def->tooltip  = L("Angle jump");
+    def->sidetext = L("degree");
+    def->min      = -360;
+    def->max      = 360;
+    def->set_default_value(new ConfigOptionFloat(300.0));
+
+    def           = this->add("largix_angle_jump_lr", coFloat);
+    def->label    = L("Angle jump LR");
+    def->category = L("Largix");
+    def->tooltip  = L("Angle jump LR");
+    def->sidetext = L("degree");
+    def->min      = -360;
+    def->max      = 360;
+    def->set_default_value(new ConfigOptionFloat(8.0));
+
+    def        = this->add("largix_laser_rotation_axis_offset", coFloat);
+    def->label = L("Head Distance");
+    def->category = L("Largix");
+    def->tooltip  = L("Head Distance");
+    def->sidetext = L("mm");
+    def->set_default_value(new ConfigOptionFloat(-20.0));
+
+    def        = this->add("largix_laser_rotation_radius", coFloat);
+    def->label = L("Rotation Radius");
+    def->category = L("Largix");
+    def->tooltip  = L("Rotation Radius");
+    def->sidetext = L("mm");
+    def->set_default_value(new ConfigOptionFloat(80.0));
+
+    def        = this->add("largix_laser_spot_offset", coFloat);
+    def->label = L("Connect Point Offset");
+    def->category = L("Largix");
+    def->tooltip  = L("Connect Point Offset");
+    def->sidetext = L("mm");
+    def->set_default_value(new ConfigOptionFloat(10.0));
+
+    def           = this->add("largix_wheel_axis_offset", coFloat);
+    def->label    = L("Head Distance");
+    def->category = L("Largix");
+    def->tooltip  = L("Head Distance");
+    def->sidetext = L("mm");
+    def->set_default_value(new ConfigOptionFloat(45.0));
+
+    def           = this->add("largix_wheel_rotation_radius", coFloat);
+    def->label    = L("Rotation Radius");
+    def->category = L("Largix");
+    def->tooltip  = L("Rotation Radius");
+    def->sidetext = L("mm");
+    def->set_default_value(new ConfigOptionFloat(40.0));
+
+    def           = this->add("largix_min_rotation_angle", coFloat);
+    def->label    = L("Min rotation angle");
+    def->category = L("Largix");
+    def->tooltip  = L("Min rotation angle");
+    def->min      = -360.0;
+    def->max      = 360.0;
+    def->sidetext = L("degree");
+    def->set_default_value(new ConfigOptionFloat(-90.0));
+
+    def           = this->add("largix_max_rotation_angle", coFloat);
+    def->label    = L("Max rotation angle");
+    def->category = L("Largix");
+    def->tooltip  = L("Max rotation angle");
+    def->min      = -360;
+    def->max      = 360;
+    def->sidetext = L("degree");
+    def->set_default_value(new ConfigOptionFloat(90.0));
+
     // end largix configuring section   
 
     def = this->add("max_print_height", coFloat);

@@ -1547,7 +1547,44 @@ void TabPrint::build()
         optgroup->append_single_option_line(option);
 
         // end largix 2 settings
-    page = add_options_page(L("Support material"), "support");
+
+        // Largix 3 settings
+        optgroup = page->new_optgroup(L("Press Wheel"), 20);
+
+        option = optgroup->get_option("largix_wheel_axis_offset");
+        option.opt.set_default_value(new ConfigOptionFloat(45.0));
+        optgroup->append_single_option_line(option);
+
+        option = optgroup->get_option("largix_wheel_rotation_radius");
+        option.opt.set_default_value(new ConfigOptionFloat(40.0));
+        optgroup->append_single_option_line(option);
+
+        option = optgroup->get_option("largix_laser_spot_offset");
+        option.opt.set_default_value(new ConfigOptionFloat(10.0));
+        optgroup->append_single_option_line(option);
+
+
+        optgroup = page->new_optgroup(L("Laser Rail"), 20);
+
+        option = optgroup->get_option("largix_laser_rotation_axis_offset");
+        option.opt.set_default_value(new ConfigOptionFloat(-20.0));
+        optgroup->append_single_option_line(option);
+
+        option = optgroup->get_option("largix_laser_rotation_radius");
+        option.opt.set_default_value(new ConfigOptionFloat(80.0));
+        optgroup->append_single_option_line(option);
+
+        //option = optgroup->get_option("largix_min_rotation_angle");
+        //option.opt.set_default_value(new ConfigOptionFloat(-90.0));
+        //optgroup->append_single_option_line(option);
+
+        //option = optgroup->get_option("largix_max_rotation_angle");
+        //option.opt.set_default_value(new ConfigOptionFloat(90.0));
+        //optgroup->append_single_option_line(option);
+
+        // end Largix 3 settings
+
+        page = add_options_page(L("Support material"), "support");
         category_path = "support-material_1698#";
         optgroup = page->new_optgroup(L("Support material"));
         optgroup->append_single_option_line("support_material", category_path + "generate-support-material");

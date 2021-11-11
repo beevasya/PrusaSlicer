@@ -289,6 +289,36 @@ void PrintConfigDef::init_common_params()
     def->max = 1000;
     def->set_default_value(new ConfigOptionInt(2));
 
+    def = this->add("largix_strands_width", coFloat); // strand width
+    def->label = L("Width");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "define starnd width.");
+    def->sidetext = L("mm");
+    def->min = 1;
+    def->max = 20;
+    def->set_default_value(new ConfigOptionFloat(3.4));
+    
+    def = this->add("largix_strands_height", coFloat); // strand height
+    def->label = L("Height");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "define starnd height.");
+    def->sidetext = L("mm");
+    def->min = 1;
+    def->max = 20;
+    def->set_default_value(new ConfigOptionFloat(3.35));
+
+    def = this->add("largix_tool_offset", coFloat); // tool offset
+    def->label = L("Tool Offset");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "distance between print head axis and tool.");
+    def->sidetext = L("mm");
+    def->min = -50;
+    def->max = 50;
+    def->set_default_value(new ConfigOptionFloat(-5.0));
+
     def        = this->add("largix_max_angle", coFloat);
     def->label    = L("Max angle");
     def->category = L("Largix");
@@ -317,7 +347,7 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(8.0));
 
     def        = this->add("largix_laser_rotation_axis_offset", coFloat);
-    def->label = L("Head Distance");
+    def->label = L("Head Offset");
     def->category = L("Largix");
     def->tooltip  = L("Head Distance");
     def->sidetext = L("mm");
@@ -338,7 +368,7 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(10.0));
 
     def           = this->add("largix_wheel_axis_offset", coFloat);
-    def->label    = L("Head Distance");
+    def->label    = L("Head Offset");
     def->category = L("Largix");
     def->tooltip  = L("Head Distance");
     def->sidetext = L("mm");

@@ -1533,6 +1533,14 @@ void TabPrint::build()
         page = add_options_page(L("Largix"), "Largix_icon.png");
         optgroup = page->new_optgroup(L("Strand Settings"), 20);
 
+        //add strand width
+        option = optgroup->get_option("largix_strands_width");
+        option.opt.set_default_value(new ConfigOptionFloat(3.4));
+        optgroup->append_single_option_line(option);
+        //add strand height
+        option = optgroup->get_option("largix_strands_height");
+        option.opt.set_default_value(new ConfigOptionFloat(3.35));
+        optgroup->append_single_option_line(option);
         //add minimal strand radius
         option = optgroup->get_option("largix_min_radius");
         option.opt.set_default_value(new ConfigOptionFloat(3.0));
@@ -1544,6 +1552,13 @@ void TabPrint::build()
         //add strands numbers per layer
         option = optgroup->get_option("largix_strands_number");
         option.opt.set_default_value(new ConfigOptionInt(2));
+        optgroup->append_single_option_line(option);
+        
+        // tool params
+        optgroup = page->new_optgroup(L("Tool Settings"), 20);
+        //tool offset
+        option = optgroup->get_option("largix_tool_offset");
+        option.opt.set_default_value(new ConfigOptionFloat(-5.0));
         optgroup->append_single_option_line(option);
 
         // end largix 2 settings

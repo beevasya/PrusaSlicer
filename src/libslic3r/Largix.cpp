@@ -65,6 +65,12 @@ bool LargixExport::do_export(Print *print, const char *path)
             settings.wheelRotationRadius = object->config()
                                             .largix_wheel_rotation_radius;
 
+            settings.StrandHeight = object->config()
+                                            .largix_strands_height;
+            settings.StrandWidth = object->config()
+                                            .largix_strands_width;
+            settings.toolOffset = object->config()
+                                            .largix_tool_offset;
             Largix::TeddySliceConvert conv(slice, settings);
             conv.convert();
             slices.push_back(conv.getSlice());

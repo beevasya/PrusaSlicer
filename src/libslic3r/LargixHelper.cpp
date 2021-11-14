@@ -46,11 +46,11 @@ bool LargixHelper::convert_polygon_2_largix(ExPolygon &      src,
     return true;
 }
 
-bool LargixHelper::convert_layer_2_prusa(Largix::Layer &src, Polylines &dst)
+bool LargixHelper::convert_layer_2_prusa(Largix::Layer &src, Polylines &dst, double strandWidth)
 {
     for (auto strand : src.strands()) {
         std::vector<std::array<Largix::Point2D, 4>> points;
-        strand.get4StrandPoints(points);
+        strand.get4StrandPoints(points, strandWidth);
 
         std::array<Polyline, 4> pline;
         for (auto point : points) {

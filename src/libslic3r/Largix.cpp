@@ -17,6 +17,7 @@
 #include "Print.hpp"
 #include "Layer.hpp"
 #include "LargixHelper.hpp"
+#include "DefaultSettings.h"
 
 
 namespace Slic3r {
@@ -24,7 +25,7 @@ namespace Slic3r {
 bool LargixExport::do_export(Print *print, const char *path)
 {
     Largix::Slices          slices;
-    Largix::ConvertSettings settings;
+    Largix::ConvertSettings settings = Largix::DefaultSettings::getDefaultSettings();
 
 
     for (auto object : print->objects()) {

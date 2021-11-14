@@ -51,19 +51,22 @@ void FillLargix::_fill_surface_single(
     pv.simplify(pol);
 
     Largix::Settings set;
-    set.szBin = Largix::Size2D(Largix::STRAND_4_WIDTH, Largix::STRAND_HEIGHT);
+    set.szBin = Largix::Size2D{ set.strandWidth, 3.5 };
     if (params.print_options)
     {
         set.maxNumbersStrandsPerLayer = params.print_options->config().largix_strands_number;
         set.minStrandRadius = params.print_options->config().largix_min_radius;
         set.minStrandLength = params.print_options->config().largix_min_strand_lenght;
+        set.strandWidth = params.print_options->config().largix_strands_width;
+        set.szBin[0] = set.strandWidth * params.print_options->config().largix_number_of_stripes;
+        set.szBin[1] = params.print_options->config().largix_bin_length;
     }
-    else
+    /*else
     {
         set.minStrandLength = set.szBin[1] * 2.5;
         set.minStrandRadius = 5;
         set.maxNumbersStrandsPerLayer = 1;
-    }
+    }*/
 
     Largix::Layer layer;
     Largix::BuildLayerMgr buider(pol, set);

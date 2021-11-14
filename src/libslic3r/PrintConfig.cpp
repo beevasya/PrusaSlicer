@@ -260,6 +260,26 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(0.3));
 
     //  Configuring settings for Largix tab
+    def = this->add("largix_bin_length", coFloat); // bin length
+    def->label = L("Bin Length");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "define Bin Length");
+    def->sidetext = L("mm");
+    def->min = 0.1;
+    def->max = 200;
+    def->set_default_value(new ConfigOptionFloat(5));
+
+    def = this->add("largix_number_of_stripes", coInt); // number of stripes
+    def->label = L("Number Of Stripes");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Number Of Stripes");
+    def->sidetext = L("mm");
+    def->min = 1;
+    def->max = 50;
+    def->set_default_value(new ConfigOptionInt(4));
+
     def = this->add("largix_min_radius", coFloat); // strand min radius
     def->label = L("Minimal Radius");
     def->category = L("Largix");

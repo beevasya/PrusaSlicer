@@ -27,6 +27,7 @@
 #include <boost/preprocessor/tuple/elem.hpp>
 #include <boost/preprocessor/tuple/to_seq.hpp>
 
+
 // #define HAS_PRESSURE_EQUALIZER
 
 namespace Slic3r {
@@ -513,6 +514,8 @@ PRINT_CONFIG_CLASS_DEFINE(
     ((ConfigOptionInt, largix_strands_number)) 
     ((ConfigOptionFloat, largix_strands_width))
     ((ConfigOptionFloat, largix_strands_height))
+    ((ConfigOptionFloat, largix_bin_length))
+    ((ConfigOptionInt, largix_number_of_stripes))
     ((ConfigOptionFloat, largix_tool_offset))
     ((ConfigOptionFloat, largix_max_angle))
     ((ConfigOptionFloat, largix_angle_jump))

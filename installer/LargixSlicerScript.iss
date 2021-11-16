@@ -5,6 +5,8 @@
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "Largix"
 #define MyAppExeName "prusa-slicer.exe"
+#define PrusaPath GetEnv ('PRUSA_PATH')
+#define PrusaDepPath GetEnv ('PRUSA_DEP_PATH')
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -20,7 +22,7 @@ AllowNoIcons=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputBaseFilename=LargixSlicerInstaller
-SetupIconFile=C:\src\PrusaSlicer\build\src\Debug\resources\icons\PrusaSlicer.ico
+SetupIconFile={#PrusaPath}\build\src\Debug\resources\icons\PrusaSlicer.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -32,20 +34,20 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\src\PrusaSlicer\build\src\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\GCodeConvert.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\PathNavigator.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\PrusaSlicer.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\PrusaSlicer.exp"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\prusa-slicer.exp"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\PrusaSlicer.lib"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\prusa-slicer.lib"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\TeddyConvert.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Release\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\src\PrusaSlicer-deps\usr\local\bin\libgmp-10.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer-deps\usr\local\bin\libmpfr-4.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\src\PrusaSlicer\build\src\Debug\default_config.xml"; DestDir: "{app}"; Flags: ignoreversion
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+Source: "{#PrusaPath}\build\src\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\GCodeConvert.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\PathNavigator.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\PrusaSlicer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\PrusaSlicer.exp"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\prusa-slicer.exp"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\PrusaSlicer.lib"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\prusa-slicer.lib"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\TeddyConvert.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\\build\src\Release\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#PrusaDepPath}\usr\local\bin\libgmp-10.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaDepPath}\usr\local\bin\libmpfr-4.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\installer\LargixConvertConfig.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\installer\Largix.ini"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

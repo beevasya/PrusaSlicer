@@ -1,8 +1,8 @@
 # CMake generation dependency list for this directory.
-C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19/Modules/CMakeParseArguments.cmake
-C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19/Modules/FindBoost.cmake
-C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake
-C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/CMakeParseArguments.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindBoost.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindPackageMessage.cmake
 C:/src/PrusaSlicer-deps/usr/local/lib/cmake/Boost-1.75.0/BoostConfig.cmake
 C:/src/PrusaSlicer-deps/usr/local/lib/cmake/Boost-1.75.0/BoostConfigVersion.cmake
 C:/src/PrusaSlicer-deps/usr/local/lib/cmake/CGAL/CGALConfig.cmake
@@ -27,6 +27,6 @@ C:/src/PrusaSlicer-deps/usr/local/lib/cmake/CGAL/FindGMP.cmake
 C:/src/PrusaSlicer-deps/usr/local/lib/cmake/CGAL/FindMPFR.cmake
 C:/src/PrusaSlicer-deps/usr/local/lib/cmake/boost_headers-1.75.0/boost_headers-config-version.cmake
 C:/src/PrusaSlicer-deps/usr/local/lib/cmake/boost_headers-1.75.0/boost_headers-config.cmake
-D:/CleverTech/PrusaSlicer/cmake/modules/PrecompiledHeader.cmake
-D:/CleverTech/PrusaSlicer/src/libslic3r/CMakeLists.txt
-D:/CleverTech/PrusaSlicer/src/libslic3r/libslic3r_version.h.in
+C:/src/PrusaSlicer/cmake/modules/PrecompiledHeader.cmake
+C:/src/PrusaSlicer/src/libslic3r/CMakeLists.txt
+C:/src/PrusaSlicer/src/libslic3r/libslic3r_version.h.in

@@ -1,39 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\admesh\connect.cpp">
+    <ClCompile Include="C:\src\PrusaSlicer\src\admesh\connect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\admesh\normals.cpp">
+    <ClCompile Include="C:\src\PrusaSlicer\src\admesh\normals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\admesh\shared.cpp">
+    <ClCompile Include="C:\src\PrusaSlicer\src\admesh\shared.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\admesh\stl_io.cpp">
+    <ClCompile Include="C:\src\PrusaSlicer\src\admesh\stl_io.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\admesh\stlinit.cpp">
+    <ClCompile Include="C:\src\PrusaSlicer\src\admesh\stlinit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\admesh\util.cpp">
+    <ClCompile Include="C:\src\PrusaSlicer\src\admesh\util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\CleverTech\PrusaSlicer\src\admesh\stl.h">
+    <ClInclude Include="C:\src\PrusaSlicer\src\admesh\stl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\admesh\CMakeLists.txt" />
+    <CustomBuild Include="C:\src\PrusaSlicer\src\admesh\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{BFD6BFA8-1FCD-3CA7-A14E-CE4E0CD6CB2D}</UniqueIdentifier>
+      <UniqueIdentifier>{56893C23-EBE0-3760-B55F-CEFB52BF206F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{B4C1F34B-5030-335F-8FFB-3807EEC679DD}</UniqueIdentifier>
+      <UniqueIdentifier>{06F49595-D755-3A5B-B5CF-F36C7EE87975}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

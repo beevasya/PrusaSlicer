@@ -1,4 +1,4 @@
-# Install script for directory: D:/CleverTech/PrusaSlicer/src/libslic3r
+# Install script for directory: C:/src/PrusaSlicer/src/libslic3r
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

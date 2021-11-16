@@ -45,11 +45,6 @@ bool LargixExport::do_export(Print *print, const char *path)
                 slice.second.swap(line_out);
             }
 
-            settings.XOffset = 0.0;
-            settings.YOffset = 0.0;
-            settings.ZOffset = 350.0;
-            settings.AngleJump = object->config().largix_angle_jump;
-            settings.AngleJumpLR = object->config().largix_angle_jump_lr;
             settings.laserRotationAxisOffset =
                 object->config().largix_laser_rotation_axis_offset;
             settings.laserRotationRadius = object->config()

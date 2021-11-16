@@ -1,4 +1,4 @@
-# Install script for directory: D:/CleverTech/PrusaSlicer/src/imgui
+# Install script for directory: C:/src/PrusaSlicer/src/imgui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

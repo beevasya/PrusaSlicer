@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\CleverTech\PrusaSlicer\build\CMakeFiles\e49cacba2640edeb3f06bc3e425642dd\INSTALL_force.rule">
+    <CustomBuild Include="C:\src\PrusaSlicer\build\CMakeFiles\246d5289f969e35b817944a94e2e215c\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{C41170D5-0B6F-31D4-A12E-FD3EE81E9776}</UniqueIdentifier>
+      <UniqueIdentifier>{5C3729F5-D136-31FC-80EF-4A9C70FBA0C0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

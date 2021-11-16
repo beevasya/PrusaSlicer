@@ -1,4 +1,4 @@
-# Install script for directory: D:/CleverTech/PrusaSlicer/src/hints
+# Install script for directory: C:/src/PrusaSlicer/src/hints
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

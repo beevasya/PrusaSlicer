@@ -5,13 +5,13 @@
   <key>CFBundleExecutable</key>
   <string>PrusaSlicer</string>
   <key>CFBundleGetInfoString</key>
-  <string>PrusaSlicer Copyright (C) 2011-2019 Alessandro Ranellucci, (C) 2016-2020 Prusa Reseach</string>
+  <string>PrusaSlicer Copyright (C) 2011-2019 Alessandro Ranellucci, (C) 2016-2021 Prusa Reseach</string>
   <key>CFBundleIconFile</key>
   <string>PrusaSlicer.icns</string>
   <key>CFBundleName</key>
   <string>PrusaSlicer</string>
   <key>CFBundleShortVersionString</key>
-  <string>PrusaSlicer PrusaSlicer-2.4.0-alpha0+UNKNOWN</string>
+  <string>PrusaSlicer PrusaSlicer-2.4.0-alpha3+UNKNOWN</string>
   <key>CFBundleIdentifier</key>
   <string>com.prusa3d.slic3r/</string>
   <key>CFBundleInfoDictionaryVersion</key>
@@ -21,7 +21,7 @@
   <key>CFBundleSignature</key>
   <string>????</string>
   <key>CFBundleVersion</key>
-  <string>PrusaSlicer-2.4.0-alpha0+UNKNOWN</string>
+  <string>PrusaSlicer-2.4.0-alpha3+UNKNOWN</string>
   <key>CFBundleDocumentTypes</key>
   <array>
     <dict>

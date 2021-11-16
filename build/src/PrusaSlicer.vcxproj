@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7838193B-2E0F-3E69-A813-BB2529FFAAAB}</ProjectGuid>
+    <ProjectGuid>{7A7E8C74-DB80-37AC-BFB6-573789D352F2}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PrusaSlicer.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PrusaSlicer</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PrusaSlicer.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PrusaSlicer</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">PrusaSlicer.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">PrusaSlicer</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">PrusaSlicer.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">PrusaSlicer</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mov\source\TeddyTools\PathNavigator\..\GCodeConvert\TeddyConvert;C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -bigobj -Zm520 /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -102,15 +102,15 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;TBB_USE_DEBUG=1;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR="Debug";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;TBB_USE_DEBUG=1;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR="Debug";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;TBB_USE_DEBUG=1;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR=\"Debug\";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;TBB_USE_DEBUG=1;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR=\"Debug\";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -120,7 +120,7 @@
     <PostBuildEvent>
       <Message>Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree</Message>
       <Command>setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\Debug ( if not exist D:\CleverTech\PrusaSlicer\build\src\Debug\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\Debug\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\Debug ( if not exist C:\src\PrusaSlicer\build\src\Debug\resources ( mklink /J C:\src\PrusaSlicer\build\src\Debug\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,7 +129,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\Release ( if not exist D:\CleverTech\PrusaSlicer\build\src\Release\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\Release\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\Release ( if not exist C:\src\PrusaSlicer\build\src\Release\resources ( mklink /J C:\src\PrusaSlicer\build\src\Release\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -138,7 +138,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\MinSizeRel ( if not exist D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\MinSizeRel ( if not exist C:\src\PrusaSlicer\build\src\MinSizeRel\resources ( mklink /J C:\src\PrusaSlicer\build\src\MinSizeRel\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -147,7 +147,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo ( if not exist D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\RelWithDebInfo ( if not exist C:\src\PrusaSlicer\build\src\RelWithDebInfo\resources ( mklink /J C:\src\PrusaSlicer\build\src\RelWithDebInfo\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -157,13 +157,13 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>libslic3r\Debug\libslic3r.lib;slic3r\Debug\libslic3r_gui.lib;user32.lib;Setupapi.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um\x64\Psapi.Lib;libslic3r\Debug\libslic3r.lib;libnest2d\Debug\libnest2d.lib;libslic3r\Debug\libslic3r.lib;libnest2d\Debug\libnest2d.lib;admesh\Debug\admesh.lib;miniz\Debug\miniz_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_log-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_filesystem-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_thread-vc142-mt-gd-x64-1_75.lib;advapi32.lib;bcrypt.lib;mswsock.lib;psapi.lib;secur32.lib;ws2_32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_locale-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_regex-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_chrono-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_atomic-vc142-mt-gd-x64-1_75.lib;synchronization.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_date_time-vc142-mt-gd-x64-1_75.lib;clipper\Debug\clipper.lib;boost\Debug\nowide.lib;glu-libtess\Debug\glu-libtess.lib;qhull\Debug\qhullstatic.lib;semver\Debug\semver.lib;libslic3r\Debug\libslic3r_cgal.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libmpfr-4.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libgmp-10.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_staticd.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libopenvdbd.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_system-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_iostreams-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\Half-2_5d.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libbloscd.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;Psapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tbb_static_debug.lib;C:\src\PrusaSlicer-deps\usr\local\lib\nlopt.lib;avrdude\Debug\avrdude.lib;imgui\Debug\imgui.lib;C:\src\PrusaSlicer-deps\usr\local\lib\glewd.lib;opengl32.lib;hidapi\Debug\hidapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libcurl.lib;crypt32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31ud_html.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31ud_adv.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31ud_gl.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31ud_core.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxbase31ud.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxregexud.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_staticd.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tiff.lib;C:\src\PrusaSlicer-deps\usr\local\lib\jpeg-static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\expat.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libslic3r\Debug\libslic3r.lib;slic3r\Debug\libslic3r_gui.lib;user32.lib;Setupapi.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um\x64\Psapi.Lib;libslic3r\Debug\libslic3r.lib;libnest2d\Debug\libnest2d.lib;libslic3r\Debug\libslic3r.lib;libnest2d\Debug\libnest2d.lib;admesh\Debug\admesh.lib;miniz\Debug\miniz_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_log-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_filesystem-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_thread-vc142-mt-gd-x64-1_75.lib;advapi32.lib;bcrypt.lib;mswsock.lib;psapi.lib;secur32.lib;ws2_32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_locale-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_regex-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_chrono-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_atomic-vc142-mt-gd-x64-1_75.lib;synchronization.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_date_time-vc142-mt-gd-x64-1_75.lib;clipper\Debug\clipper.lib;boost\Debug\nowide.lib;glu-libtess\Debug\glu-libtess.lib;qhull\Debug\qhullstatic.lib;semver\Debug\semver.lib;libslic3r\Debug\libslic3r_cgal.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libmpfr-4.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libgmp-10.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_staticd.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libopenvdbd.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_system-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_iostreams-vc142-mt-gd-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\Half-2_5d.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libbloscd.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;Psapi.lib;C:\Users\mov\source\TeddyTools\PathNavigator\x64\Debug\PathNavigator.lib;C:\Users\mov\source\TeddyTools\PathNavigator\..\GCodeConvert\x64\Debug\TeddyConvert.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tbb_static_debug.lib;C:\src\PrusaSlicer-deps\usr\local\lib\nlopt.lib;avrdude\Debug\avrdude.lib;imgui\Debug\imgui.lib;C:\src\PrusaSlicer-deps\usr\local\lib\glewd.lib;opengl32.lib;hidapi\Debug\hidapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libcurl.lib;crypt32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31ud_html.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31ud_adv.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31ud_gl.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31ud_core.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxbase31ud.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxregexud.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_staticd.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tiff.lib;C:\src\PrusaSlicer-deps\usr\local\lib\jpeg-static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\expat.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/CleverTech/PrusaSlicer/build/src/Debug/PrusaSlicer.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/CleverTech/PrusaSlicer/build/src/Debug/PrusaSlicer.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/src/PrusaSlicer/build/src/Debug/PrusaSlicer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/src/PrusaSlicer/build/src/Debug/PrusaSlicer.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -172,7 +172,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -bigobj -Zm520 /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -187,15 +187,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR="Release";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR="Release";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR=\"Release\";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR=\"Release\";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -205,7 +205,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree</Message>
       <Command>setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\Debug ( if not exist D:\CleverTech\PrusaSlicer\build\src\Debug\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\Debug\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\Debug ( if not exist C:\src\PrusaSlicer\build\src\Debug\resources ( mklink /J C:\src\PrusaSlicer\build\src\Debug\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -214,7 +214,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\Release ( if not exist D:\CleverTech\PrusaSlicer\build\src\Release\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\Release\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\Release ( if not exist C:\src\PrusaSlicer\build\src\Release\resources ( mklink /J C:\src\PrusaSlicer\build\src\Release\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -223,7 +223,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\MinSizeRel ( if not exist D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\MinSizeRel ( if not exist C:\src\PrusaSlicer\build\src\MinSizeRel\resources ( mklink /J C:\src\PrusaSlicer\build\src\MinSizeRel\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -232,7 +232,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo ( if not exist D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\RelWithDebInfo ( if not exist C:\src\PrusaSlicer\build\src\RelWithDebInfo\resources ( mklink /J C:\src\PrusaSlicer\build\src\RelWithDebInfo\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -242,13 +242,13 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>libslic3r\Release\libslic3r.lib;slic3r\Release\libslic3r_gui.lib;user32.lib;Setupapi.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um\x64\Psapi.Lib;libslic3r\Release\libslic3r.lib;libnest2d\Release\libnest2d.lib;libslic3r\Release\libslic3r.lib;libnest2d\Release\libnest2d.lib;admesh\Release\admesh.lib;miniz\Release\miniz_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_log-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_filesystem-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_thread-vc142-mt-x64-1_75.lib;advapi32.lib;bcrypt.lib;mswsock.lib;psapi.lib;secur32.lib;ws2_32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_locale-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_regex-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_chrono-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_atomic-vc142-mt-x64-1_75.lib;synchronization.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_date_time-vc142-mt-x64-1_75.lib;clipper\Release\clipper.lib;boost\Release\nowide.lib;glu-libtess\Release\glu-libtess.lib;qhull\Release\qhullstatic.lib;semver\Release\semver.lib;libslic3r\Release\libslic3r_cgal.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libmpfr-4.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libgmp-10.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libopenvdb.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_system-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_iostreams-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\Half-2_5.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libblosc.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;Psapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tbb_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\nlopt.lib;avrdude\Release\avrdude.lib;imgui\Release\imgui.lib;C:\src\PrusaSlicer-deps\usr\local\lib\glew.lib;opengl32.lib;hidapi\Release\hidapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libcurl.lib;crypt32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_html.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_adv.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_gl.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_core.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxbase31u.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxregexu.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tiff.lib;C:\src\PrusaSlicer-deps\usr\local\lib\jpeg-static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\expat.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libslic3r\Release\libslic3r.lib;slic3r\Release\libslic3r_gui.lib;user32.lib;Setupapi.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um\x64\Psapi.Lib;libslic3r\Release\libslic3r.lib;libnest2d\Release\libnest2d.lib;libslic3r\Release\libslic3r.lib;libnest2d\Release\libnest2d.lib;admesh\Release\admesh.lib;miniz\Release\miniz_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_log-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_filesystem-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_thread-vc142-mt-x64-1_75.lib;advapi32.lib;bcrypt.lib;mswsock.lib;psapi.lib;secur32.lib;ws2_32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_locale-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_regex-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_chrono-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_atomic-vc142-mt-x64-1_75.lib;synchronization.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_date_time-vc142-mt-x64-1_75.lib;clipper\Release\clipper.lib;boost\Release\nowide.lib;glu-libtess\Release\glu-libtess.lib;qhull\Release\qhullstatic.lib;semver\Release\semver.lib;libslic3r\Release\libslic3r_cgal.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libmpfr-4.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libgmp-10.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libopenvdb.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_system-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_iostreams-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\Half-2_5.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libblosc.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;Psapi.lib;C:\Users\mov\source\TeddyTools\PathNavigator\x64\Debug\PathNavigator.lib;C:\Users\mov\source\TeddyTools\PathNavigator\..\GCodeConvert\x64\Debug\TeddyConvert.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tbb_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\nlopt.lib;avrdude\Release\avrdude.lib;imgui\Release\imgui.lib;C:\src\PrusaSlicer-deps\usr\local\lib\glew.lib;opengl32.lib;hidapi\Release\hidapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libcurl.lib;crypt32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_html.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_adv.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_gl.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_core.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxbase31u.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxregexu.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tiff.lib;C:\src\PrusaSlicer-deps\usr\local\lib\jpeg-static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\expat.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/CleverTech/PrusaSlicer/build/src/Release/PrusaSlicer.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/CleverTech/PrusaSlicer/build/src/Release/PrusaSlicer.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/src/PrusaSlicer/build/src/Release/PrusaSlicer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/src/PrusaSlicer/build/src/Release/PrusaSlicer.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -257,7 +257,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -bigobj -Zm520 /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -272,15 +272,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR="MinSizeRel";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR="MinSizeRel";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR=\"MinSizeRel\";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR=\"MinSizeRel\";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -290,7 +290,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree</Message>
       <Command>setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\Debug ( if not exist D:\CleverTech\PrusaSlicer\build\src\Debug\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\Debug\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\Debug ( if not exist C:\src\PrusaSlicer\build\src\Debug\resources ( mklink /J C:\src\PrusaSlicer\build\src\Debug\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -299,7 +299,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\Release ( if not exist D:\CleverTech\PrusaSlicer\build\src\Release\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\Release\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\Release ( if not exist C:\src\PrusaSlicer\build\src\Release\resources ( mklink /J C:\src\PrusaSlicer\build\src\Release\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -308,7 +308,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\MinSizeRel ( if not exist D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\MinSizeRel ( if not exist C:\src\PrusaSlicer\build\src\MinSizeRel\resources ( mklink /J C:\src\PrusaSlicer\build\src\MinSizeRel\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -317,7 +317,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo ( if not exist D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\RelWithDebInfo ( if not exist C:\src\PrusaSlicer\build\src\RelWithDebInfo\resources ( mklink /J C:\src\PrusaSlicer\build\src\RelWithDebInfo\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -327,13 +327,13 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>libslic3r\MinSizeRel\libslic3r.lib;slic3r\MinSizeRel\libslic3r_gui.lib;user32.lib;Setupapi.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um\x64\Psapi.Lib;libslic3r\MinSizeRel\libslic3r.lib;libnest2d\MinSizeRel\libnest2d.lib;libslic3r\MinSizeRel\libslic3r.lib;libnest2d\MinSizeRel\libnest2d.lib;admesh\MinSizeRel\admesh.lib;miniz\MinSizeRel\miniz_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_log-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_filesystem-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_thread-vc142-mt-x64-1_75.lib;advapi32.lib;bcrypt.lib;mswsock.lib;psapi.lib;secur32.lib;ws2_32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_locale-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_regex-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_chrono-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_atomic-vc142-mt-x64-1_75.lib;synchronization.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_date_time-vc142-mt-x64-1_75.lib;clipper\MinSizeRel\clipper.lib;boost\MinSizeRel\nowide.lib;glu-libtess\MinSizeRel\glu-libtess.lib;qhull\MinSizeRel\qhullstatic.lib;semver\MinSizeRel\semver.lib;libslic3r\MinSizeRel\libslic3r_cgal.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libmpfr-4.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libgmp-10.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libopenvdb.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_system-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_iostreams-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\Half-2_5d.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libblosc.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;Psapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tbb_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\nlopt.lib;avrdude\MinSizeRel\avrdude.lib;imgui\MinSizeRel\imgui.lib;C:\src\PrusaSlicer-deps\usr\local\lib\glew.lib;opengl32.lib;hidapi\MinSizeRel\hidapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libcurl.lib;crypt32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_html.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_adv.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_gl.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_core.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxbase31u.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxregexu.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tiff.lib;C:\src\PrusaSlicer-deps\usr\local\lib\jpeg-static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\expat.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libslic3r\MinSizeRel\libslic3r.lib;slic3r\MinSizeRel\libslic3r_gui.lib;user32.lib;Setupapi.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um\x64\Psapi.Lib;libslic3r\MinSizeRel\libslic3r.lib;libnest2d\MinSizeRel\libnest2d.lib;libslic3r\MinSizeRel\libslic3r.lib;libnest2d\MinSizeRel\libnest2d.lib;admesh\MinSizeRel\admesh.lib;miniz\MinSizeRel\miniz_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_log-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_filesystem-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_thread-vc142-mt-x64-1_75.lib;advapi32.lib;bcrypt.lib;mswsock.lib;psapi.lib;secur32.lib;ws2_32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_locale-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_regex-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_chrono-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_atomic-vc142-mt-x64-1_75.lib;synchronization.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_date_time-vc142-mt-x64-1_75.lib;clipper\MinSizeRel\clipper.lib;boost\MinSizeRel\nowide.lib;glu-libtess\MinSizeRel\glu-libtess.lib;qhull\MinSizeRel\qhullstatic.lib;semver\MinSizeRel\semver.lib;libslic3r\MinSizeRel\libslic3r_cgal.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libmpfr-4.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libgmp-10.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libopenvdb.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_system-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_iostreams-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\Half-2_5d.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libblosc.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;Psapi.lib;C:\Users\mov\source\TeddyTools\PathNavigator\x64\Debug\PathNavigator.lib;C:\Users\mov\source\TeddyTools\PathNavigator\..\GCodeConvert\x64\Debug\TeddyConvert.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tbb_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\nlopt.lib;avrdude\MinSizeRel\avrdude.lib;imgui\MinSizeRel\imgui.lib;C:\src\PrusaSlicer-deps\usr\local\lib\glew.lib;opengl32.lib;hidapi\MinSizeRel\hidapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libcurl.lib;crypt32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_html.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_adv.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_gl.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_core.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxbase31u.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxregexu.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tiff.lib;C:\src\PrusaSlicer-deps\usr\local\lib\jpeg-static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\expat.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/CleverTech/PrusaSlicer/build/src/MinSizeRel/PrusaSlicer.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/CleverTech/PrusaSlicer/build/src/MinSizeRel/PrusaSlicer.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/src/PrusaSlicer/build/src/MinSizeRel/PrusaSlicer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/src/PrusaSlicer/build/src/MinSizeRel/PrusaSlicer.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -342,7 +342,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -bigobj -Zm520 /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -357,15 +357,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR="RelWithDebInfo";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR="RelWithDebInfo";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR=\"RelWithDebInfo\";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;USE_TBB;TBB_USE_CAPTURED_EXCEPTION=0;LIBNEST2D_THREADING_tbb;LIBNEST2D_STATIC;LIBNEST2D_OPTIMIZER_nlopt;LIBNEST2D_GEOMETRIES_libslic3r;__TBB_NO_IMPLICIT_LINKAGE;OPENVDB_STATICLIB;OPENVDB_OPENEXR_STATICLIB;wxDEBUG_LEVEL=0;GLEW_STATIC;CURL_STATICLIB;CMAKE_INTDIR=\"RelWithDebInfo\";PrusaSlicer_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\build\src\libslic3r;D:\CleverTech\PrusaSlicer\src\libnest2d\include;D:\CleverTech\PrusaSlicer\src\miniz;D:\CleverTech\PrusaSlicer\src\glu-libtess\include;D:\CleverTech\PrusaSlicer\src\qhull\src;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;D:\CleverTech\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\build\src\libslic3r;C:\src\PrusaSlicer\src\libnest2d\include;C:\src\PrusaSlicer\src\miniz;C:\src\PrusaSlicer\src\glu-libtess\include;C:\src\PrusaSlicer\src\qhull\src;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;C:\src\PrusaSlicer\src\libigl;C:\src\PrusaSlicer-deps\usr\local\include\OpenEXR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -375,7 +375,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree	Symlinking the resources directory into the build tree</Message>
       <Command>setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\Debug ( if not exist D:\CleverTech\PrusaSlicer\build\src\Debug\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\Debug\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\Debug ( if not exist C:\src\PrusaSlicer\build\src\Debug\resources ( mklink /J C:\src\PrusaSlicer\build\src\Debug\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -384,7 +384,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\Release ( if not exist D:\CleverTech\PrusaSlicer\build\src\Release\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\Release\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\Release ( if not exist C:\src\PrusaSlicer\build\src\Release\resources ( mklink /J C:\src\PrusaSlicer\build\src\Release\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -393,7 +393,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\MinSizeRel ( if not exist D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\MinSizeRel ( if not exist C:\src\PrusaSlicer\build\src\MinSizeRel\resources ( mklink /J C:\src\PrusaSlicer\build\src\MinSizeRel\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -402,7 +402,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-if exist D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo ( if not exist D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\resources ( mklink /J D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\resources D:\CleverTech\PrusaSlicer\resources ) )
+if exist C:\src\PrusaSlicer\build\src\RelWithDebInfo ( if not exist C:\src\PrusaSlicer\build\src\RelWithDebInfo\resources ( mklink /J C:\src\PrusaSlicer\build\src\RelWithDebInfo\resources C:\src\PrusaSlicer\resources ) )
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -412,13 +412,13 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>libslic3r\RelWithDebInfo\libslic3r.lib;slic3r\RelWithDebInfo\libslic3r_gui.lib;user32.lib;Setupapi.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um\x64\Psapi.Lib;libslic3r\RelWithDebInfo\libslic3r.lib;libnest2d\RelWithDebInfo\libnest2d.lib;libslic3r\RelWithDebInfo\libslic3r.lib;libnest2d\RelWithDebInfo\libnest2d.lib;admesh\RelWithDebInfo\admesh.lib;miniz\RelWithDebInfo\miniz_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_log-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_filesystem-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_thread-vc142-mt-x64-1_75.lib;advapi32.lib;bcrypt.lib;mswsock.lib;psapi.lib;secur32.lib;ws2_32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_locale-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_regex-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_chrono-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_atomic-vc142-mt-x64-1_75.lib;synchronization.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_date_time-vc142-mt-x64-1_75.lib;clipper\RelWithDebInfo\clipper.lib;boost\RelWithDebInfo\nowide.lib;glu-libtess\RelWithDebInfo\glu-libtess.lib;qhull\RelWithDebInfo\qhullstatic.lib;semver\RelWithDebInfo\semver.lib;libslic3r\RelWithDebInfo\libslic3r_cgal.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libmpfr-4.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libgmp-10.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libopenvdb.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_system-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_iostreams-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\Half-2_5.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libblosc.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;Psapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tbb_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\nlopt.lib;avrdude\RelWithDebInfo\avrdude.lib;imgui\RelWithDebInfo\imgui.lib;C:\src\PrusaSlicer-deps\usr\local\lib\glew.lib;opengl32.lib;hidapi\RelWithDebInfo\hidapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libcurl.lib;crypt32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_html.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_adv.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_gl.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_core.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxbase31u.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxregexu.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tiff.lib;C:\src\PrusaSlicer-deps\usr\local\lib\jpeg-static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\expat.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libslic3r\RelWithDebInfo\libslic3r.lib;slic3r\RelWithDebInfo\libslic3r_gui.lib;user32.lib;Setupapi.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um\x64\Psapi.Lib;libslic3r\RelWithDebInfo\libslic3r.lib;libnest2d\RelWithDebInfo\libnest2d.lib;libslic3r\RelWithDebInfo\libslic3r.lib;libnest2d\RelWithDebInfo\libnest2d.lib;admesh\RelWithDebInfo\admesh.lib;miniz\RelWithDebInfo\miniz_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_log-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_filesystem-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_thread-vc142-mt-x64-1_75.lib;advapi32.lib;bcrypt.lib;mswsock.lib;psapi.lib;secur32.lib;ws2_32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_locale-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_regex-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_chrono-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_atomic-vc142-mt-x64-1_75.lib;synchronization.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_date_time-vc142-mt-x64-1_75.lib;clipper\RelWithDebInfo\clipper.lib;boost\RelWithDebInfo\nowide.lib;glu-libtess\RelWithDebInfo\glu-libtess.lib;qhull\RelWithDebInfo\qhullstatic.lib;semver\RelWithDebInfo\semver.lib;libslic3r\RelWithDebInfo\libslic3r_cgal.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libmpfr-4.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libgmp-10.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libopenvdb.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_system-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libboost_iostreams-vc142-mt-x64-1_75.lib;C:\src\PrusaSlicer-deps\usr\local\lib\Half-2_5.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libblosc.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;Psapi.lib;C:\Users\mov\source\TeddyTools\PathNavigator\x64\Debug\PathNavigator.lib;C:\Users\mov\source\TeddyTools\PathNavigator\..\GCodeConvert\x64\Debug\TeddyConvert.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tbb_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\nlopt.lib;avrdude\RelWithDebInfo\avrdude.lib;imgui\RelWithDebInfo\imgui.lib;C:\src\PrusaSlicer-deps\usr\local\lib\glew.lib;opengl32.lib;hidapi\RelWithDebInfo\hidapi.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libcurl.lib;crypt32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_html.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_adv.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_gl.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxmsw31u_core.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxbase31u.lib;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\wxregexu.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;uuid.lib;oleacc.lib;uxtheme.lib;rpcrt4.lib;shlwapi.lib;version.lib;wsock32.lib;C:\src\PrusaSlicer-deps\usr\local\lib\libpng16_static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\zlib.lib;C:\src\PrusaSlicer-deps\usr\local\lib\tiff.lib;C:\src\PrusaSlicer-deps\usr\local\lib\jpeg-static.lib;C:\src\PrusaSlicer-deps\usr\local\lib\expat.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/CleverTech/PrusaSlicer/build/src/RelWithDebInfo/PrusaSlicer.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/CleverTech/PrusaSlicer/build/src/RelWithDebInfo/PrusaSlicer.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/src/PrusaSlicer/build/src/RelWithDebInfo/PrusaSlicer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/src/PrusaSlicer/build/src/RelWithDebInfo/PrusaSlicer.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -426,11 +426,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\CMakeLists.txt">
+    <CustomBuild Include="C:\src\PrusaSlicer\src\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/src/PrusaSlicer/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -438,12 +438,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\UsewxWidgets.cmake;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\UsewxWidgets.cmake;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;C:\src\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/src/PrusaSlicer/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -451,12 +451,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\UsewxWidgets.cmake;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\UsewxWidgets.cmake;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;C:\src\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/src/PrusaSlicer/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -464,12 +464,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\UsewxWidgets.cmake;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\UsewxWidgets.cmake;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;C:\src\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/src/PrusaSlicer/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -477,72 +477,72 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\UsewxWidgets.cmake;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\UsewxWidgets.cmake;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;C:\src\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\PrusaSlicer.cpp" />
-    <ClInclude Include="D:\CleverTech\PrusaSlicer\src\PrusaSlicer.hpp" />
+    <ClCompile Include="C:\src\PrusaSlicer\src\PrusaSlicer.cpp" />
+    <ClInclude Include="C:\src\PrusaSlicer\src\PrusaSlicer.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\ZERO_CHECK.vcxproj">
-      <Project>{668B8D7E-7268-331C-9BBD-EA919028A0C2}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\ZERO_CHECK.vcxproj">
+      <Project>{5B81CF25-FC9A-3669-A898-487CCFF01ACB}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\admesh\admesh.vcxproj">
-      <Project>{BAA0A771-CDEC-3C57-AEC3-1F9BAF028AE8}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\admesh\admesh.vcxproj">
+      <Project>{6F71DE43-D21B-39F1-B241-3F075D4782F2}</Project>
       <Name>admesh</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\avrdude\avrdude.vcxproj">
-      <Project>{8A7C3F9D-1A92-3B00-9F88-174419011AA6}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\avrdude\avrdude.vcxproj">
+      <Project>{C4392308-6D9D-3625-881E-867056B440DB}</Project>
       <Name>avrdude</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\clipper\clipper.vcxproj">
-      <Project>{C4B65FCE-A6C8-38B1-8F7A-9AE35D6BAA1D}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\clipper\clipper.vcxproj">
+      <Project>{6C3DA9AA-3C78-3B13-88E5-B1DD3A59A54E}</Project>
       <Name>clipper</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\glu-libtess\glu-libtess.vcxproj">
-      <Project>{8F8BA1DB-B555-3B02-A724-77A44B206651}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\glu-libtess\glu-libtess.vcxproj">
+      <Project>{6486E292-41E8-3876-A661-7983AE5BEAAF}</Project>
       <Name>glu-libtess</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\hidapi\hidapi.vcxproj">
-      <Project>{876010B9-B1F3-3001-83C3-4BAA746D3C9B}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\hidapi\hidapi.vcxproj">
+      <Project>{DBB1474C-C2B6-30B9-ABE5-E5154512F806}</Project>
       <Name>hidapi</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\imgui\imgui.vcxproj">
-      <Project>{EC2F8655-A869-36FC-B5EF-1EAD96E9CC3F}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\imgui\imgui.vcxproj">
+      <Project>{43F24BBE-2C30-34AC-B94A-CDD704F8CF0E}</Project>
       <Name>imgui</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\libnest2d\libnest2d.vcxproj">
-      <Project>{9EE52D7A-DEFE-31CD-A189-4C12E9D649F5}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\libnest2d\libnest2d.vcxproj">
+      <Project>{7D8021E9-BC7B-383D-BFAF-708E8046F7FB}</Project>
       <Name>libnest2d</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\libslic3r\libslic3r_cgal.vcxproj">
-      <Project>{A0D6B6A5-1276-3EC8-9E36-C4A829D0F60C}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\libslic3r\libslic3r_cgal.vcxproj">
+      <Project>{D60C8DA9-7669-3408-9D89-790D790769C4}</Project>
       <Name>libslic3r_cgal</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\slic3r\libslic3r_gui.vcxproj">
-      <Project>{AB4A3150-7AE8-36D4-B174-535D2A1B4A69}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\slic3r\libslic3r_gui.vcxproj">
+      <Project>{24663A63-1AC4-3D3A-9400-D8B67CD97E2A}</Project>
       <Name>libslic3r_gui</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\miniz\miniz_static.vcxproj">
-      <Project>{536C0944-183E-3343-884B-0BD2B456B652}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\miniz\miniz_static.vcxproj">
+      <Project>{2D55716B-DE0B-3829-B702-6AF422875595}</Project>
       <Name>miniz_static</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\boost\nowide.vcxproj">
-      <Project>{4023E832-D05A-3564-B9C7-60AB093636DE}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\boost\nowide.vcxproj">
+      <Project>{00BB24E7-7A22-3DE8-B963-9A1BB88F9E8A}</Project>
       <Name>nowide</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\qhull\qhullstatic.vcxproj">
-      <Project>{79BD5B50-9082-32FC-8670-2E08DF355D4C}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\qhull\qhullstatic.vcxproj">
+      <Project>{0B942EAE-E976-3C36-A01C-DBAEB8238410}</Project>
       <Name>qhullstatic</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\semver\semver.vcxproj">
-      <Project>{3C7EAD95-79E6-39B1-B992-36DE5ABF4012}</Project>
+    <ProjectReference Include="C:\src\PrusaSlicer\build\src\semver\semver.vcxproj">
+      <Project>{DBB1AE80-8D90-37A1-9230-3A5CA60538AB}</Project>
       <Name>semver</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\CleverTech\PrusaSlicer\build\CMakeFiles\9fdcbf67c9894ee2c51bd6917294a146\encoding-check-libslic3r_gui.rule">
+    <CustomBuild Include="C:\src\PrusaSlicer\build\CMakeFiles\96c3327719baa1de35ddcc8596b2cf04\encoding-check-libslic3r_gui.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\slic3r\CMakeLists.txt" />
+    <CustomBuild Include="C:\src\PrusaSlicer\src\slic3r\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\CleverTech\PrusaSlicer\build\src\slic3r\CMakeFiles\encoding-check-libslic3r_gui" />
+    <None Include="C:\src\PrusaSlicer\build\src\slic3r\CMakeFiles\encoding-check-libslic3r_gui" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{C41170D5-0B6F-31D4-A12E-FD3EE81E9776}</UniqueIdentifier>
+      <UniqueIdentifier>{5C3729F5-D136-31FC-80EF-4A9C70FBA0C0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

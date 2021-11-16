@@ -510,7 +510,7 @@ PRINT_CONFIG_CLASS_DEFINE(
     ((ConfigOptionBool,                wipe_into_objects))
     // My test options for largix 2
     ((ConfigOptionFloat, largix_min_radius))
-    ((ConfigOptionFloat, largix_min_strand_lenght))
+    ((ConfigOptionFloat, largix_min_strand_length))
     ((ConfigOptionInt, largix_strands_number)) 
     ((ConfigOptionFloat, largix_strands_width))
     ((ConfigOptionFloat, largix_strands_height))

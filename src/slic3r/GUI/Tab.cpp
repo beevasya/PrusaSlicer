@@ -1546,7 +1546,7 @@ void TabPrint::build()
         option.opt.set_default_value(new ConfigOptionFloat(3.0));
         optgroup->append_single_option_line(option);
         //add minimal strand length
-        option = optgroup->get_option("largix_min_strand_lenght");
+        option = optgroup->get_option("largix_min_strand_length");
         option.opt.set_default_value(new ConfigOptionFloat(4.0));
         optgroup->append_single_option_line(option);
         //add strands numbers per layer

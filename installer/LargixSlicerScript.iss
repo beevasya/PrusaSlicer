@@ -5,8 +5,10 @@
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "Largix"
 #define MyAppExeName "prusa-slicer.exe"
+#define LargixPath GetEnv ('LARGIX_PATH')
 #define PrusaPath GetEnv ('PRUSA_PATH')
 #define PrusaDepPath GetEnv ('PRUSA_DEP_PATH')
+#define InstallDir   GetEnv('INSTALL_DIR')
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -26,6 +28,7 @@ SetupIconFile={#PrusaPath}\build\src\Debug\resources\icons\PrusaSlicer.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+OutputDir={#InstallDir}
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -35,14 +38,13 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "{#PrusaPath}\build\src\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-;Source: "{#PrusaPath}\build\src\Release\GCodeConvert.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#PrusaPath}\build\src\Release\PathNavigator.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\build\src\Release\PrusaSlicer.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\build\src\Release\PrusaSlicer.exp"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\build\src\Release\prusa-slicer.exp"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\build\src\Release\PrusaSlicer.lib"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\build\src\Release\prusa-slicer.lib"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#PrusaPath}\build\src\Release\TeddyConvert.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#LargixPath}\PathNavigator\x64\Release\PathNavigator.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#LargixPath}\GCodeConvert\x64\Release\TeddyConvert.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\\build\src\Release\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#PrusaDepPath}\usr\local\bin\libgmp-10.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaDepPath}\usr\local\bin\libmpfr-4.dll"; DestDir: "{app}"; Flags: ignoreversion

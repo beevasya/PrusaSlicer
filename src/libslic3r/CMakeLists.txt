@@ -16,8 +16,8 @@ if (TARGET OpenVDB::openvdb)
     set(OpenVDBUtils_SOURCES OpenVDBUtils.cpp OpenVDBUtils.hpp)
 endif()
 
-include_directories(libslic3r PUBLIC ${LARGIX_PATH}/PathNavigator)
-include_directories(libslic3r PUBLIC ${LARGIX_PATH}/../GCodeConvert/TeddyConvert)
+include_directories(libslic3r PUBLIC ${LARGIX_PATH}/PathNavigator/PathNavigator)
+include_directories(libslic3r PUBLIC ${LARGIX_PATH}/GCodeConvert/TeddyConvert)
 
 add_library(libslic3r STATIC
     pchheader.cpp
@@ -365,16 +365,16 @@ endif ()
 
 add_library(PathNavigator STATIC IMPORTED)
 set_property(TARGET PathNavigator PROPERTY
-             IMPORTED_LOCATION ${LARGIX_PATH}/x64/Debug/PathNavigator.lib)
+             IMPORTED_LOCATION ${LARGIX_PATH}/PathNavigator/x64/Release/PathNavigator.lib)
 
 add_library(TeddyConvert STATIC IMPORTED)
 set_property(TARGET TeddyConvert PROPERTY
-             IMPORTED_LOCATION ${LARGIX_PATH}/../GCodeConvert/x64/Debug/TeddyConvert.lib)
+             IMPORTED_LOCATION ${LARGIX_PATH}/GCodeConvert/x64/Release/TeddyConvert.lib)
 
 
 target_link_libraries(libslic3r PathNavigator TeddyConvert)
 
-add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/x64/Debug/PathNavigator.dll ${CMAKE_CURRENT_BINARY_DIR}/../Debug/PathNavigator.dll)
-add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/../GCodeConvert/x64/Debug/TeddyConvert.dll ${CMAKE_CURRENT_BINARY_DIR}/../Debug/TeddyConvert.dll)
-add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/../GCodeConvert/x64/Debug/GCodeParser.dll ${CMAKE_CURRENT_BINARY_DIR}/../Debug/GCodeParser.dll)
+add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/PathNavigator/x64/Release/PathNavigator.dll ${CMAKE_CURRENT_BINARY_DIR}/../Release/PathNavigator.dll)
+add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/GCodeConvert/x64/Release/TeddyConvert.dll ${CMAKE_CURRENT_BINARY_DIR}/../Release/TeddyConvert.dll)
+
 

@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: C:/src/PrusaSlicer/src
-# Build directory: C:/src/PrusaSlicer/build/src
+# Source directory: D:/CleverTech/PrusaSlicer/src
+# Build directory: D:/CleverTech/PrusaSlicer/build/src
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

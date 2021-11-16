@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4999DBF3-0086-33CD-813B-3DE9A77022D6}</ProjectGuid>
+    <ProjectGuid>{81D0FF7A-888E-31CE-B6F8-4BD9D9752B8F}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,24 +76,11 @@
     <PostBuildEvent>
       <Message>																																			</Message>
       <Command>setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude arduino.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avr.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude arduino.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -102,24 +89,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avrpart.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avr910.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avr.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -128,24 +102,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude bitbang.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude buspirate.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avrpart.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -154,24 +115,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude butterfly.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude config.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avr910.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -180,24 +128,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude config_gram.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude crc16.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude bitbang.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -206,24 +141,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude fileio.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude lexer.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude buspirate.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -232,24 +154,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude linuxgpio.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude lists.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude butterfly.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -258,24 +167,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude pgm.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude pgm_type.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude config.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -284,24 +180,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude pickit2.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude pindefs.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude config_gram.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -310,24 +193,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude safemode.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude ser_avrdoper.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude crc16.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -336,24 +206,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude serbb_posix.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude serbb_win32.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude fileio.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -362,24 +219,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude ser_posix.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude ser_win32.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude lexer.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -388,24 +232,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude stk500.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude stk500generic.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude linuxgpio.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -414,24 +245,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude stk500v2.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude term.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude lists.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -440,24 +258,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude update.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude wiring.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude pgm.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -466,24 +271,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude main.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avrdude-slic3r.hpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude pgm_type.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -492,24 +284,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avrdude-slic3r.cpp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude windows/utf8.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude pickit2.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -518,11 +297,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude windows/unistd.cpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude pindefs.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -531,11 +310,232 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude windows/getopt.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude safemode.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude ser_avrdoper.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude serbb_posix.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude serbb_win32.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude ser_posix.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude ser_win32.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude stk500.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude stk500generic.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude stk500v2.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude term.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude update.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude wiring.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude main.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avrdude-slic3r.hpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude avrdude-slic3r.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude windows/utf8.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude windows/unistd.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude windows/getopt.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -547,7 +547,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -557,24 +557,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>																																			</Message>
       <Command>setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude arduino.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avr.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude arduino.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -583,24 +570,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avrpart.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avr910.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avr.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -609,24 +583,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude bitbang.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude buspirate.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avrpart.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -635,24 +596,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude butterfly.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude config.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avr910.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -661,24 +609,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude config_gram.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude crc16.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude bitbang.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -687,24 +622,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude fileio.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude lexer.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude buspirate.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -713,24 +635,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude linuxgpio.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude lists.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude butterfly.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -739,24 +648,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude pgm.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude pgm_type.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude config.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -765,24 +661,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude pickit2.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude pindefs.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude config_gram.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -791,24 +674,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude safemode.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude ser_avrdoper.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude crc16.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -817,24 +687,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude serbb_posix.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude serbb_win32.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude fileio.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -843,24 +700,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude ser_posix.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude ser_win32.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude lexer.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -869,24 +713,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude stk500.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude stk500generic.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude linuxgpio.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -895,24 +726,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude stk500v2.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude term.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude lists.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -921,24 +739,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude update.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude wiring.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude pgm.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -947,24 +752,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude main.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avrdude-slic3r.hpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude pgm_type.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -973,24 +765,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avrdude-slic3r.cpp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude windows/utf8.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude pickit2.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -999,11 +778,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude windows/unistd.cpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude pindefs.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1012,11 +791,232 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude windows/getopt.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude safemode.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude ser_avrdoper.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude serbb_posix.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude serbb_win32.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude ser_posix.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude ser_win32.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude stk500.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude stk500generic.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude stk500v2.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude term.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude update.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude wiring.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude main.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avrdude-slic3r.hpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude avrdude-slic3r.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude windows/utf8.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude windows/unistd.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude windows/getopt.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1028,7 +1028,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -1038,24 +1038,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>																																			</Message>
       <Command>setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude arduino.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avr.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude arduino.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1064,24 +1051,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avrpart.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avr910.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avr.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1090,24 +1064,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude bitbang.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude buspirate.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avrpart.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1116,24 +1077,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude butterfly.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude config.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avr910.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1142,24 +1090,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude config_gram.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude crc16.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude bitbang.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1168,24 +1103,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude fileio.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude lexer.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude buspirate.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1194,24 +1116,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude linuxgpio.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude lists.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude butterfly.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1220,24 +1129,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude pgm.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude pgm_type.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude config.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1246,24 +1142,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude pickit2.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude pindefs.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude config_gram.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1272,24 +1155,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude safemode.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude ser_avrdoper.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude crc16.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1298,24 +1168,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude serbb_posix.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude serbb_win32.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude fileio.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1324,24 +1181,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude ser_posix.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude ser_win32.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude lexer.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1350,24 +1194,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude stk500.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude stk500generic.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude linuxgpio.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1376,24 +1207,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude stk500v2.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude term.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude lists.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1402,24 +1220,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude update.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude wiring.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude pgm.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1428,24 +1233,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude main.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avrdude-slic3r.hpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude pgm_type.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1454,24 +1246,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avrdude-slic3r.cpp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude windows/utf8.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude pickit2.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1480,11 +1259,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude windows/unistd.cpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude pindefs.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1493,11 +1272,232 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude windows/getopt.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude safemode.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude ser_avrdoper.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude serbb_posix.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude serbb_win32.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude ser_posix.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude ser_win32.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude stk500.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude stk500generic.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude stk500v2.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude term.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude update.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude wiring.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude main.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avrdude-slic3r.hpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude avrdude-slic3r.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude windows/utf8.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude windows/unistd.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude windows/getopt.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1509,7 +1509,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -1519,24 +1519,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>																																			</Message>
       <Command>setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude arduino.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avr.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude arduino.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1545,24 +1532,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avrpart.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avr910.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avr.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1571,24 +1545,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude bitbang.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude buspirate.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avrpart.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1597,24 +1558,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude butterfly.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude config.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avr910.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1623,24 +1571,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude config_gram.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude crc16.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude bitbang.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1649,24 +1584,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude fileio.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude lexer.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude buspirate.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1675,24 +1597,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude linuxgpio.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude lists.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude butterfly.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1701,24 +1610,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude pgm.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude pgm_type.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude config.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1727,24 +1623,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude pickit2.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude pindefs.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude config_gram.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1753,24 +1636,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude safemode.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude ser_avrdoper.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude crc16.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1779,24 +1649,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude serbb_posix.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude serbb_win32.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude fileio.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1805,24 +1662,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude ser_posix.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude ser_win32.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude lexer.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1831,24 +1675,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude stk500.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude stk500generic.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude linuxgpio.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1857,24 +1688,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude stk500v2.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude term.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude lists.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1883,24 +1701,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude update.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude wiring.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude pgm.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1909,24 +1714,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude main.c
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avrdude-slic3r.hpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude pgm_type.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1935,24 +1727,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avrdude-slic3r.cpp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-cd C:\src\PrusaSlicer\src\avrdude
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude windows/utf8.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude pickit2.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1961,11 +1740,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude windows/unistd.cpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude pindefs.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1974,11 +1753,232 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude windows/getopt.c
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude safemode.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude ser_avrdoper.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude serbb_posix.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude serbb_win32.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude ser_posix.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude ser_win32.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude stk500.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude stk500generic.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude stk500v2.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude term.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude update.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude wiring.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude main.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avrdude-slic3r.hpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude avrdude-slic3r.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude windows/utf8.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude windows/unistd.cpp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+cd D:\CleverTech\PrusaSlicer\src\avrdude
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude windows/getopt.c
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -1989,7 +1989,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\build\CMakeFiles\694dee341f3ee3ab5233f9d8b5aa3674\encoding-check-avrdude.rule">
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\build\CMakeFiles\03f90d9edfdbeb420fdac298b3a9091c\encoding-check-avrdude.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking source files encodings for target avrdude</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -1998,8 +1998,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe;C:\src\PrusaSlicer\src\avrdude\arduino.c;C:\src\PrusaSlicer\src\avrdude\avr.c;C:\src\PrusaSlicer\src\avrdude\avrpart.c;C:\src\PrusaSlicer\src\avrdude\avr910.c;C:\src\PrusaSlicer\src\avrdude\bitbang.c;C:\src\PrusaSlicer\src\avrdude\buspirate.c;C:\src\PrusaSlicer\src\avrdude\butterfly.c;C:\src\PrusaSlicer\src\avrdude\config.c;C:\src\PrusaSlicer\src\avrdude\config_gram.c;C:\src\PrusaSlicer\src\avrdude\crc16.c;C:\src\PrusaSlicer\src\avrdude\fileio.c;C:\src\PrusaSlicer\src\avrdude\lexer.c;C:\src\PrusaSlicer\src\avrdude\linuxgpio.c;C:\src\PrusaSlicer\src\avrdude\lists.c;C:\src\PrusaSlicer\src\avrdude\pgm.c;C:\src\PrusaSlicer\src\avrdude\pgm_type.c;C:\src\PrusaSlicer\src\avrdude\pickit2.c;C:\src\PrusaSlicer\src\avrdude\pindefs.c;C:\src\PrusaSlicer\src\avrdude\safemode.c;C:\src\PrusaSlicer\src\avrdude\ser_avrdoper.c;C:\src\PrusaSlicer\src\avrdude\serbb_posix.c;C:\src\PrusaSlicer\src\avrdude\serbb_win32.c;C:\src\PrusaSlicer\src\avrdude\ser_posix.c;C:\src\PrusaSlicer\src\avrdude\ser_win32.c;C:\src\PrusaSlicer\src\avrdude\stk500.c;C:\src\PrusaSlicer\src\avrdude\stk500generic.c;C:\src\PrusaSlicer\src\avrdude\stk500v2.c;C:\src\PrusaSlicer\src\avrdude\term.c;C:\src\PrusaSlicer\src\avrdude\update.c;C:\src\PrusaSlicer\src\avrdude\wiring.c;C:\src\PrusaSlicer\src\avrdude\main.c;C:\src\PrusaSlicer\src\avrdude\avrdude-slic3r.hpp;C:\src\PrusaSlicer\src\avrdude\avrdude-slic3r.cpp;C:\src\PrusaSlicer\src\avrdude\windows\utf8.c;C:\src\PrusaSlicer\src\avrdude\windows\unistd.cpp;C:\src\PrusaSlicer\src\avrdude\windows\getopt.c;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe;D:\CleverTech\PrusaSlicer\src\avrdude\arduino.c;D:\CleverTech\PrusaSlicer\src\avrdude\avr.c;D:\CleverTech\PrusaSlicer\src\avrdude\avrpart.c;D:\CleverTech\PrusaSlicer\src\avrdude\avr910.c;D:\CleverTech\PrusaSlicer\src\avrdude\bitbang.c;D:\CleverTech\PrusaSlicer\src\avrdude\buspirate.c;D:\CleverTech\PrusaSlicer\src\avrdude\butterfly.c;D:\CleverTech\PrusaSlicer\src\avrdude\config.c;D:\CleverTech\PrusaSlicer\src\avrdude\config_gram.c;D:\CleverTech\PrusaSlicer\src\avrdude\crc16.c;D:\CleverTech\PrusaSlicer\src\avrdude\fileio.c;D:\CleverTech\PrusaSlicer\src\avrdude\lexer.c;D:\CleverTech\PrusaSlicer\src\avrdude\linuxgpio.c;D:\CleverTech\PrusaSlicer\src\avrdude\lists.c;D:\CleverTech\PrusaSlicer\src\avrdude\pgm.c;D:\CleverTech\PrusaSlicer\src\avrdude\pgm_type.c;D:\CleverTech\PrusaSlicer\src\avrdude\pickit2.c;D:\CleverTech\PrusaSlicer\src\avrdude\pindefs.c;D:\CleverTech\PrusaSlicer\src\avrdude\safemode.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_avrdoper.c;D:\CleverTech\PrusaSlicer\src\avrdude\serbb_posix.c;D:\CleverTech\PrusaSlicer\src\avrdude\serbb_win32.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_posix.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_win32.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500generic.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500v2.c;D:\CleverTech\PrusaSlicer\src\avrdude\term.c;D:\CleverTech\PrusaSlicer\src\avrdude\update.c;D:\CleverTech\PrusaSlicer\src\avrdude\wiring.c;D:\CleverTech\PrusaSlicer\src\avrdude\main.c;D:\CleverTech\PrusaSlicer\src\avrdude\avrdude-slic3r.hpp;D:\CleverTech\PrusaSlicer\src\avrdude\avrdude-slic3r.cpp;D:\CleverTech\PrusaSlicer\src\avrdude\windows\utf8.c;D:\CleverTech\PrusaSlicer\src\avrdude\windows\unistd.cpp;D:\CleverTech\PrusaSlicer\src\avrdude\windows\getopt.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking source files encodings for target avrdude</Message>
@@ -2010,8 +2010,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe;C:\src\PrusaSlicer\src\avrdude\arduino.c;C:\src\PrusaSlicer\src\avrdude\avr.c;C:\src\PrusaSlicer\src\avrdude\avrpart.c;C:\src\PrusaSlicer\src\avrdude\avr910.c;C:\src\PrusaSlicer\src\avrdude\bitbang.c;C:\src\PrusaSlicer\src\avrdude\buspirate.c;C:\src\PrusaSlicer\src\avrdude\butterfly.c;C:\src\PrusaSlicer\src\avrdude\config.c;C:\src\PrusaSlicer\src\avrdude\config_gram.c;C:\src\PrusaSlicer\src\avrdude\crc16.c;C:\src\PrusaSlicer\src\avrdude\fileio.c;C:\src\PrusaSlicer\src\avrdude\lexer.c;C:\src\PrusaSlicer\src\avrdude\linuxgpio.c;C:\src\PrusaSlicer\src\avrdude\lists.c;C:\src\PrusaSlicer\src\avrdude\pgm.c;C:\src\PrusaSlicer\src\avrdude\pgm_type.c;C:\src\PrusaSlicer\src\avrdude\pickit2.c;C:\src\PrusaSlicer\src\avrdude\pindefs.c;C:\src\PrusaSlicer\src\avrdude\safemode.c;C:\src\PrusaSlicer\src\avrdude\ser_avrdoper.c;C:\src\PrusaSlicer\src\avrdude\serbb_posix.c;C:\src\PrusaSlicer\src\avrdude\serbb_win32.c;C:\src\PrusaSlicer\src\avrdude\ser_posix.c;C:\src\PrusaSlicer\src\avrdude\ser_win32.c;C:\src\PrusaSlicer\src\avrdude\stk500.c;C:\src\PrusaSlicer\src\avrdude\stk500generic.c;C:\src\PrusaSlicer\src\avrdude\stk500v2.c;C:\src\PrusaSlicer\src\avrdude\term.c;C:\src\PrusaSlicer\src\avrdude\update.c;C:\src\PrusaSlicer\src\avrdude\wiring.c;C:\src\PrusaSlicer\src\avrdude\main.c;C:\src\PrusaSlicer\src\avrdude\avrdude-slic3r.hpp;C:\src\PrusaSlicer\src\avrdude\avrdude-slic3r.cpp;C:\src\PrusaSlicer\src\avrdude\windows\utf8.c;C:\src\PrusaSlicer\src\avrdude\windows\unistd.cpp;C:\src\PrusaSlicer\src\avrdude\windows\getopt.c;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe;D:\CleverTech\PrusaSlicer\src\avrdude\arduino.c;D:\CleverTech\PrusaSlicer\src\avrdude\avr.c;D:\CleverTech\PrusaSlicer\src\avrdude\avrpart.c;D:\CleverTech\PrusaSlicer\src\avrdude\avr910.c;D:\CleverTech\PrusaSlicer\src\avrdude\bitbang.c;D:\CleverTech\PrusaSlicer\src\avrdude\buspirate.c;D:\CleverTech\PrusaSlicer\src\avrdude\butterfly.c;D:\CleverTech\PrusaSlicer\src\avrdude\config.c;D:\CleverTech\PrusaSlicer\src\avrdude\config_gram.c;D:\CleverTech\PrusaSlicer\src\avrdude\crc16.c;D:\CleverTech\PrusaSlicer\src\avrdude\fileio.c;D:\CleverTech\PrusaSlicer\src\avrdude\lexer.c;D:\CleverTech\PrusaSlicer\src\avrdude\linuxgpio.c;D:\CleverTech\PrusaSlicer\src\avrdude\lists.c;D:\CleverTech\PrusaSlicer\src\avrdude\pgm.c;D:\CleverTech\PrusaSlicer\src\avrdude\pgm_type.c;D:\CleverTech\PrusaSlicer\src\avrdude\pickit2.c;D:\CleverTech\PrusaSlicer\src\avrdude\pindefs.c;D:\CleverTech\PrusaSlicer\src\avrdude\safemode.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_avrdoper.c;D:\CleverTech\PrusaSlicer\src\avrdude\serbb_posix.c;D:\CleverTech\PrusaSlicer\src\avrdude\serbb_win32.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_posix.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_win32.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500generic.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500v2.c;D:\CleverTech\PrusaSlicer\src\avrdude\term.c;D:\CleverTech\PrusaSlicer\src\avrdude\update.c;D:\CleverTech\PrusaSlicer\src\avrdude\wiring.c;D:\CleverTech\PrusaSlicer\src\avrdude\main.c;D:\CleverTech\PrusaSlicer\src\avrdude\avrdude-slic3r.hpp;D:\CleverTech\PrusaSlicer\src\avrdude\avrdude-slic3r.cpp;D:\CleverTech\PrusaSlicer\src\avrdude\windows\utf8.c;D:\CleverTech\PrusaSlicer\src\avrdude\windows\unistd.cpp;D:\CleverTech\PrusaSlicer\src\avrdude\windows\getopt.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Checking source files encodings for target avrdude</Message>
@@ -2022,8 +2022,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe;C:\src\PrusaSlicer\src\avrdude\arduino.c;C:\src\PrusaSlicer\src\avrdude\avr.c;C:\src\PrusaSlicer\src\avrdude\avrpart.c;C:\src\PrusaSlicer\src\avrdude\avr910.c;C:\src\PrusaSlicer\src\avrdude\bitbang.c;C:\src\PrusaSlicer\src\avrdude\buspirate.c;C:\src\PrusaSlicer\src\avrdude\butterfly.c;C:\src\PrusaSlicer\src\avrdude\config.c;C:\src\PrusaSlicer\src\avrdude\config_gram.c;C:\src\PrusaSlicer\src\avrdude\crc16.c;C:\src\PrusaSlicer\src\avrdude\fileio.c;C:\src\PrusaSlicer\src\avrdude\lexer.c;C:\src\PrusaSlicer\src\avrdude\linuxgpio.c;C:\src\PrusaSlicer\src\avrdude\lists.c;C:\src\PrusaSlicer\src\avrdude\pgm.c;C:\src\PrusaSlicer\src\avrdude\pgm_type.c;C:\src\PrusaSlicer\src\avrdude\pickit2.c;C:\src\PrusaSlicer\src\avrdude\pindefs.c;C:\src\PrusaSlicer\src\avrdude\safemode.c;C:\src\PrusaSlicer\src\avrdude\ser_avrdoper.c;C:\src\PrusaSlicer\src\avrdude\serbb_posix.c;C:\src\PrusaSlicer\src\avrdude\serbb_win32.c;C:\src\PrusaSlicer\src\avrdude\ser_posix.c;C:\src\PrusaSlicer\src\avrdude\ser_win32.c;C:\src\PrusaSlicer\src\avrdude\stk500.c;C:\src\PrusaSlicer\src\avrdude\stk500generic.c;C:\src\PrusaSlicer\src\avrdude\stk500v2.c;C:\src\PrusaSlicer\src\avrdude\term.c;C:\src\PrusaSlicer\src\avrdude\update.c;C:\src\PrusaSlicer\src\avrdude\wiring.c;C:\src\PrusaSlicer\src\avrdude\main.c;C:\src\PrusaSlicer\src\avrdude\avrdude-slic3r.hpp;C:\src\PrusaSlicer\src\avrdude\avrdude-slic3r.cpp;C:\src\PrusaSlicer\src\avrdude\windows\utf8.c;C:\src\PrusaSlicer\src\avrdude\windows\unistd.cpp;C:\src\PrusaSlicer\src\avrdude\windows\getopt.c;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe;D:\CleverTech\PrusaSlicer\src\avrdude\arduino.c;D:\CleverTech\PrusaSlicer\src\avrdude\avr.c;D:\CleverTech\PrusaSlicer\src\avrdude\avrpart.c;D:\CleverTech\PrusaSlicer\src\avrdude\avr910.c;D:\CleverTech\PrusaSlicer\src\avrdude\bitbang.c;D:\CleverTech\PrusaSlicer\src\avrdude\buspirate.c;D:\CleverTech\PrusaSlicer\src\avrdude\butterfly.c;D:\CleverTech\PrusaSlicer\src\avrdude\config.c;D:\CleverTech\PrusaSlicer\src\avrdude\config_gram.c;D:\CleverTech\PrusaSlicer\src\avrdude\crc16.c;D:\CleverTech\PrusaSlicer\src\avrdude\fileio.c;D:\CleverTech\PrusaSlicer\src\avrdude\lexer.c;D:\CleverTech\PrusaSlicer\src\avrdude\linuxgpio.c;D:\CleverTech\PrusaSlicer\src\avrdude\lists.c;D:\CleverTech\PrusaSlicer\src\avrdude\pgm.c;D:\CleverTech\PrusaSlicer\src\avrdude\pgm_type.c;D:\CleverTech\PrusaSlicer\src\avrdude\pickit2.c;D:\CleverTech\PrusaSlicer\src\avrdude\pindefs.c;D:\CleverTech\PrusaSlicer\src\avrdude\safemode.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_avrdoper.c;D:\CleverTech\PrusaSlicer\src\avrdude\serbb_posix.c;D:\CleverTech\PrusaSlicer\src\avrdude\serbb_win32.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_posix.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_win32.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500generic.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500v2.c;D:\CleverTech\PrusaSlicer\src\avrdude\term.c;D:\CleverTech\PrusaSlicer\src\avrdude\update.c;D:\CleverTech\PrusaSlicer\src\avrdude\wiring.c;D:\CleverTech\PrusaSlicer\src\avrdude\main.c;D:\CleverTech\PrusaSlicer\src\avrdude\avrdude-slic3r.hpp;D:\CleverTech\PrusaSlicer\src\avrdude\avrdude-slic3r.cpp;D:\CleverTech\PrusaSlicer\src\avrdude\windows\utf8.c;D:\CleverTech\PrusaSlicer\src\avrdude\windows\unistd.cpp;D:\CleverTech\PrusaSlicer\src\avrdude\windows\getopt.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Checking source files encodings for target avrdude</Message>
@@ -2034,18 +2034,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe;C:\src\PrusaSlicer\src\avrdude\arduino.c;C:\src\PrusaSlicer\src\avrdude\avr.c;C:\src\PrusaSlicer\src\avrdude\avrpart.c;C:\src\PrusaSlicer\src\avrdude\avr910.c;C:\src\PrusaSlicer\src\avrdude\bitbang.c;C:\src\PrusaSlicer\src\avrdude\buspirate.c;C:\src\PrusaSlicer\src\avrdude\butterfly.c;C:\src\PrusaSlicer\src\avrdude\config.c;C:\src\PrusaSlicer\src\avrdude\config_gram.c;C:\src\PrusaSlicer\src\avrdude\crc16.c;C:\src\PrusaSlicer\src\avrdude\fileio.c;C:\src\PrusaSlicer\src\avrdude\lexer.c;C:\src\PrusaSlicer\src\avrdude\linuxgpio.c;C:\src\PrusaSlicer\src\avrdude\lists.c;C:\src\PrusaSlicer\src\avrdude\pgm.c;C:\src\PrusaSlicer\src\avrdude\pgm_type.c;C:\src\PrusaSlicer\src\avrdude\pickit2.c;C:\src\PrusaSlicer\src\avrdude\pindefs.c;C:\src\PrusaSlicer\src\avrdude\safemode.c;C:\src\PrusaSlicer\src\avrdude\ser_avrdoper.c;C:\src\PrusaSlicer\src\avrdude\serbb_posix.c;C:\src\PrusaSlicer\src\avrdude\serbb_win32.c;C:\src\PrusaSlicer\src\avrdude\ser_posix.c;C:\src\PrusaSlicer\src\avrdude\ser_win32.c;C:\src\PrusaSlicer\src\avrdude\stk500.c;C:\src\PrusaSlicer\src\avrdude\stk500generic.c;C:\src\PrusaSlicer\src\avrdude\stk500v2.c;C:\src\PrusaSlicer\src\avrdude\term.c;C:\src\PrusaSlicer\src\avrdude\update.c;C:\src\PrusaSlicer\src\avrdude\wiring.c;C:\src\PrusaSlicer\src\avrdude\main.c;C:\src\PrusaSlicer\src\avrdude\avrdude-slic3r.hpp;C:\src\PrusaSlicer\src\avrdude\avrdude-slic3r.cpp;C:\src\PrusaSlicer\src\avrdude\windows\utf8.c;C:\src\PrusaSlicer\src\avrdude\windows\unistd.cpp;C:\src\PrusaSlicer\src\avrdude\windows\getopt.c;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe;D:\CleverTech\PrusaSlicer\src\avrdude\arduino.c;D:\CleverTech\PrusaSlicer\src\avrdude\avr.c;D:\CleverTech\PrusaSlicer\src\avrdude\avrpart.c;D:\CleverTech\PrusaSlicer\src\avrdude\avr910.c;D:\CleverTech\PrusaSlicer\src\avrdude\bitbang.c;D:\CleverTech\PrusaSlicer\src\avrdude\buspirate.c;D:\CleverTech\PrusaSlicer\src\avrdude\butterfly.c;D:\CleverTech\PrusaSlicer\src\avrdude\config.c;D:\CleverTech\PrusaSlicer\src\avrdude\config_gram.c;D:\CleverTech\PrusaSlicer\src\avrdude\crc16.c;D:\CleverTech\PrusaSlicer\src\avrdude\fileio.c;D:\CleverTech\PrusaSlicer\src\avrdude\lexer.c;D:\CleverTech\PrusaSlicer\src\avrdude\linuxgpio.c;D:\CleverTech\PrusaSlicer\src\avrdude\lists.c;D:\CleverTech\PrusaSlicer\src\avrdude\pgm.c;D:\CleverTech\PrusaSlicer\src\avrdude\pgm_type.c;D:\CleverTech\PrusaSlicer\src\avrdude\pickit2.c;D:\CleverTech\PrusaSlicer\src\avrdude\pindefs.c;D:\CleverTech\PrusaSlicer\src\avrdude\safemode.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_avrdoper.c;D:\CleverTech\PrusaSlicer\src\avrdude\serbb_posix.c;D:\CleverTech\PrusaSlicer\src\avrdude\serbb_win32.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_posix.c;D:\CleverTech\PrusaSlicer\src\avrdude\ser_win32.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500generic.c;D:\CleverTech\PrusaSlicer\src\avrdude\stk500v2.c;D:\CleverTech\PrusaSlicer\src\avrdude\term.c;D:\CleverTech\PrusaSlicer\src\avrdude\update.c;D:\CleverTech\PrusaSlicer\src\avrdude\wiring.c;D:\CleverTech\PrusaSlicer\src\avrdude\main.c;D:\CleverTech\PrusaSlicer\src\avrdude\avrdude-slic3r.hpp;D:\CleverTech\PrusaSlicer\src\avrdude\avrdude-slic3r.cpp;D:\CleverTech\PrusaSlicer\src\avrdude\windows\utf8.c;D:\CleverTech\PrusaSlicer\src\avrdude\windows\unistd.cpp;D:\CleverTech\PrusaSlicer\src\avrdude\windows\getopt.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\src\avrdude\CMakeLists.txt">
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\avrdude\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/src/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -2053,12 +2053,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\src\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\CMakeParseArguments.cmake;D:\CleverTech\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/src/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -2066,12 +2066,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\src\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\CMakeParseArguments.cmake;D:\CleverTech\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/src/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -2079,12 +2079,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\src\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\CMakeParseArguments.cmake;D:\CleverTech\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/src/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -2092,24 +2092,24 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\src\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\CMakeParseArguments.cmake;D:\CleverTech\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude">
+    <None Include="D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\src\PrusaSlicer\build\ZERO_CHECK.vcxproj">
-      <Project>{5B81CF25-FC9A-3669-A898-487CCFF01ACB}</Project>
+    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\ZERO_CHECK.vcxproj">
+      <Project>{668B8D7E-7268-331C-9BBD-EA919028A0C2}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\src\PrusaSlicer\build\src\build-utils\encoding-check.vcxproj">
-      <Project>{3D54412F-9B47-329B-9F5D-48294B5CB589}</Project>
+    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\build-utils\encoding-check.vcxproj">
+      <Project>{A129C527-82E1-3EFB-8D0C-DF351EE6AC60}</Project>
       <Name>encoding-check</Name>
     </ProjectReference>
   </ItemGroup>

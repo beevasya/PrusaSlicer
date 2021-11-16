@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{22F5F1AD-DB75-3CEC-AAAF-5FE89AD368EC}</ProjectGuid>
+    <ProjectGuid>{C5082330-9A97-3EF3-BD0D-06BEC4EA7D0C}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,7 +76,7 @@
     <PostBuildEvent>
       <Message>Copy gmp runtime to build tree	Copy mpfr runtime to build tree</Message>
       <Command>setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/src/PrusaSlicer/deps/GMP/gmp/lib/win64/libgmp-10.dll C:/src/PrusaSlicer/build/src/Debug
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/CleverTech/PrusaSlicer/deps/GMP/gmp/lib/win64/libgmp-10.dll D:/CleverTech/PrusaSlicer/build/src/Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -85,7 +85,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/src/PrusaSlicer/deps/MPFR/mpfr/lib/win64/libmpfr-4.dll C:/src/PrusaSlicer/build/src/Debug
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/CleverTech/PrusaSlicer/deps/MPFR/mpfr/lib/win64/libmpfr-4.dll D:/CleverTech/PrusaSlicer/build/src/Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -97,7 +97,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -107,7 +107,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Copy gmp runtime to build tree	Copy mpfr runtime to build tree</Message>
       <Command>setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/src/PrusaSlicer/deps/GMP/gmp/lib/win64/libgmp-10.dll C:/src/PrusaSlicer/build/src/Release
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/CleverTech/PrusaSlicer/deps/GMP/gmp/lib/win64/libgmp-10.dll D:/CleverTech/PrusaSlicer/build/src/Release
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -116,7 +116,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/src/PrusaSlicer/deps/MPFR/mpfr/lib/win64/libmpfr-4.dll C:/src/PrusaSlicer/build/src/Release
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/CleverTech/PrusaSlicer/deps/MPFR/mpfr/lib/win64/libmpfr-4.dll D:/CleverTech/PrusaSlicer/build/src/Release
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -128,7 +128,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -138,7 +138,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Copy gmp runtime to build tree	Copy mpfr runtime to build tree</Message>
       <Command>setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/src/PrusaSlicer/deps/GMP/gmp/lib/win64/libgmp-10.dll C:/src/PrusaSlicer/build/src/MinSizeRel
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/CleverTech/PrusaSlicer/deps/GMP/gmp/lib/win64/libgmp-10.dll D:/CleverTech/PrusaSlicer/build/src/MinSizeRel
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -147,7 +147,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/src/PrusaSlicer/deps/MPFR/mpfr/lib/win64/libmpfr-4.dll C:/src/PrusaSlicer/build/src/MinSizeRel
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/CleverTech/PrusaSlicer/deps/MPFR/mpfr/lib/win64/libmpfr-4.dll D:/CleverTech/PrusaSlicer/build/src/MinSizeRel
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,7 +159,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\hidapi\include;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\hidapi\include;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\lib\vc_x64_lib\mswu;C:\src\PrusaSlicer-deps\usr\local\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -169,7 +169,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Copy gmp runtime to build tree	Copy mpfr runtime to build tree</Message>
       <Command>setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/src/PrusaSlicer/deps/GMP/gmp/lib/win64/libgmp-10.dll C:/src/PrusaSlicer/build/src/RelWithDebInfo
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/CleverTech/PrusaSlicer/deps/GMP/gmp/lib/win64/libgmp-10.dll D:/CleverTech/PrusaSlicer/build/src/RelWithDebInfo
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -178,7 +178,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/src/PrusaSlicer/deps/MPFR/mpfr/lib/win64/libmpfr-4.dll C:/src/PrusaSlicer/build/src/RelWithDebInfo
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/CleverTech/PrusaSlicer/deps/MPFR/mpfr/lib/win64/libmpfr-4.dll D:/CleverTech/PrusaSlicer/build/src/RelWithDebInfo
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -189,7 +189,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\build\CMakeFiles\6472750ea6e43632b005f0aa888df5a1\PrusaSlicerDllsCopy.rule">
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\build\CMakeFiles\d3b2beeffd1c080ed71d7e73e3dc2368\PrusaSlicerDllsCopy.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -198,8 +198,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\Debug\PrusaSlicer.dll;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\Debug\PrusaSlicer.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
@@ -210,8 +210,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\Release\PrusaSlicer.dll;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\Release\PrusaSlicer.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
@@ -222,8 +222,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\MinSizeRel\PrusaSlicer.dll;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\MinSizeRel\PrusaSlicer.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
@@ -234,18 +234,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\RelWithDebInfo\PrusaSlicer.dll;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\RelWithDebInfo\PrusaSlicer.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\src\CMakeLists.txt">
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/src/PrusaSlicer/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -253,12 +253,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\UsewxWidgets.cmake;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;C:\src\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\UsewxWidgets.cmake;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/src/PrusaSlicer/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -266,12 +266,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\UsewxWidgets.cmake;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;C:\src\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\UsewxWidgets.cmake;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/src/PrusaSlicer/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -279,12 +279,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\UsewxWidgets.cmake;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;C:\src\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\UsewxWidgets.cmake;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/src/PrusaSlicer/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -292,24 +292,24 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\UsewxWidgets.cmake;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;C:\src\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;C:\src\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindJPEG.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindTIFF.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\FindwxWidgets.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\UsewxWidgets.cmake;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer-gcodeviewer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.manifest.in;D:\CleverTech\PrusaSlicer\src\platform\msw\PrusaSlicer.rc.in;D:\CleverTech\PrusaSlicer\src\platform\osx\Info.plist.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\src\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy">
+    <None Include="D:\CleverTech\PrusaSlicer\build\src\CMakeFiles\PrusaSlicerDllsCopy">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\src\PrusaSlicer\build\ZERO_CHECK.vcxproj">
-      <Project>{5B81CF25-FC9A-3669-A898-487CCFF01ACB}</Project>
+    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\ZERO_CHECK.vcxproj">
+      <Project>{668B8D7E-7268-331C-9BBD-EA919028A0C2}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\src\PrusaSlicer\build\src\PrusaSlicer.vcxproj">
-      <Project>{7A7E8C74-DB80-37AC-BFB6-573789D352F2}</Project>
+    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\PrusaSlicer.vcxproj">
+      <Project>{7838193B-2E0F-3E69-A813-BB2529FFAAAB}</Project>
       <Name>PrusaSlicer</Name>
     </ProjectReference>
   </ItemGroup>

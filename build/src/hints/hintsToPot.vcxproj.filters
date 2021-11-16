@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\src\PrusaSlicer\src\hints\HintsToPot.cpp">
+    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\hints\HintsToPot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\src\hints\CMakeLists.txt" />
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\hints\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{06F49595-D755-3A5B-B5CF-F36C7EE87975}</UniqueIdentifier>
+      <UniqueIdentifier>{B4C1F34B-5030-335F-8FFB-3807EEC679DD}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-# Install script for directory: C:/src/PrusaSlicer/src/libigl
+# Install script for directory: D:/CleverTech/PrusaSlicer/src/libigl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

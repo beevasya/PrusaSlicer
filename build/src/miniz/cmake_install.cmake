@@ -1,4 +1,4 @@
-# Install script for directory: C:/src/PrusaSlicer/src/miniz
+# Install script for directory: D:/CleverTech/PrusaSlicer/src/miniz
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

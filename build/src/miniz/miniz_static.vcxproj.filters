@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\src\PrusaSlicer\src\miniz\miniz.c">
+    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\miniz\miniz.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\src\PrusaSlicer\src\miniz\miniz.h">
+    <ClInclude Include="D:\CleverTech\PrusaSlicer\src\miniz\miniz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\src\miniz\CMakeLists.txt" />
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\miniz\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{56893C23-EBE0-3760-B55F-CEFB52BF206F}</UniqueIdentifier>
+      <UniqueIdentifier>{BFD6BFA8-1FCD-3CA7-A14E-CE4E0CD6CB2D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{06F49595-D755-3A5B-B5CF-F36C7EE87975}</UniqueIdentifier>
+      <UniqueIdentifier>{B4C1F34B-5030-335F-8FFB-3807EEC679DD}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

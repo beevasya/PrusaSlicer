@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: C:/src/PrusaSlicer/src/imgui
-# Build directory: C:/src/PrusaSlicer/build/src/imgui
+# Source directory: D:/CleverTech/PrusaSlicer/src/imgui
+# Build directory: D:/CleverTech/PrusaSlicer/build/src/imgui
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

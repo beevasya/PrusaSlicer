@@ -1,4 +1,4 @@
-# Install script for directory: C:/src/PrusaSlicer/src/glu-libtess
+# Install script for directory: D:/CleverTech/PrusaSlicer/src/glu-libtess
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

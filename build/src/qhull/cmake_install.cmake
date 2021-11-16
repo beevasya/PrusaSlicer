@@ -1,4 +1,4 @@
-# Install script for directory: C:/src/PrusaSlicer/src/qhull
+# Install script for directory: D:/CleverTech/PrusaSlicer/src/qhull
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

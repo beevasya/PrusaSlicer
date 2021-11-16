@@ -1,4 +1,4 @@
-# Install script for directory: C:/src/PrusaSlicer/src/boost
+# Install script for directory: D:/CleverTech/PrusaSlicer/src/boost
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

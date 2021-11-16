@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{86E71C7F-1968-3F90-A8C9-43F67AA9D4F1}</ProjectGuid>
+    <ProjectGuid>{505FFF1B-AF18-3585-8DAE-46BBC80E2142}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\hints\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\hints\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">hintsToPot.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">hintsToPot</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\hints\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\hints\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">hintsToPot.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">hintsToPot</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\hints\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\hints\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">hintsToPot.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">hintsToPot</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\hints\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\hints\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">hintsToPot.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">hintsToPot</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -bigobj -Zm520 /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -102,15 +102,15 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -123,8 +123,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/src/PrusaSlicer/build/src/hints/Debug/hintsToPot.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/src/PrusaSlicer/build/src/hints/Debug/hintsToPot.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/CleverTech/PrusaSlicer/build/src/hints/Debug/hintsToPot.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CleverTech/PrusaSlicer/build/src/hints/Debug/hintsToPot.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -133,7 +133,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -bigobj -Zm520 /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -148,15 +148,15 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -169,8 +169,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/src/PrusaSlicer/build/src/hints/Release/hintsToPot.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/src/PrusaSlicer/build/src/hints/Release/hintsToPot.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/CleverTech/PrusaSlicer/build/src/hints/Release/hintsToPot.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CleverTech/PrusaSlicer/build/src/hints/Release/hintsToPot.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -179,7 +179,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -bigobj -Zm520 /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -194,15 +194,15 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -215,8 +215,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/src/PrusaSlicer/build/src/hints/MinSizeRel/hintsToPot.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/src/PrusaSlicer/build/src/hints/MinSizeRel/hintsToPot.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/CleverTech/PrusaSlicer/build/src/hints/MinSizeRel/hintsToPot.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CleverTech/PrusaSlicer/build/src/hints/MinSizeRel/hintsToPot.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -225,7 +225,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -bigobj -Zm520 /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -240,15 +240,15 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SILENCE_CXX17_ADAPTOR_TYPEDEFS_DEPRECATION_WARNING;SLIC3R_GUI;SLIC3R_DESKTOP_INTEGRATION;HAS_WIN10SDK;_USE_MATH_DEFINES;_WIN32;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_USE_WINAPI_VERSION=0x601;BOOST_SYSTEM_USE_UTF8;wxUSE_UNICODE;_UNICODE;UNICODE;WXINTL_NO_GETTEXT_MACRO;wxNO_UNSAFE_WXSTRING_CONV;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;C:\src\PrusaSlicer-deps\usr\local\include\boost-1_75;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -261,8 +261,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/src/PrusaSlicer/build/src/hints/RelWithDebInfo/hintsToPot.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/src/PrusaSlicer/build/src/hints/RelWithDebInfo/hintsToPot.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/CleverTech/PrusaSlicer/build/src/hints/RelWithDebInfo/hintsToPot.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CleverTech/PrusaSlicer/build/src/hints/RelWithDebInfo/hintsToPot.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -270,11 +270,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\src\hints\CMakeLists.txt">
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\hints\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/src/PrusaSlicer/src/hints/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/hints/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/hints/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/hints/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -283,11 +283,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\hints\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\hints\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/src/PrusaSlicer/src/hints/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/hints/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/hints/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/hints/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -296,11 +296,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\hints\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\hints\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/src/PrusaSlicer/src/hints/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/hints/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/hints/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/hints/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -309,11 +309,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\hints\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\hints\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/src/PrusaSlicer/src/hints/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/hints/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/hints/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/hints/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -322,16 +322,16 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\hints\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\hints\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\src\PrusaSlicer\src\hints\HintsToPot.cpp" />
+    <ClCompile Include="D:\CleverTech\PrusaSlicer\src\hints\HintsToPot.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\src\PrusaSlicer\build\ZERO_CHECK.vcxproj">
-      <Project>{5B81CF25-FC9A-3669-A898-487CCFF01ACB}</Project>
+    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\ZERO_CHECK.vcxproj">
+      <Project>{668B8D7E-7268-331C-9BBD-EA919028A0C2}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

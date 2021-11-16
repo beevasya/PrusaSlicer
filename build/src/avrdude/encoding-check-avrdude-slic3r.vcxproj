@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9B5A4206-79A7-31AB-A5D7-11CDBCBA938C}</ProjectGuid>
+    <ProjectGuid>{18EFEF20-951B-3CE4-905E-C5E41BCDB9FB}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,11 +76,11 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude-slic3r main-standalone.cpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe avrdude-slic3r main-standalone.cpp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -92,7 +92,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -102,11 +102,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude-slic3r main-standalone.cpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe avrdude-slic3r main-standalone.cpp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -118,7 +118,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -128,11 +128,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude-slic3r main-standalone.cpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe avrdude-slic3r main-standalone.cpp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -144,7 +144,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\src\PrusaSlicer\src;C:\src\PrusaSlicer\build\src\platform;C:\src\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0;D:\CleverTech\PrusaSlicer\src;D:\CleverTech\PrusaSlicer\build\src\platform;D:\CleverTech\PrusaSlicer\src\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -154,11 +154,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd C:\src\PrusaSlicer\src\avrdude
+cd D:\CleverTech\PrusaSlicer\src\avrdude
 if %errorlevel% neq 0 goto :cmEnd
-C:
+D:
 if %errorlevel% neq 0 goto :cmEnd
-C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude-slic3r main-standalone.cpp
+D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe avrdude-slic3r main-standalone.cpp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -169,7 +169,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\build\CMakeFiles\694dee341f3ee3ab5233f9d8b5aa3674\encoding-check-avrdude-slic3r.rule">
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\build\CMakeFiles\03f90d9edfdbeb420fdac298b3a9091c\encoding-check-avrdude-slic3r.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking source files encodings for target avrdude-slic3r</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -178,8 +178,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe;C:\src\PrusaSlicer\src\avrdude\main-standalone.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\build-utils\Debug\encoding-check.exe;D:\CleverTech\PrusaSlicer\src\avrdude\main-standalone.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking source files encodings for target avrdude-slic3r</Message>
@@ -190,8 +190,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe;C:\src\PrusaSlicer\src\avrdude\main-standalone.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\build-utils\Release\encoding-check.exe;D:\CleverTech\PrusaSlicer\src\avrdude\main-standalone.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Checking source files encodings for target avrdude-slic3r</Message>
@@ -202,8 +202,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe;C:\src\PrusaSlicer\src\avrdude\main-standalone.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\build-utils\MinSizeRel\encoding-check.exe;D:\CleverTech\PrusaSlicer\src\avrdude\main-standalone.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Checking source files encodings for target avrdude-slic3r</Message>
@@ -214,18 +214,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe;C:\src\PrusaSlicer\src\avrdude\main-standalone.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\build-utils\RelWithDebInfo\encoding-check.exe;D:\CleverTech\PrusaSlicer\src\avrdude\main-standalone.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\src\PrusaSlicer\src\avrdude\CMakeLists.txt">
+    <CustomBuild Include="D:\CleverTech\PrusaSlicer\src\avrdude\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/src/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -233,12 +233,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\src\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\CMakeParseArguments.cmake;D:\CleverTech\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/src/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -246,12 +246,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\src\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\CMakeParseArguments.cmake;D:\CleverTech\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/src/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -259,12 +259,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\src\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\CMakeParseArguments.cmake;D:\CleverTech\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/src/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/CleverTech/PrusaSlicer/src/avrdude/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/src/PrusaSlicer -BC:/src/PrusaSlicer/build --check-stamp-file C:/src/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/CleverTech/PrusaSlicer -BD:/CleverTech/PrusaSlicer/build --check-stamp-file D:/CleverTech/PrusaSlicer/build/src/avrdude/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -272,24 +272,24 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\src\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.19\Modules\CMakeParseArguments.cmake;D:\CleverTech\PrusaSlicer\cmake\modules\bin2h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\src\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r">
+    <None Include="D:\CleverTech\PrusaSlicer\build\src\avrdude\CMakeFiles\encoding-check-avrdude-slic3r">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\src\PrusaSlicer\build\ZERO_CHECK.vcxproj">
-      <Project>{5B81CF25-FC9A-3669-A898-487CCFF01ACB}</Project>
+    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\ZERO_CHECK.vcxproj">
+      <Project>{668B8D7E-7268-331C-9BBD-EA919028A0C2}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\src\PrusaSlicer\build\src\build-utils\encoding-check.vcxproj">
-      <Project>{3D54412F-9B47-329B-9F5D-48294B5CB589}</Project>
+    <ProjectReference Include="D:\CleverTech\PrusaSlicer\build\src\build-utils\encoding-check.vcxproj">
+      <Project>{A129C527-82E1-3EFB-8D0C-DF351EE6AC60}</Project>
       <Name>encoding-check</Name>
     </ProjectReference>
   </ItemGroup>

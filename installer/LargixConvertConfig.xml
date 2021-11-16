@@ -1,0 +1,19 @@
+<ser class_id="0" tracking_level="0" version="0">
+	<_set.MaxAngle>4.00000000000000000e+01</_set.MaxAngle>
+	<_set.AngleJump>3.00000000000000000e+02</_set.AngleJump>
+	<_set.XOffset>0.00000000000000000e+00</_set.XOffset>
+	<_set.YOffset>0.00000000000000000e+00</_set.YOffset>
+	<_set.ZOffset>0.00000000000000000e+00</_set.ZOffset>
+	<_set.AngleJumpLR>4.00000000000000000e+00</_set.AngleJumpLR>
+	<_set.StrandHeight>3.35000000000000009e+00</_set.StrandHeight>
+	<_set.StrandWidth>3.39999999999999991e+00</_set.StrandWidth>
+	<_set.laserRotationAxisOffset>-2.00000000000000000e+01</_set.laserRotationAxisOffset>
+	<_set.laserRotationRadius>8.00000000000000000e+01</_set.laserRotationRadius>
+	<_set.laserSpotOffset>1.00000000000000000e+01</_set.laserSpotOffset>
+	<_set.wheelAxisOffset>4.50000000000000000e+01</_set.wheelAxisOffset>
+	<_set.wheelRotationRadius>4.00000000000000000e+01</_set.wheelRotationRadius>
+	<_set.minRotationAngle>-9.00000000000000000e+01</_set.minRotationAngle>
+	<_set.maxRotationAngle>9.00000000000000000e+01</_set.maxRotationAngle>
+	<_set.toolOffset>-5.00000000000000000e+00</_set.toolOffset>
+</ser>
+

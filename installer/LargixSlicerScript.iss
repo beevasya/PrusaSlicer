@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "PrusaLargix"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion GetEnv ('PRUSA_VER')
 #define MyAppPublisher "Largix"
 #define MyAppExeName "prusa-slicer.exe"
 #define LargixPath GetEnv ('LARGIX_PATH')
@@ -23,12 +23,13 @@ DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputBaseFilename=LargixSlicerInstaller
-SetupIconFile={#PrusaPath}\build\src\Debug\resources\icons\PrusaSlicer.ico
+OutputBaseFilename={#MyAppName}
+SetupIconFile={#PrusaPath}\build\src\Release\resources\icons\PrusaSlicer.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
-OutputDir={#InstallDir}
+OutputDir={#InstallDir}\{#MyAppVersion}
+;\{#MyAppVersion}
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"

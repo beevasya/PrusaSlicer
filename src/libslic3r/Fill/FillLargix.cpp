@@ -56,7 +56,7 @@ void FillLargix::_fill_surface_single(
     {
         set.maxNumbersStrandsPerLayer = params.print_options->config().largix_strands_number;
         set.minStrandRadius = params.print_options->config().largix_min_radius;
-        set.minStrandLength = params.print_options->config().largix_min_strand_lenght;
+        set.minStrandLength = params.print_options->config().largix_min_strand_length;
         set.strandWidth = params.print_options->config().largix_strands_width;
         set.szBin[0] = set.strandWidth * params.print_options->config().largix_number_of_stripes;
         set.szBin[1] = params.print_options->config().largix_bin_length;

@@ -290,7 +290,7 @@ void PrintConfigDef::init_common_params()
     def->max = 100;
     def->set_default_value(new ConfigOptionFloat(3.0));
 
-    def = this->add("largix_min_strand_lenght", coFloat); // strand min length
+    def = this->add("largix_min_strand_length", coFloat); // strand min length
     def->label = L("Minimal Length");
     def->category = L("Largix");
     def->tooltip = L(

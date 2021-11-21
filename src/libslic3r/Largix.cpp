@@ -51,11 +51,6 @@ bool LargixExport::do_export(Print *print, const char *path)
                                                .largix_laser_rotation_radius;
             settings.laserSpotOffset = object->config()
                                            .largix_laser_spot_offset;
-            settings.MaxAngle = object->config().largix_max_angle;
-            settings.maxRotationAngle = object->config()
-                                            .largix_max_rotation_angle;
-            settings.minRotationAngle = object->config()
-                                            .largix_min_rotation_angle;
             settings.wheelAxisOffset = object->config()
                                            .largix_wheel_axis_offset;
             settings.wheelRotationRadius = object->config()

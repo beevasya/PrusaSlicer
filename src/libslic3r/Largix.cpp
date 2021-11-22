@@ -1,12 +1,9 @@
 #include <TeddyConvert.h>
-#include <TeddySlice4Convert.h>
 #include <Exports.h>
 #include <ConvertSettings.h>
 #include <vector>
 #include <array>
 #include <Point.h>
-
-
 
 #include "libslic3r.h"
 #include "I18N.hpp"
@@ -18,6 +15,8 @@
 #include "Layer.hpp"
 #include "LargixHelper.hpp"
 #include "DefaultSettings.h"
+#include "Slice.h"
+#include <TeddySliceConvert.h>
 
 
 namespace Slic3r {
@@ -34,7 +33,7 @@ bool LargixExport::do_export(Print *print, const char *path)
                                 object->support_layers().size());
         for (auto layer : object->layers()) {
             Largix::Slice slice;
-            slice.first = layer->slice_z;
+            slice.setZ(layer->slice_z);
             for (auto region : layer->regions()) {
                 auto pLines = region->fills.as_polylines();
                 std::vector<Largix::Point2D> line_out;
@@ -42,9 +41,8 @@ bool LargixExport::do_export(Print *print, const char *path)
                 {
                     LargixHelper::convertPolylineToLargix(line, line_out);
                 }
-                slice.second.swap(line_out);
+                slice.swapPoints(line_out);
             }
-             
             settings.laserRotationAxisOffset =
                 object->config().largix_laser_rotation_axis_offset;
             settings.laserRotationRadius = object->config()

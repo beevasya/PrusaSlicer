@@ -448,7 +448,7 @@ static std::vector<std::string> s_Preset_print_options {
     "largix_min_radius","largix_min_strand_length","largix_strands_number","largix_max_angle","largix_angle_jump",
     "largix_angle_jump_lr", "largix_laser_rotation_axis_offset","largix_laser_rotation_radius","largix_laser_spot_offset",
     "largix_wheel_axis_offset","largix_wheel_rotation_radius","largix_min_rotation_angle","largix_max_rotation_angle", "largix_strands_width","largix_strands_height","largix_tool_offset",
-     "largix_bin_length","largix_number_of_stripes"   
+     "largix_bin_length","largix_number_of_stripes", "largix_maximal_combinations_number"
 };
 
 static std::vector<std::string> s_Preset_filament_options {

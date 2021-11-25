@@ -1561,6 +1561,10 @@ void TabPrint::build()
         option = optgroup->get_option("largix_number_of_stripes");
         option.opt.set_default_value(new ConfigOptionInt(4));
         optgroup->append_single_option_line(option);
+        //add maximal combinaions number
+        option = optgroup->get_option("largix_maximal_combinations_number");
+        option.opt.set_default_value(new ConfigOptionInt(100000));
+        optgroup->append_single_option_line(option);
 
         // tool params
         optgroup = page->new_optgroup(L("Tool Settings"), 20);

@@ -377,7 +377,14 @@ void Layer::make_fills(FillAdaptive::Octree* adaptive_fill_octree, FillAdaptive:
 
         for (ExPolygon &expoly : surface_fill.expolygons) {
 			// Spacing is modified by the filler to indicate adjustments. Reset it for each expolygon.
-			f->spacing = surface_fill.params.spacing;
+			
+			// If the filling pattern is ipLargix, remove the parameter responsible for compensating 
+			// the width of the print material
+			if (surface_fill.params.pattern == ipLargix)
+				f->spacing = 0;
+			else
+				f->spacing = surface_fill.params.spacing;
+
 			surface_fill.surface.expolygon = std::move(expoly);
 			Polylines polylines;
 			try {

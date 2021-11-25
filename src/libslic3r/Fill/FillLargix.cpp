@@ -75,10 +75,11 @@ void FillLargix::_fill_surface_single(
 
     if (layer.getNumBins() == 0 ||
         std::any_of(layer.strands().begin(), layer.strands().end(),
-                    [](const Largix::Strand &item) { return !item.isClosed(); })) 
+            [](const Largix::Strand& item) { return !item.isClosed(); }))
     {
         std::stringstream ss;
         ss << "C:\\Temp\\Polygons\\polygon" << (++_count) << ".wkt";
+        //ss << "C:\\src\\temp\\temp" << (++_count) << ".wkt";
         Largix::PolygonIO::saveToWktFile(pol, ss.str());
     }
 

@@ -22,6 +22,7 @@
 #include <PolygonValidator.h>
 #include <PolygonIO.h>
 #include <BuildLayerMgr.h>
+#include <FirstPolygonPoint.h>
 #include <Size.h>
 #include <TeddyDef.h>
 
@@ -51,6 +52,10 @@ void FillLargix::_fill_surface_single(
     pv.simplify(pol);
 
     Largix::Settings set;
+    //set.bUseAnglePattern = true;
+    //set.angleStart       = 0;
+    //set.angleShift[0]    = 90;
+    //set.clockwiseFlag    = 2;
     set.szBin = Largix::Size2D{ set.strandWidth, 3.5 };
     if (params.print_options)
     {
@@ -61,18 +66,28 @@ void FillLargix::_fill_surface_single(
         set.szBin[0] = set.strandWidth * params.print_options->config().largix_number_of_stripes;
         set.szBin[1] = params.print_options->config().largix_bin_length;
     }
-    /*else
-    {
-        set.minStrandLength = set.szBin[1] * 2.5;
-        set.minStrandRadius = 5;
-        set.maxNumbersStrandsPerLayer = 1;
-    }*/
 
     Largix::Layer layer;
-    Largix::BuildLayerMgr buider(pol, set);
 
-    buider.build(layer);
+    if (set.bUseAnglePattern) 
+    {
+        Point prusaPoint = bounding_box.center();
+        Largix::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
 
+        size_t index;
+        Largix::FirstPolygonPoint pointFinder(pol, set);
+        if (pointFinder.find(center, thickness_layers, index)) 
+        { 
+            Largix::BuildLayer buider(pol, set);
+            buider.build(index, layer);
+        }
+
+    } 
+    else 
+    {
+        Largix::BuildLayerMgr buider(pol, set);
+        buider.build(layer);
+    }
     if (layer.getNumBins() == 0 ||
         std::any_of(layer.strands().begin(), layer.strands().end(),
             [](const Largix::Strand& item) { return !item.isClosed(); }))

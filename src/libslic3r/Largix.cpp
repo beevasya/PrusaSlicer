@@ -60,6 +60,10 @@ bool LargixExport::do_export(Print *print, const char *path)
                                             .largix_strands_width;
             settings.toolOffset = object->config()
                                             .largix_tool_offset;
+            if (object->config().largix_angle_pattern)
+            {
+                settings.stairMode = object->config().largix_stair_mode;
+            }
             Largix::TeddySliceConvert conv(slice, settings);
             conv.convert();
             slices.push_back(conv.getSlice());

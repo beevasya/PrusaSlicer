@@ -111,6 +111,13 @@ static t_config_enum_values s_keys_map_InfillPattern {
 };
 CONFIG_OPTION_ENUM_DEFINE_STATIC_MAPS(InfillPattern)
 
+static t_config_enum_values s_keys_map_AntiClockwiseParam {
+    {"not in use",          cwpNotUse},
+    {"clockwise",           cwpClockwise},
+    {"anticlockwise",       cwpAntiClockWise}
+};
+CONFIG_OPTION_ENUM_DEFINE_STATIC_MAPS(AntiClockwiseParam)
+
 static t_config_enum_values s_keys_map_IroningType {
     { "top",            int(IroningType::TopSurfaces) },
     { "topmost",        int(IroningType::TopmostOnly) },
@@ -329,6 +336,70 @@ void PrintConfigDef::init_common_params()
     def->max = 20;
     def->set_default_value(new ConfigOptionFloat(3.4));
     
+    def = this->add("largix_angle_pattern", coBool); // use angle pattern 
+    def->label = L("Angle Pattern");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Use Angle Pattern in fill polygons algorithm.");
+    def->set_default_value(new ConfigOptionBool(false));
+
+    def = this->add("largix_stair_mode", coBool); // use stair mode 
+    def->label = L("Stair Mode");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Stair Mode.");
+    def->set_default_value(new ConfigOptionBool(false));
+
+    def = this->add("largix_angle_pattern_start_angle", coFloat); // start angle
+    def->label = L("Start Angle");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Start Angle.");
+    def->sidetext = L("°");
+    def->min = 0;
+    def->max = 360;
+    def->set_default_value(new ConfigOptionFloat(0));
+
+    def = this->add("largix_angle_pattern0", coFloat); // angle pattern 0
+    def->label = L("First Angle");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "First Angle Pattern.");
+    def->sidetext = L("°");
+    def->min = 0;
+    def->max = 360;
+    def->set_default_value(new ConfigOptionFloat(60));
+
+    def = this->add("largix_angle_pattern1", coFloat); // angle pattern 1
+    def->label = L("Second Angle");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Second Angle Pattern.");
+    def->sidetext = L("°");
+    def->min = 0;
+    def->max = 360;
+    def->set_default_value(new ConfigOptionFloat(0));
+
+    def = this->add("largix_angle_pattern2", coFloat); // angle pattern 2
+    def->label = L("Third Angle");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Third Angle Pattern.");
+    def->sidetext = L("°");
+    def->min = 0;
+    def->max = 360;
+    def->set_default_value(new ConfigOptionFloat(0));
+
+    def = this->add("largix_angle_pattern3", coFloat); // angle pattern 3
+    def->label = L("Fourth Angle");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Fourth Angle Pattern.");
+    def->sidetext = L("°");
+    def->min = 0;
+    def->max = 360;
+    def->set_default_value(new ConfigOptionFloat(0));
+
     def = this->add("largix_strands_height", coFloat); // strand height
     def->label = L("Height");
     def->category = L("Largix");
@@ -338,6 +409,15 @@ void PrintConfigDef::init_common_params()
     def->min = 1;
     def->max = 20;
     def->set_default_value(new ConfigOptionFloat(3.35));
+
+    def = this->add("largix_anticlockwise_param", coEnum);     // anticlockwise param
+    def->label = L("(Anti)Clockwise Parameter");
+    def->tooltip = L("Clockwise / Anticlockwise or None parameter");
+    def->enum_keys_map = &ConfigOptionEnum<AntiClockwiseParam>::get_enum_values();
+    def->enum_values.push_back("not in use");
+    def->enum_values.push_back("clockwise");
+    def->enum_values.push_back("anticlockwise");
+    def->set_default_value(new ConfigOptionEnum<AntiClockwiseParam>(cwpNotUse));
 
     def = this->add("largix_tool_offset", coFloat); // tool offset
     def->label = L("Tool Offset");

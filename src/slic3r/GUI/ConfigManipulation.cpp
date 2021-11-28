@@ -324,6 +324,12 @@ void ConfigManipulation::toggle_print_fff_options(DynamicPrintConfig* config)
 
     bool have_avoid_crossing_perimeters = config->opt_bool("avoid_crossing_perimeters");
     toggle_field("avoid_crossing_perimeters_max_detour", have_avoid_crossing_perimeters);
+ 
+    bool have_angle_pattern = config->opt_bool("largix_angle_pattern");
+    for (auto el : { "largix_angle_pattern_start_angle", "largix_angle_pattern0", "largix_angle_pattern1", "largix_angle_pattern2", "largix_angle_pattern3",
+                      "largix_stair_mode"})
+        toggle_field(el, have_angle_pattern);
+
 }
 
 void ConfigManipulation::update_print_sla_config(DynamicPrintConfig* config, const bool is_global_config/* = false*/)

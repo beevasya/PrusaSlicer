@@ -65,6 +65,7 @@ void FillLargix::_fill_surface_single(
         set.strandWidth = params.print_options->config().largix_strands_width;
         set.szBin[0] = set.strandWidth * params.print_options->config().largix_number_of_stripes;
         set.szBin[1] = params.print_options->config().largix_bin_length;
+        set.maxNumberOfStrandCombinations = params.print_options->config().largix_maximal_combinations_number;
     }
 
     Largix::Layer layer;

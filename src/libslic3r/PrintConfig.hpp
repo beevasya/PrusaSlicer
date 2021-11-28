@@ -512,6 +512,7 @@ PRINT_CONFIG_CLASS_DEFINE(
     ((ConfigOptionFloat, largix_min_radius))
     ((ConfigOptionFloat, largix_min_strand_length))
     ((ConfigOptionInt, largix_strands_number)) 
+    ((ConfigOptionInt, largix_maximal_combinations_number))
     ((ConfigOptionFloat, largix_strands_width))
     ((ConfigOptionFloat, largix_strands_height))
     ((ConfigOptionFloat, largix_bin_length))

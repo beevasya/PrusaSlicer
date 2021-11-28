@@ -309,11 +309,21 @@ void PrintConfigDef::init_common_params()
     def->max = 1000;
     def->set_default_value(new ConfigOptionInt(2));
 
+    def = this->add("largix_maximal_combinations_number", coInt); // maximal combinations number
+    def->label = L("Maximal Combinations Number");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "This parameter determines the maximum number of combinations of enumerating options for the location of strands within the polygon.");
+    def->sidetext = L("combinations");
+    def->min = 10;
+    def->max = 1000000000;
+    def->set_default_value(new ConfigOptionInt(100000));
+
     def = this->add("largix_strands_width", coFloat); // strand width
     def->label = L("Width");
     def->category = L("Largix");
     def->tooltip = L(
-        "define starnd width.");
+        "define strand width.");
     def->sidetext = L("mm");
     def->min = 1;
     def->max = 20;
@@ -323,7 +333,7 @@ void PrintConfigDef::init_common_params()
     def->label = L("Height");
     def->category = L("Largix");
     def->tooltip = L(
-        "define starnd height.");
+        "define strand height.");
     def->sidetext = L("mm");
     def->min = 1;
     def->max = 20;

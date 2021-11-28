@@ -50,12 +50,12 @@ void FillLargix::_fill_surface_single(
     }
 
     pv.simplify(pol);
+    if (pol.outer().empty()) {
+        assert(!"Failed to build path for empty polygon!");
+        return;
+    }
 
     Largix::Settings set;
-    //set.bUseAnglePattern = true;
-    //set.angleStart       = 0;
-    //set.angleShift[0]    = 90;
-    //set.clockwiseFlag    = 2;
     set.szBin = Largix::Size2D{ set.strandWidth, 3.5 };
     if (params.print_options)
     {
@@ -70,6 +70,7 @@ void FillLargix::_fill_surface_single(
         if (set.bUseAnglePattern)
         {
             set.clockwiseFlag = params.print_options->config().largix_anticlockwise_param;
+            set.angleStart = params.print_options->config().largix_angle_pattern_start_angle;
             set.angleShift[0] = params.print_options->config().largix_angle_pattern0;
             set.angleShift[1] = params.print_options->config().largix_angle_pattern1;
             set.angleShift[2] = params.print_options->config().largix_angle_pattern2;
@@ -85,8 +86,9 @@ void FillLargix::_fill_surface_single(
         Largix::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
 
         size_t index;
+        size_t layerNum = (size_t) (z / params.print_options->config().largix_strands_height + 0.5);
         Largix::FirstPolygonPoint pointFinder(pol, set);
-        if (pointFinder.find(center, thickness_layers, index)) 
+        if (pointFinder.find(center, layerNum, index)) 
         { 
             Largix::BuildLayer buider(pol, set);
             buider.build(index, layer);

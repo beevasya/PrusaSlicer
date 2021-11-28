@@ -32,6 +32,12 @@
 
 namespace Slic3r {
 
+    enum AntiClockwiseParam: int {
+        cwpNotUse,
+        cwpClockwise,
+        cwpAntiClockWise
+    };
+
 enum GCodeFlavor : unsigned char {
     gcfRepRapSprinter, gcfRepRapFirmware, gcfRepetier, gcfTeacup, gcfMakerWare, gcfMarlinLegacy, gcfMarlinFirmware, gcfSailfish, gcfMach3, gcfMachinekit,
     gcfSmoothie, gcfNoExtrusion,
@@ -130,6 +136,7 @@ enum DraftShield {
     template<> const t_config_enum_names& ConfigOptionEnum<NAME>::get_enum_names(); \
     template<> const t_config_enum_values& ConfigOptionEnum<NAME>::get_enum_values();
 
+CONFIG_OPTION_ENUM_DECLARE_STATIC_MAPS(AntiClockwiseParam)
 CONFIG_OPTION_ENUM_DECLARE_STATIC_MAPS(PrinterTechnology)
 CONFIG_OPTION_ENUM_DECLARE_STATIC_MAPS(GCodeFlavor)
 CONFIG_OPTION_ENUM_DECLARE_STATIC_MAPS(MachineLimitsUsage)
@@ -508,26 +515,34 @@ PRINT_CONFIG_CLASS_DEFINE(
     ((ConfigOptionBool,                thick_bridges))
     ((ConfigOptionFloat,               xy_size_compensation))
     ((ConfigOptionBool,                wipe_into_objects))
-    // My test options for largix 2
-    ((ConfigOptionFloat, largix_min_radius))
-    ((ConfigOptionFloat, largix_min_strand_length))
-    ((ConfigOptionInt, largix_strands_number)) 
-    ((ConfigOptionInt, largix_maximal_combinations_number))
-    ((ConfigOptionFloat, largix_strands_width))
-    ((ConfigOptionFloat, largix_strands_height))
-    ((ConfigOptionFloat, largix_bin_length))
-    ((ConfigOptionInt, largix_number_of_stripes))
-    ((ConfigOptionFloat, largix_tool_offset))
-    ((ConfigOptionFloat, largix_max_angle))
-    ((ConfigOptionFloat, largix_angle_jump))
-    ((ConfigOptionFloat, largix_angle_jump_lr))
-    ((ConfigOptionFloat, largix_laser_rotation_axis_offset))
-    ((ConfigOptionFloat, largix_laser_rotation_radius))
-    ((ConfigOptionFloat, largix_laser_spot_offset))
-    ((ConfigOptionFloat, largix_wheel_axis_offset))
-    ((ConfigOptionFloat, largix_wheel_rotation_radius))
-    ((ConfigOptionFloat, largix_min_rotation_angle))
-    ((ConfigOptionFloat, largix_max_rotation_angle))
+    // My test options for largix 2 
+    ((ConfigOptionBool,                largix_angle_pattern))
+    ((ConfigOptionBool,                largix_stair_mode))
+    ((ConfigOptionFloat,               largix_angle_pattern_start_angle))
+    ((ConfigOptionFloat,               largix_angle_pattern0))
+    ((ConfigOptionFloat,               largix_angle_pattern1))
+    ((ConfigOptionFloat,               largix_angle_pattern2))
+    ((ConfigOptionFloat,               largix_angle_pattern3))
+    ((ConfigOptionEnum<AntiClockwiseParam>, largix_anticlockwise_param))
+    ((ConfigOptionFloat,                largix_min_radius))
+    ((ConfigOptionFloat,                largix_min_strand_length))
+    ((ConfigOptionInt,                  largix_strands_number)) 
+    ((ConfigOptionInt,                  largix_maximal_combinations_number))
+    ((ConfigOptionFloat,                largix_strands_width))
+    ((ConfigOptionFloat,                largix_strands_height))
+    ((ConfigOptionFloat,                largix_bin_length))
+    ((ConfigOptionInt,                  largix_number_of_stripes))
+    ((ConfigOptionFloat,                largix_tool_offset))
+    ((ConfigOptionFloat,                largix_max_angle))
+    ((ConfigOptionFloat,                largix_angle_jump))
+    ((ConfigOptionFloat,                largix_angle_jump_lr))
+    ((ConfigOptionFloat,                largix_laser_rotation_axis_offset))
+    ((ConfigOptionFloat,                largix_laser_rotation_radius))
+    ((ConfigOptionFloat,                largix_laser_spot_offset))
+    ((ConfigOptionFloat,                largix_wheel_axis_offset))
+    ((ConfigOptionFloat,                largix_wheel_rotation_radius))
+    ((ConfigOptionFloat,                largix_min_rotation_angle))
+    ((ConfigOptionFloat,                largix_max_rotation_angle))
 )
 
 // This object is mapped to Perl as Slic3r::Config::PrintRegion.

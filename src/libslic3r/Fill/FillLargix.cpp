@@ -66,6 +66,15 @@ void FillLargix::_fill_surface_single(
         set.szBin[0] = set.strandWidth * params.print_options->config().largix_number_of_stripes;
         set.szBin[1] = params.print_options->config().largix_bin_length;
         set.maxNumberOfStrandCombinations = params.print_options->config().largix_maximal_combinations_number;
+        set.bUseAnglePattern = params.print_options->config().largix_angle_pattern;
+        if (set.bUseAnglePattern)
+        {
+            set.clockwiseFlag = params.print_options->config().largix_anticlockwise_param;
+            set.angleShift[0] = params.print_options->config().largix_angle_pattern0;
+            set.angleShift[1] = params.print_options->config().largix_angle_pattern1;
+            set.angleShift[2] = params.print_options->config().largix_angle_pattern2;
+            set.angleShift[3] = params.print_options->config().largix_angle_pattern3;
+        }
     }
 
     Largix::Layer layer;

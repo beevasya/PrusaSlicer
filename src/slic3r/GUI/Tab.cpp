@@ -1565,6 +1565,34 @@ void TabPrint::build()
         option = optgroup->get_option("largix_maximal_combinations_number");
         option.opt.set_default_value(new ConfigOptionInt(100000));
         optgroup->append_single_option_line(option);
+        //add anti clockwise parameter
+        option = optgroup->get_option("largix_anticlockwise_param");
+        //option.opt.set_default_value(new ConfigOptionInt(100000));
+        optgroup->append_single_option_line(option);
+        
+        // Angle pattern params
+        optgroup = page->new_optgroup(L("Angle Pattern"), 20);
+        // bool use angle pattern
+        option = optgroup->get_option("largix_angle_pattern");
+        optgroup->append_single_option_line(option);
+        // bool start angle
+        option = optgroup->get_option("largix_angle_pattern_start_angle");
+        optgroup->append_single_option_line(option);
+        // float first parretn angle
+        option = optgroup->get_option("largix_angle_pattern0");
+        optgroup->append_single_option_line(option);
+        // float second parretn angle
+        option = optgroup->get_option("largix_angle_pattern1");
+        optgroup->append_single_option_line(option);
+        // float thrid parretn angle
+        option = optgroup->get_option("largix_angle_pattern2");
+        optgroup->append_single_option_line(option);
+        // float fourth parretn angle
+        option = optgroup->get_option("largix_angle_pattern3");
+        optgroup->append_single_option_line(option);
+        // stair mode
+        option = optgroup->get_option("largix_stair_mode");
+        optgroup->append_single_option_line(option);
 
         // tool params
         optgroup = page->new_optgroup(L("Tool Settings"), 20);

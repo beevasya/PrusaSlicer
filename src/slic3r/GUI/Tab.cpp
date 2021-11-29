@@ -1575,6 +1575,9 @@ void TabPrint::build()
         // bool use angle pattern
         option = optgroup->get_option("largix_angle_pattern");
         optgroup->append_single_option_line(option);
+        // stair mode
+        option = optgroup->get_option("largix_stair_mode");
+        optgroup->append_single_option_line(option);
         // bool start angle
         option = optgroup->get_option("largix_angle_pattern_start_angle");
         optgroup->append_single_option_line(option);
@@ -1589,9 +1592,6 @@ void TabPrint::build()
         optgroup->append_single_option_line(option);
         // float fourth parretn angle
         option = optgroup->get_option("largix_angle_pattern3");
-        optgroup->append_single_option_line(option);
-        // stair mode
-        option = optgroup->get_option("largix_stair_mode");
         optgroup->append_single_option_line(option);
 
         // tool params

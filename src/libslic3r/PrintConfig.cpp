@@ -361,7 +361,7 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(0));
 
     def = this->add("largix_angle_pattern0", coFloat); // angle pattern 0
-    def->label = L("First Angle");
+    def->label = L("Shift 1");
     def->category = L("Largix");
     def->tooltip = L(
         "First Angle Pattern.");
@@ -371,7 +371,7 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(60));
 
     def = this->add("largix_angle_pattern1", coFloat); // angle pattern 1
-    def->label = L("Second Angle");
+    def->label = L("Shift 2");
     def->category = L("Largix");
     def->tooltip = L(
         "Second Angle Pattern.");
@@ -381,7 +381,7 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(0));
 
     def = this->add("largix_angle_pattern2", coFloat); // angle pattern 2
-    def->label = L("Third Angle");
+    def->label = L("Shift 3");
     def->category = L("Largix");
     def->tooltip = L(
         "Third Angle Pattern.");
@@ -391,7 +391,7 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(0));
 
     def = this->add("largix_angle_pattern3", coFloat); // angle pattern 3
-    def->label = L("Fourth Angle");
+    def->label = L("Shift 4");
     def->category = L("Largix");
     def->tooltip = L(
         "Fourth Angle Pattern.");
@@ -411,10 +411,10 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(3.35));
 
     def = this->add("largix_anticlockwise_param", coEnum);     // anticlockwise param
-    def->label = L("(Anti)Clockwise Parameter");
-    def->tooltip = L("Clockwise / Anticlockwise or None parameter");
+    def->label = L("Clockwise");
+    def->tooltip = L("Clockwise parameter");
     def->enum_keys_map = &ConfigOptionEnum<AntiClockwiseParam>::get_enum_values();
-    def->enum_values.push_back("not in use");
+    def->enum_values.push_back("not use");
     def->enum_values.push_back("clockwise");
     def->enum_values.push_back("anticlockwise");
     def->set_default_value(new ConfigOptionEnum<AntiClockwiseParam>(cwpNotUse));

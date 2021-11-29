@@ -95,10 +95,10 @@ const float* GeometryBuffer::get_vertices_data() const
     return (m_vertices.size() > 0) ? (const float*)m_vertices.data() : nullptr;
 }
 
-const float Bed3D::Axes::DefaultStemRadius = 0.5f;
+const float Bed3D::Axes::DefaultStemRadius = 4.f; //0.5
 const float Bed3D::Axes::DefaultStemLength = 25.0f;
-const float Bed3D::Axes::DefaultTipRadius = 2.5f * Bed3D::Axes::DefaultStemRadius;
-const float Bed3D::Axes::DefaultTipLength = 5.0f;
+const float Bed3D::Axes::DefaultTipRadius = 2.5f * Bed3D::Axes::DefaultStemRadius; //25
+const float Bed3D::Axes::DefaultTipLength = 50.0f;//5
 
 void Bed3D::Axes::render() const
 {
@@ -203,7 +203,7 @@ bool Bed3D::set_shape(const Pointfs& shape, const std::string& custom_texture, c
 
     // Set the origin and size for rendering the coordinate system axes.
     m_axes.set_origin({ 0.0, 0.0, static_cast<double>(GROUND_Z) });
-    m_axes.set_stem_length(0.1f * static_cast<float>(m_bounding_box.max_size()));
+    m_axes.set_stem_length(0.15f * static_cast<float>(m_bounding_box.max_size())); //0.1
 
     // Let the calee to update the UI.
     return true;

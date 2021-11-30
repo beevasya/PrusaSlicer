@@ -1614,10 +1614,11 @@ void TabPrint::build()
         option.opt.set_default_value(new ConfigOptionFloat(40.0));
         optgroup->append_single_option_line(option);
 
-        option = optgroup->get_option("largix_laser_spot_offset");
-        option.opt.set_default_value(new ConfigOptionFloat(10.0));
+        option = optgroup->get_option("largix_use_const_wheel_angle");
         optgroup->append_single_option_line(option);
 
+        option = optgroup->get_option("largix_const_wheel_angle");
+        optgroup->append_single_option_line(option);
 
         optgroup = page->new_optgroup(L("Laser Rail"), 20);
 
@@ -1627,6 +1628,16 @@ void TabPrint::build()
 
         option = optgroup->get_option("largix_laser_rotation_radius");
         option.opt.set_default_value(new ConfigOptionFloat(80.0));
+        optgroup->append_single_option_line(option);
+
+        option = optgroup->get_option("largix_laser_spot_offset");
+        option.opt.set_default_value(new ConfigOptionFloat(10.0));
+        optgroup->append_single_option_line(option);
+
+        option = optgroup->get_option("largix_use_const_laser_angle");
+        optgroup->append_single_option_line(option);
+
+        option = optgroup->get_option("largix_const_laser_angle");
         optgroup->append_single_option_line(option);
 
         //option = optgroup->get_option("largix_min_rotation_angle");

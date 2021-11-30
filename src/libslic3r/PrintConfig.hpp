@@ -515,7 +515,11 @@ PRINT_CONFIG_CLASS_DEFINE(
     ((ConfigOptionBool,                thick_bridges))
     ((ConfigOptionFloat,               xy_size_compensation))
     ((ConfigOptionBool,                wipe_into_objects))
-    // My test options for largix 2 
+    //options for largix settings 
+    ((ConfigOptionBool,                largix_use_const_wheel_angle))
+    ((ConfigOptionBool,                largix_use_const_laser_angle))
+    ((ConfigOptionFloat,               largix_const_wheel_angle))
+    ((ConfigOptionFloat,               largix_const_laser_angle))
     ((ConfigOptionBool,                largix_angle_pattern))
     ((ConfigOptionBool,                largix_stair_mode))
     ((ConfigOptionFloat,               largix_angle_pattern_start_angle))

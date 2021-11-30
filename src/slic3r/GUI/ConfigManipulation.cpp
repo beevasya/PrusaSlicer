@@ -330,6 +330,14 @@ void ConfigManipulation::toggle_print_fff_options(DynamicPrintConfig* config)
                       "largix_stair_mode"})
         toggle_field(el, have_angle_pattern);
 
+    bool use_const_wheel_angle = config->opt_bool("largix_use_const_wheel_angle");
+    for (auto el : { "largix_const_wheel_angle" })
+        toggle_field(el, use_const_wheel_angle);
+
+    bool use_const_laser_angle = config->opt_bool("largix_use_const_laser_angle");
+    for (auto el : { "largix_const_laser_angle" })
+        toggle_field(el, use_const_laser_angle);
+
 }
 
 void ConfigManipulation::update_print_sla_config(DynamicPrintConfig* config, const bool is_global_config/* = false*/)

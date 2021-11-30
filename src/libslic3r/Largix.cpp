@@ -64,6 +64,11 @@ bool LargixExport::do_export(Print *print, const char *path)
             {
                 settings.stairMode = object->config().largix_stair_mode;
             }
+            settings.constWheelAngleParams.useConstValue = object->config().largix_use_const_wheel_angle;
+            settings.constLaserAngleParams.useConstValue = object->config().largix_use_const_laser_angle;
+            settings.constWheelAngleParams.constAngle = object->config().largix_const_wheel_angle;
+            settings.constLaserAngleParams.constAngle = object->config().largix_const_laser_angle;
+
             Largix::TeddySliceConvert conv(slice, settings);
             conv.convert();
             slices.push_back(conv.getSlice());

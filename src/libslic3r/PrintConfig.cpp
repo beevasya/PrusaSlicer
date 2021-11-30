@@ -336,6 +336,40 @@ void PrintConfigDef::init_common_params()
     def->max = 20;
     def->set_default_value(new ConfigOptionFloat(3.4));
     
+    def = this->add("largix_use_const_wheel_angle", coBool); // use const while angle 
+    def->label = L("Use Constant Press Wheel Angle");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Use Constant Press Wheel Angle - do not activate algorithm to calculate press wheel position and angle");
+    def->set_default_value(new ConfigOptionBool(false));
+
+    def = this->add("largix_use_const_laser_angle", coBool); // use const laser angle 
+    def->label = L("Use Constant Laser Angle");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Use Constant Laser Angle - do not activate algorithm to calculate press laser angle");
+    def->set_default_value(new ConfigOptionBool(false));
+
+    def = this->add("largix_const_wheel_angle", coFloat); // constant wheel angle
+    def->label = L("Constant Press Wheel Angle Value");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Constant Press Wheel Angle Value");
+    def->sidetext = L("°");
+    def->min = 0;
+    def->max = 360;
+    def->set_default_value(new ConfigOptionFloat(0));
+
+    def = this->add("largix_const_laser_angle", coFloat); // constant laser angle
+    def->label = L("Constant Laser Angle Value");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Constant Laser Angle Value");
+    def->sidetext = L("°");
+    def->min = 0;
+    def->max = 360;
+    def->set_default_value(new ConfigOptionFloat(0));
+
     def = this->add("largix_angle_pattern", coBool); // use angle pattern 
     def->label = L("Angle Pattern");
     def->category = L("Largix");

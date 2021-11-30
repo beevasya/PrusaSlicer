@@ -10,16 +10,28 @@
 #include <vector>
 #include <Point.h>
 
+namespace Largix 
+{
+    struct ConvertSettings;
+}
 
-namespace Slic3r {    
+namespace Slic3r
+{    
+    class PrintObjectConfig;
 
     class LargixExport
     {
     public:
         LargixExport() {}
-        ~LargixExport() = default;
+        virtual ~LargixExport() = default;
 
-        bool do_export(Print *print, const char *path);
+        bool do_export(Print* print, const char *path);
+
+    protected: 
+
+        void fillSettings(const PrintObjectConfig& config, Largix::ConvertSettings &set);
+
+        size_t getNumOfSlices(const Print *print);
     };
 } // namespace Slic3r
 

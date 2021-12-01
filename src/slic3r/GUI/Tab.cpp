@@ -1593,6 +1593,9 @@ void TabPrint::build()
         // float fourth parretn angle
         option = optgroup->get_option("largix_angle_pattern3");
         optgroup->append_single_option_line(option);
+        // test multivalues field
+        //option = optgroup->get_option("largix_test_multi_field");
+        //optgroup->append_single_option_line(option);
 
         // tool params
         optgroup = page->new_optgroup(L("Tool Settings"), 20);

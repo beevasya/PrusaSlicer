@@ -434,6 +434,18 @@ void PrintConfigDef::init_common_params()
     def->max = 360;
     def->set_default_value(new ConfigOptionFloat(0));
 
+    def = this->add("largix_test_multi_field", coFloats); // angle pattern 3
+    def->label = L("Test");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Test multi values field");
+    def->sidetext = L("°");
+    //def->min = 0;
+    //def->max = 360;
+    def->gui_flags = "serialized";
+    def->set_default_value(new ConfigOptionFloats({0, 600, 200}));
+
+
     def = this->add("largix_strands_height", coFloat); // strand height
     def->label = L("Height");
     def->category = L("Largix");

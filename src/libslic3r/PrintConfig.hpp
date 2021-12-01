@@ -547,6 +547,8 @@ PRINT_CONFIG_CLASS_DEFINE(
     ((ConfigOptionFloat,                largix_wheel_rotation_radius))
     ((ConfigOptionFloat,                largix_min_rotation_angle))
     ((ConfigOptionFloat,                largix_max_rotation_angle))
+    ((ConfigOptionFloats,               largix_test_multi_field))
+
 )
 
 // This object is mapped to Perl as Slic3r::Config::PrintRegion.

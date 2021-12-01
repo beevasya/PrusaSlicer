@@ -35,7 +35,7 @@ namespace Slic3r
         set.StrandHeight = config.largix_strands_height;
         set.StrandWidth  = config.largix_strands_width;
         set.toolOffset   = config.largix_tool_offset;
-        set.toolOffset   = config.largix_stair_mode;
+        set.stairMode   = config.largix_stair_mode;
         set.constWheelAngleParams.useConstValue = config.largix_use_const_wheel_angle;
         set.constLaserAngleParams.useConstValue = config.largix_use_const_laser_angle;
         set.constWheelAngleParams.constAngle = config.largix_const_wheel_angle;

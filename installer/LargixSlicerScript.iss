@@ -45,8 +45,8 @@ Source: "{#PrusaPath}\build\src\Release\prusa-slicer.exp"; DestDir: "{app}"; Fla
 Source: "{#PrusaPath}\build\src\Release\PrusaSlicer.lib"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\build\src\Release\prusa-slicer.lib"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#LargixPath}\PathNavigator\x64\Release\PathNavigator.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#LargixPath}\GCodeConvert\x64\Release\TeddyConvert.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#PrusaPath}\\build\src\Release\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#LargixPath}\ProgramBuilder\x64\Release\ProgramBuilder.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\build\src\Release\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#PrusaDepPath}\usr\local\bin\libgmp-10.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaDepPath}\usr\local\bin\libmpfr-4.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\installer\LargixConvertConfig.xml"; DestDir: "{app}"; Flags: ignoreversion

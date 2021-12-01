@@ -17,6 +17,7 @@ local-lib
 /.vscode/
 build-linux/*
 deps/build-linux/*
+
 # Prerequisites
 *.d
 
@@ -51,7 +52,7 @@ deps/build-linux/*
 *.app
 
 Skip to content
-Search or jump to…
+Search or jump toâ€¦
 
 Pull requests
 Issues
@@ -467,7 +468,7 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
-© 2021 GitHub, Inc.
+Â© 2021 GitHub, Inc.
 Terms
 Privacy
 Security

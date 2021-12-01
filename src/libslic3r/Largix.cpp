@@ -56,7 +56,9 @@ namespace Slic3r
     bool LargixExport::do_export(Print *print, const char *path)
     {
         size_t num = getNumOfSlices(print);
-        if (num == 0) return false;
+        if (num == 0) 
+            throw Slic3r::ExportError(std::string("SCV export failed. No slices found for writing!"));
+
         Largix::Slices slices(num);
 
         const auto& objects = print->objects();
@@ -85,9 +87,11 @@ namespace Slic3r
         fillSettings(objects.front()->config(), settings);
 
         Largix::TeddyConvert convert(slices, settings);
-        if (!convert.convert()) { return false; }
+        if (!convert.convert())
+            throw Slic3r::ExportError(std::string("Fail to convert slices to program!"));
 
-        if (!writeTeddyCSV(path, convert.getProgram())) { return false; }
+        if (!writeTeddyCSV(path, convert.getProgram())) 
+            throw Slic3r::RuntimeError(std::string("Fail to export program to file ") + path);
 
         return true;
     }

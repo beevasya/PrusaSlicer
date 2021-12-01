@@ -35,7 +35,7 @@ namespace Slic3r
         set.StrandHeight = config.largix_strands_height;
         set.StrandWidth  = config.largix_strands_width;
         set.toolOffset   = config.largix_tool_offset;
-        set.toolOffset   = config.largix_stair_mode;
+        set.stairMode   = config.largix_stair_mode;
         set.constWheelAngleParams.useConstValue = config.largix_use_const_wheel_angle;
         set.constLaserAngleParams.useConstValue = config.largix_use_const_laser_angle;
         set.constWheelAngleParams.constAngle = config.largix_const_wheel_angle;
@@ -56,7 +56,9 @@ namespace Slic3r
     bool LargixExport::do_export(Print *print, const char *path)
     {
         size_t num = getNumOfSlices(print);
-        if (num == 0) return false;
+        if (num == 0) 
+            throw Slic3r::ExportError(std::string("SCV export failed. No slices found for writing!"));
+
         Largix::Slices slices(num);
 
         const auto& objects = print->objects();
@@ -85,9 +87,11 @@ namespace Slic3r
         fillSettings(objects.front()->config(), settings);
 
         Largix::TeddyConvert convert(slices, settings);
-        if (!convert.convert()) { return false; }
+        if (!convert.convert())
+            throw Slic3r::ExportError(std::string("Fail to convert slices to program!"));
 
-        if (!writeTeddyCSV(path, convert.getProgram())) { return false; }
+        if (!writeTeddyCSV(path, convert.getProgram())) 
+            throw Slic3r::RuntimeError(std::string("Fail to export program to file ") + path);
 
         return true;
     }

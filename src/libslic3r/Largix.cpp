@@ -57,7 +57,7 @@ namespace Slic3r
     {
         size_t num = getNumOfSlices(print);
         if (num == 0) 
-            throw Slic3r::ExportError(std::string("SCV export failed. No slices found for writing!"));
+            throw Slic3r::ExportError(std::string("CSV export failed. No slices found for writing!"));
 
         Largix::Slices slices(num);
 

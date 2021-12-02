@@ -356,8 +356,8 @@ void PrintConfigDef::init_common_params()
     def->tooltip = L(
         "Constant Press Wheel Angle Value");
     def->sidetext = L("°");
-    def->min = 0;
-    def->max = 360;
+    def->min = -90;
+    def->max = 90;
     def->set_default_value(new ConfigOptionFloat(0));
 
     def = this->add("largix_const_laser_angle", coFloat); // constant laser angle
@@ -366,8 +366,8 @@ void PrintConfigDef::init_common_params()
     def->tooltip = L(
         "Constant Laser Angle Value");
     def->sidetext = L("°");
-    def->min = 0;
-    def->max = 360;
+    def->min = -90;
+    def->max = 90;
     def->set_default_value(new ConfigOptionFloat(0));
 
     def = this->add("largix_angle_pattern", coBool); // use angle pattern 

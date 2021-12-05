@@ -70,10 +70,10 @@ namespace Slic3r
             {
                 for (auto region : layer->regions()) 
                 {
-                    slices[i].setZ(layer->slice_z);
+                    slices[i].setZ(objects.front()->print()->config().z_offset + layer->print_z - layer->height);
                     auto pLines = region->fills.as_polylines();
                     std::vector<Largix::Point2D> line_out;
-                    for (auto line : pLines) 
+                    for (const auto& line : pLines) 
                     {
                         LargixHelper::convertPolylineToLargixShift(sh, line, line_out);
                     }

@@ -9,6 +9,7 @@
 #define PrusaPath GetEnv ('PRUSA_PATH')
 #define PrusaDepPath GetEnv ('PRUSA_DEP_PATH')
 #define InstallDir   GetEnv('INSTALL_DIR')
+#define PrusaInstallDir  GetEnv('PRUSA_INSTALL_DIR')
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -18,7 +19,7 @@ AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
-DefaultDirName={#InstallDir}\{#MyAppName}
+DefaultDirName={#PrusaInstallDir}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)

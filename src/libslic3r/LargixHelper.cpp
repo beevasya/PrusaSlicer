@@ -1,44 +1,44 @@
-#include <boost/geometry.hpp>
-#include <boost/geometry/geometries/point.hpp>
-#include <boost/geometry/geometries/polygon.hpp>
-
-#include <PolygonValidator.h>
-#include <PolygonHelper.h>
-#include <Size.h>
-#include <TeddyDef.h>
-#include <Settings.h>
-
-#include "../ClipperUtils.hpp"
-#include "../ExPolygon.hpp"
-#include "../ShortestPath.hpp"
-#include "../Surface.hpp"
-
-#include <sstream> 
-
 #include "LargixHelper.hpp"
 
 #include <Layer.h>
-#include <PolygonValidator.h>
-#include <PolygonIO.h>
-#include <BuildLayer.h>
-#include <Size.h>
-#include <TeddyDef.h>
 
 namespace Slic3r {
 
-bool LargixHelper::convert_polygon_2_largix(ExPolygon &      src,
-                                           Largix::Polygon &dst)
+void convert(const Point& p, Largix::Point2D& pl) 
 {
-    for (Slic3r::Point point : src.contour) {
-        dst.outer().push_back(Largix::Point2D(point.x() * SCALING_FACTOR,
-                                                point.y() * SCALING_FACTOR));
+    pl.x() = static_cast<double>(p.x()) * SCALING_FACTOR;
+    pl.y() = static_cast<double>(p.y()) * SCALING_FACTOR;
+}
+
+void convert(const Largix::Point2D &pl, Point &p)
+{
+    p.x() = scale_(pl.x());
+    p.y() = scale_(pl.y());
+}
+
+bool LargixHelper::convert_polygon_2_largix(const ExPolygon &src, Largix::Polygon &dst)
+{
+    {
+        auto &points = dst.outer();
+        points.resize(src.contour.size());
+        auto it = points.begin();
+        for (const auto& point : src.contour) 
+        {
+            convert(point, *it);
+            it++;
+        }
     }
+
     dst.inners().resize(src.holes.size());
     auto it = dst.inners().begin();
-    for (auto poly : src.holes) {
-        for (auto point : poly) {
-            (*it).push_back(Largix::Point2D(point.x() * SCALING_FACTOR,
-                                                point.y() * SCALING_FACTOR));
+    for (const auto& poly : src.holes) 
+    {
+        it->resize(poly.size());
+        auto itp = it->begin();
+        for (const auto& point : poly) 
+        {
+            convert(point, *itp);
+            itp++;
         }
         it++;
     }
@@ -46,14 +46,16 @@ bool LargixHelper::convert_polygon_2_largix(ExPolygon &      src,
     return true;
 }
 
-bool LargixHelper::convert_layer_2_prusa(Largix::Layer &src, Polylines &dst, double strandWidth)
+bool LargixHelper::convert_layer_2_prusa(const Largix::Layer &src, Polylines &dst, double strandWidth)
 {
-    for (auto strand : src.strands()) {
+    for (auto strand : src.strands()) 
+    {
         std::vector<std::array<Largix::Point2D, 4>> points;
         strand.get4StrandPoints(points, strandWidth);
 
         std::array<Polyline, 4> pline;
-        for (auto point : points) {
+        for (auto point : points) 
+        {
             pline[0].points.push_back(
                 Point::new_scale(point[0].x(), point[0].y()));
             pline[1].points.push_back(
@@ -72,39 +74,59 @@ bool LargixHelper::convert_layer_2_prusa(Largix::Layer &src, Polylines &dst, dou
     return true;
 }
 
-bool LargixHelper::convert_layer_2_prusa_1(Largix::Layer &src, Polylines &dst)
+bool LargixHelper::convert_layer_2_prusa_1(const Largix::Layer &src, Polylines &dst)
 {
-    for (auto strand : src.strands()) {
+    dst.resize(src.size());
+    auto it = dst.begin();
+    for (const auto& strand : src.strands()) 
+    {
         std::vector<Largix::Point2D> points;
         strand.getStrandPoints(points);
 
-        Polyline pline;
-        for (auto point : points) {
-            pline.points.push_back(
-                Point::new_scale(point.x(), point.y()));
+        Polyline &pline = *it;
+        pline.points.resize(points.size());
+        auto itp = pline.points.begin();
+        for (const auto& point : points) 
+        {
+            convert(point, *itp);
+            itp++;
         }
-        dst.push_back(pline);
+        it++;
     }
 
     return true;
 }
 
-bool LargixHelper::convertPolylineToLargix(
-    Polyline &pLine, std::vector<Largix::Point2D> &pLineOut)
+bool LargixHelper::convertPolylineToLargix(const Polyline &pLine, std::vector<Largix::Point2D> &pLineOut)
 {
+    pLineOut.resize(pLine.points.size());
+    auto it = pLineOut.begin();
+    for (const auto& point : pLine.points) 
+    {
+        convert(point, *it);
+        it++;
+    }
+    return true;
+}
+
+bool LargixHelper::convertPolylineToLargixShift(const Point& shift, const Polyline& pLine, std::vector<Largix::Point2D>& pLineOut)
+{
+    pLineOut.resize(pLine.points.size());
+    auto it = pLineOut.begin();
     for (auto point : pLine.points) 
     {
-        pLineOut.push_back(Largix::Point2D(point.x() * SCALING_FACTOR,
-                                           point.y() * SCALING_FACTOR));
+        convert(shift + point, *it);
+        it++;
     }
+
     return true;
 }
 
 bool LargixHelper::convertPolylineToLargix(
-    Polyline &                                   pLine1,
-    Polyline &                                   pLine2,
-    Polyline &                                   pLine3,
-    Polyline &                                   pLine4,
+    const Polyline &                             pLine1,
+    const Polyline &                             pLine2,
+    const Polyline &                             pLine3,
+    const Polyline &                             pLine4,
     std::vector<std::array<Largix::Point2D, 4>> &pLineOut)
 {
     if (pLine1.points.size() != pLine2.points.size() ||
@@ -126,8 +148,7 @@ bool LargixHelper::convertPolylineToLargix(
     return true;
 }
 
-void LargixHelper::saveLargixStrand(
-    std::vector<std::array<Largix::Point2D, 4>> &strand)
+void LargixHelper::saveLargixStrand(const std::vector<std::array<Largix::Point2D, 4>> &strand)
 {
     static int i = 0;
     std::stringstream ss;

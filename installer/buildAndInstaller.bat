@@ -9,8 +9,8 @@ IF %ERRORLEVEL% NEQ 0 goto Done
 msbuild %LARGIX_PATH%\PathNavigator\PathNavigator.sln /target:build /maxcpucount:4 /p:Configuration=Release /p:Platform="x64"
 IF %ERRORLEVEL% NEQ 0 goto Done
 
-msbuild %LARGIX_PATH%\GCodeConvert\GCodeConvert.sln /target:build /maxcpucount:4 /p:Configuration=Release /p:Platform="x64"
-IF %ERRORLEVEL% NEQ 0 goto Done
+msbuild %LARGIX_PATH%\ProgramBuilder\ProgramBuilder.sln /target:build /maxcpucount:4 /p:Configuration=Release /p:Platform="x64"
+IF %ERRORLEVEL% NEQ 0 goto Done 
 
 call buildInstaller.bat
 

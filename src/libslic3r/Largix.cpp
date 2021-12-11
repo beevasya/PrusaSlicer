@@ -65,16 +65,17 @@ namespace Slic3r
         size_t i = 0;
         for (auto object : objects) 
         {
+            const Point& sh = object->instances()[0].shift;
             for (auto layer : object->layers()) 
             {
                 for (auto region : layer->regions()) 
                 {
-                    slices[i].setZ(layer->slice_z);
+                    slices[i].setZ(objects.front()->print()->config().z_offset + layer->print_z - layer->height);
                     auto pLines = region->fills.as_polylines();
                     std::vector<Largix::Point2D> line_out;
-                    for (auto line : pLines) 
+                    for (const auto& line : pLines) 
                     {
-                        LargixHelper::convertPolylineToLargix(line, line_out);
+                        LargixHelper::convertPolylineToLargixShift(sh, line, line_out);
                     }
                     slices[i].swapPoints(line_out);
                     i++;

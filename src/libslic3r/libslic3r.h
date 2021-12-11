@@ -48,6 +48,8 @@ static constexpr double EPSILON = 1e-4;
 // 0..4294mm with 1nm resolution
 // int32_t fits an interval of (-2147.48mm, +2147.48mm)
 // with int64_t we don't have to worry anymore about the size of the int.
+
+// Largix uses big bed (4100 x 3145) so we enlarge it twice 
 static constexpr double SCALING_FACTOR = 0.000002;
 // RESOLUTION, SCALED_RESOLUTION: Used as an error threshold for a Douglas-Peucker polyline simplification algorithm.
 static constexpr double RESOLUTION = 0.0125;

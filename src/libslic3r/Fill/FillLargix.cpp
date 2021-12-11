@@ -81,7 +81,8 @@ namespace Slic3r
         if (params.print_options)
             fillSettings(params.print_options->config(), set);
 
-        size_t layerNum = (size_t) (z / params.print_options->config().largix_strands_height + 0.5);
+ //     size_t layerNum = (size_t) (z /params.print_options->config().largix_strands_height + 0.5);
+        size_t layerNum = layer_id + 1;
 
         Largix::Layer layer;
         if (set.bUseAnglePattern) 

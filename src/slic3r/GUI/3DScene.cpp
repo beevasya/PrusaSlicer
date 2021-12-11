@@ -1873,7 +1873,7 @@ void _3DScene::thick_lines_to_verts(
     double                       top_z,
     GLVolume                    &volume)
 {
-    thick_lines_to_indexed_vertex_array_square(lines, widths, heights, closed,
+   thick_lines_to_indexed_vertex_array_square(lines, widths, heights, closed,
                                                top_z,
                                                volume.indexed_vertex_array);
 }

@@ -2431,6 +2431,7 @@ void GCodeProcessor::process_G1(const GCodeReader::GCodeLine& line)
         return;
 
     EMoveType type = move_type(delta_pos);
+
     if (type == EMoveType::Extrude) {
         float delta_xyz = std::sqrt(sqr(delta_pos[X]) + sqr(delta_pos[Y]) + sqr(delta_pos[Z]));
         float volume_extruded_filament = area_filament_cross_section * delta_pos[E];
@@ -2687,8 +2688,21 @@ void GCodeProcessor::process_G1(const GCodeReader::GCodeLine& line)
         m_seams_detector.set_first_vertex(m_result.moves.back().position - m_extruder_offsets[m_extruder_id]);
     }
 
+
+    if (prev_gcode_cmd_move_type != EMoveType::Extrude && type == EMoveType::Extrude)
+    {
+         store_move_vertex(EMoveType::StrandStart);
+    }
+    else if (prev_gcode_cmd_move_type == EMoveType::Extrude && type != EMoveType::Extrude)
+    {
+        store_move_vertex(EMoveType::StrandEnd);
+    }
+
     // store move
     store_move_vertex(type);
+
+
+   prev_gcode_cmd_move_type = type;
 }
 
 void GCodeProcessor::process_G10(const GCodeReader::GCodeLine& line)
@@ -3145,23 +3159,89 @@ void GCodeProcessor::store_move_vertex(EMoveType type)
     m_last_line_id = (type == EMoveType::Color_change || type == EMoveType::Pause_Print || type == EMoveType::Custom_GCode) ?
         m_line_id + 1 :
         ((type == EMoveType::Seam) ? m_last_line_id : m_line_id);
+    if (type != EMoveType::StrandEnd)
+    {
+        if (type == EMoveType::StrandStart)
+        {
+            Vec3f start(m_start_position[X], m_start_position[Y], m_start_position[Z]);
+            Vec3f end(m_end_position[X], m_end_position[Y], m_end_position[Z]);
+            Vec3f dir = (end-start).normalized();
+            Vec3f short_dist = start + dir * 0.1f;
+            m_result.moves.push_back({
+                m_last_line_id,
+                EMoveType::Extrude,
+                m_extrusion_role,
+                m_extruder_id,
+                m_cp_color.current,
+                Vec3f(short_dist.x(), short_dist.y(), short_dist.z()),
+                0.1f,
+                m_feedrate,
+                m_width,
+                m_height,
+                m_mm3_per_mm,
+                m_fan_speed,
+                m_extruder_temps[m_extruder_id],
+                static_cast<float>(m_result.moves.size())
+                });
+            m_result.moves.push_back({
+                m_last_line_id,
+                EMoveType::StrandStart,
+                m_extrusion_role,
+                m_extruder_id,
+                m_cp_color.current,
+                Vec3f(short_dist.x(), short_dist.y(), short_dist.z()),
+                0.1f,
+                m_feedrate,
+                m_width,
+                m_height,
+                m_mm3_per_mm,
+                m_fan_speed,
+                m_extruder_temps[m_extruder_id],
+                static_cast<float>(m_result.moves.size())
+                });
 
-    m_result.moves.push_back({
-        m_last_line_id,
-        type,
-        m_extrusion_role,
-        m_extruder_id,
-        m_cp_color.current,
-        Vec3f(m_end_position[X], m_end_position[Y], m_processing_start_custom_gcode ? m_first_layer_height : m_end_position[Z]) + m_extruder_offsets[m_extruder_id],
-        m_end_position[E] - m_start_position[E],
-        m_feedrate,
-        m_width,
-        m_height,
-        m_mm3_per_mm,
-        m_fan_speed,
-        m_extruder_temps[m_extruder_id],
-        static_cast<float>(m_result.moves.size())
-    });
+        }
+        else
+        m_result.moves.push_back({
+            m_last_line_id,
+            type,
+            m_extrusion_role,
+            m_extruder_id,
+            m_cp_color.current,
+            Vec3f(m_end_position[X], m_end_position[Y], m_processing_start_custom_gcode ? m_first_layer_height : m_end_position[Z]) + m_extruder_offsets[m_extruder_id],
+            m_end_position[E] - m_start_position[E],
+            m_feedrate,
+            m_width,
+            m_height,
+            m_mm3_per_mm,
+            m_fan_speed,
+            m_extruder_temps[m_extruder_id],
+            static_cast<float>(m_result.moves.size())
+            });
+    }
+    else
+    {
+        size_t prev_item = m_result.moves.size() - 1;
+        /*if (m_result.moves[prev_item].type == EMoveType::StrandStart)
+            --prev_item;*/
+        Vec3f pos = m_result.moves[prev_item].position;
+        m_result.moves.push_back({
+            m_last_line_id,
+            type,
+            ExtrusionRole::erCustom,
+            m_extruder_id,
+            m_cp_color.current,
+            Vec3f(pos[X], pos[Y], m_processing_start_custom_gcode ? m_first_layer_height : pos[Z]) + m_extruder_offsets[m_extruder_id],
+            0,
+            m_feedrate,
+            m_width,
+            m_height,
+            m_mm3_per_mm,
+            m_fan_speed,
+            m_extruder_temps[m_extruder_id],
+            static_cast<float>(m_result.moves.size())
+            });
+    }
 
     // stores stop time placeholders for later use
     if (type == EMoveType::Color_change || type == EMoveType::Pause_Print) {

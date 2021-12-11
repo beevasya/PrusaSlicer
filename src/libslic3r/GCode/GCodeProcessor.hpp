@@ -29,6 +29,8 @@ namespace Slic3r {
         Travel,
         Wipe,
         Extrude,
+        StrandStart,
+        StrandEnd,
         Count
     };
 
@@ -502,6 +504,7 @@ namespace Slic3r {
         std::vector<Vec3f> m_extruder_offsets;
         GCodeFlavor m_flavor;
 
+        EMoveType prev_gcode_cmd_move_type = EMoveType::Noop;
         AxisCoords m_start_position; // mm
         AxisCoords m_end_position; // mm
         AxisCoords m_origin; // mm

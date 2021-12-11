@@ -133,6 +133,8 @@ bool GCodeViewer::Path::matches(const GCodeProcessor::MoveVertex& move) const
     case EMoveType::Retract:
     case EMoveType::Unretract:
     case EMoveType::Seam:
+    case EMoveType::StrandStart:
+    case EMoveType::StrandEnd:
     case EMoveType::Extrude: {
         // use rounding to reduce the number of generated paths
         return type == move.type && extruder_id == move.extruder_id && cp_color_id == move.cp_color_id && role == move.extrusion_role &&
@@ -505,7 +507,10 @@ const std::vector<GCodeViewer::Color> GCodeViewer::Options_Colors {{
     { 0.758f, 0.744f, 0.389f, 1.0f },   // ToolChanges
     { 0.856f, 0.582f, 0.546f, 1.0f },   // ColorChanges
     { 0.322f, 0.942f, 0.512f, 1.0f },   // PausePrints
-    { 0.886f, 0.825f, 0.262f, 1.0f }    // CustomGCodes
+    { 0.886f, 0.825f, 0.262f, 1.0f },   // CustomGCodes
+    { 0.990f, 0.000f, 0.000f, 1.0f },   // StrandStart
+    { 0.000f, 0.000f, 0.990f, 1.0f }    // StrandEnd
+
 }};
 
 const std::vector<GCodeViewer::Color> GCodeViewer::Travel_Colors {{
@@ -593,6 +598,8 @@ void GCodeViewer::init()
         case EMoveType::Custom_GCode:
         case EMoveType::Retract:
         case EMoveType::Unretract:
+        case EMoveType::StrandStart:
+        case EMoveType::StrandEnd:
         case EMoveType::Seam: {
 #if ENABLE_SEAMS_USING_BATCHED_MODELS
             if (wxGetApp().is_gl_version_greater_or_equal_to(3, 3)) {
@@ -1009,6 +1016,8 @@ unsigned int GCodeViewer::get_options_visibility_flags() const
     flags = set_flag(flags, static_cast<unsigned int>(Preview::OptionType::Shells), m_shells.visible);
     flags = set_flag(flags, static_cast<unsigned int>(Preview::OptionType::ToolMarker), m_sequential_view.marker.is_visible());
     flags = set_flag(flags, static_cast<unsigned int>(Preview::OptionType::Legend), is_legend_enabled());
+    flags = set_flag(flags, static_cast<unsigned int>(Preview::OptionType::StrandStart), is_toolpath_move_type_visible(EMoveType::StrandStart));
+    flags = set_flag(flags, static_cast<unsigned int>(Preview::OptionType::StrandEnd), is_toolpath_move_type_visible(EMoveType::StrandEnd)); 
     return flags;
 }
 
@@ -1027,6 +1036,8 @@ void GCodeViewer::set_options_visibility_from_flags(unsigned int flags)
     set_toolpath_move_type_visible(EMoveType::Color_change, is_flag_set(static_cast<unsigned int>(Preview::OptionType::ColorChanges)));
     set_toolpath_move_type_visible(EMoveType::Pause_Print, is_flag_set(static_cast<unsigned int>(Preview::OptionType::PausePrints)));
     set_toolpath_move_type_visible(EMoveType::Custom_GCode, is_flag_set(static_cast<unsigned int>(Preview::OptionType::CustomGCodes)));
+    set_toolpath_move_type_visible(EMoveType::StrandStart, is_flag_set(static_cast<unsigned int>(Preview::OptionType::StrandStart)));
+    set_toolpath_move_type_visible(EMoveType::StrandEnd, is_flag_set(static_cast<unsigned int>(Preview::OptionType::StrandEnd)));
     m_shells.visible = is_flag_set(static_cast<unsigned int>(Preview::OptionType::Shells));
     m_sequential_view.marker.set_visible(is_flag_set(static_cast<unsigned int>(Preview::OptionType::ToolMarker)));
     enable_legend(is_flag_set(static_cast<unsigned int>(Preview::OptionType::Legend)));
@@ -2726,6 +2737,8 @@ void GCodeViewer::refresh_render_paths(bool keep_sequential_current_first,
         case EMoveType::Custom_GCode:
         case EMoveType::Retract:
         case EMoveType::Unretract:
+        case EMoveType::StrandStart:
+        case EMoveType::StrandEnd:
         case EMoveType::Seam: { color = option_color(path.type); break; }
         case EMoveType::Extrude: {
             if (!top_layer_only ||
@@ -4030,6 +4043,8 @@ void GCodeViewer::render_legend(float& legend_height)
             available(EMoveType::Retract) ||
             available(EMoveType::Tool_change) ||
             available(EMoveType::Unretract) ||
+            available(EMoveType::StrandStart) ||
+            available(EMoveType::StrandEnd) ||
             available(EMoveType::Seam);
     };
 
@@ -4057,6 +4072,8 @@ void GCodeViewer::render_legend(float& legend_height)
         add_option(EMoveType::Color_change, EOptionsColors::ColorChanges, _u8L("Color changes"));
         add_option(EMoveType::Pause_Print, EOptionsColors::PausePrints, _u8L("Print pauses"));
         add_option(EMoveType::Custom_GCode, EOptionsColors::CustomGCodes, _u8L("Custom G-codes"));
+        add_option(EMoveType::StrandStart, EOptionsColors::StrandStart, _u8L("Strand start"));
+        add_option(EMoveType::StrandEnd, EOptionsColors::StrandEnd, _u8L("Strand end"));
     }
 
     // settings section
@@ -4341,6 +4358,8 @@ GCodeViewer::Color GCodeViewer::option_color(EMoveType move_type) const
     case EMoveType::Retract:      { return Options_Colors[static_cast<unsigned int>(EOptionsColors::Retractions)]; }
     case EMoveType::Unretract:    { return Options_Colors[static_cast<unsigned int>(EOptionsColors::Unretractions)]; }
     case EMoveType::Seam:         { return Options_Colors[static_cast<unsigned int>(EOptionsColors::Seams)]; }
+    case EMoveType::StrandStart:  { return Options_Colors[static_cast<unsigned int>(EOptionsColors::StrandStart)]; }
+    case EMoveType::StrandEnd:    { return Options_Colors[static_cast<unsigned int>(EOptionsColors::StrandEnd)]; }
     default:                      { return { 0.0f, 0.0f, 0.0f, 1.0f }; }
     }
 }

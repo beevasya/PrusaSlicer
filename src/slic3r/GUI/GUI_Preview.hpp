@@ -126,7 +126,9 @@ public:
         CustomGCodes,
         Shells,
         ToolMarker,
-        Legend
+        Legend,
+        StrandStart,
+        StrandEnd
     };
 
     Preview(wxWindow* parent, Model* model, DynamicPrintConfig* config, BackgroundSlicingProcess* process, 

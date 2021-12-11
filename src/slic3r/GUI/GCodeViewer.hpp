@@ -50,7 +50,9 @@ class GCodeViewer
         ToolChanges,
         ColorChanges,
         PausePrints,
-        CustomGCodes
+        CustomGCodes,
+        StrandStart,
+        StrandEnd
     };
 
     // vbo buffer containing vertices data used to render a specific toolpath type
@@ -775,7 +777,7 @@ private:
     bool m_gl_data_initialized{ false };
     unsigned int m_last_result_id{ 0 };
     size_t m_moves_count{ 0 };
-    std::vector<TBuffer> m_buffers{ static_cast<size_t>(EMoveType::Extrude) };
+    std::vector<TBuffer> m_buffers{ static_cast<size_t>(EMoveType::Count) };//Extrude
     // bounding box of toolpaths
     BoundingBoxf3 m_paths_bounding_box;
     // bounding box of toolpaths + marker tools

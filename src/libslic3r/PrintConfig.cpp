@@ -267,6 +267,43 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(0.3));
 
     //  Configuring settings for Largix tab
+    def = this->add("largix_retraction", coBool); // use const laser angle 
+    def->label = L("Retraction");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Activate/Deactivate retraction parameters");
+    def->set_default_value(new ConfigOptionBool(true));
+
+    def = this->add("largix_retraction_delta", coFloat); // bin length
+    def->label = L("Delta");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Reduce strand in the beginning and return it back by Return Length");
+    def->sidetext = L("mm");
+    def->min = 0;
+    def->max = 100;
+    def->set_default_value(new ConfigOptionFloat(1));
+
+    def = this->add("largix_retraction_extra", coFloat); // bin length
+    def->label = L("Extra");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Return extra strand");
+    def->sidetext = L("mm");
+    def->min = 0;
+    def->max = 100;
+    def->set_default_value(new ConfigOptionFloat(0.35));
+
+    def = this->add("largix_retraction_return_length", coFloat); // bin length
+    def->label = L("Return Length");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Return Length");
+    def->sidetext = L("mm");
+    def->min = 0;
+    def->max = 1000;
+    def->set_default_value(new ConfigOptionFloat(80));
+    
     def = this->add("largix_bin_length", coFloat); // bin length
     def->label = L("Bin Length");
     def->category = L("Largix");

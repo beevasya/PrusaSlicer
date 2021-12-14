@@ -516,6 +516,11 @@ PRINT_CONFIG_CLASS_DEFINE(
     ((ConfigOptionFloat,               xy_size_compensation))
     ((ConfigOptionBool,                wipe_into_objects))
     //options for largix settings 
+    ((ConfigOptionBool,                largix_retraction))
+    ((ConfigOptionFloat,               largix_retraction_delta))
+    ((ConfigOptionFloat,               largix_retraction_extra))
+    ((ConfigOptionFloat,               largix_retraction_return_length))
+
     ((ConfigOptionBool,                largix_use_const_wheel_angle))
     ((ConfigOptionBool,                largix_use_const_laser_angle))
     ((ConfigOptionFloat,               largix_const_wheel_angle))

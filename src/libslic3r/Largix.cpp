@@ -40,7 +40,13 @@ namespace Slic3r
         set.constLaserAngleParams.useConstValue = config.largix_use_const_laser_angle;
         set.constWheelAngleParams.constAngle = config.largix_const_wheel_angle;
         set.constLaserAngleParams.constAngle = config.largix_const_laser_angle;
-       
+        set.bRetraction = config.largix_retraction;
+        if (set.bRetraction)
+        {
+            set.retractionDelta = config.largix_retraction_delta;
+            set.retractionExtra = config.largix_retraction_extra;
+            set.retractionReturnLength = config.largix_retraction_return_length;
+        }     
     }
 
     size_t LargixExport::getNumOfSlices(const Print* print) 

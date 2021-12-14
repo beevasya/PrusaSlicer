@@ -337,6 +337,10 @@ void ConfigManipulation::toggle_print_fff_options(DynamicPrintConfig* config)
     bool use_const_laser_angle = config->opt_bool("largix_use_const_laser_angle");
     for (auto el : { "largix_const_laser_angle" })
         toggle_field(el, use_const_laser_angle);
+    
+    bool use_retraction = config->opt_bool("largix_retraction");
+    for (auto el : { "largix_retraction_delta", "largix_retraction_extra","largix_retraction_return_length" })
+        toggle_field(el, use_retraction);
 
 }
 

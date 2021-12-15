@@ -5663,10 +5663,24 @@ void Plater::export_gcode(bool prefer_removable)
 			// Direct user to the last internal media.
 			start_dir = appconfig.get_last_output_dir(default_output_file.parent_path().string(), false);
 	}
-
+    
+    int filter_index = 0;
     fs::path output_path;
     {
-    	std::string ext = default_output_file.extension().string();
+        std::string ext = default_output_file.extension().string();
+        std::string saved_ext{ "" };
+        bool has_config_last_saved_file_type = appconfig.get("", "last_saved_file_type", saved_ext);
+        if (has_config_last_saved_file_type)
+        {
+            filter_index = saved_ext == ".csv" ? 1 : 0;
+        }
+        else
+        {
+            saved_ext = default_output_file.extension().string();
+            appconfig.set("", "last_saved_file_type", ext);
+            
+        }
+        default_output_file.replace_extension(saved_ext);
         wxFileDialog dlg(this, (printer_technology() == ptFFF) ? _L("Save G-code file as:") : _L("Save SL1 / SL1S file as:"),
             start_dir,
             from_path(default_output_file.filename()),
@@ -5679,8 +5693,10 @@ void Plater::export_gcode(bool prefer_removable)
                              "|" + GUI::file_wildcards(FT_CSV),
             wxFD_SAVE | wxFD_OVERWRITE_PROMPT
         );
-            if (dlg.ShowModal() == wxID_OK)
+        dlg.SetFilterIndex(filter_index);
+        if (dlg.ShowModal() == wxID_OK)
             output_path = into_path(dlg.GetPath());
+        filter_index = dlg.GetFilterIndex();
     }
 
     if (! output_path.empty()) {
@@ -5694,8 +5710,8 @@ void Plater::export_gcode(bool prefer_removable)
         // is_path_on_removable_drive() is called with the "true" parameter to update its internal database as the user may have shuffled the external drives
         // while the dialog was open.
         appconfig.update_last_output_dir(output_path.parent_path().string(), path_on_removable_media);
-		
-	}
+        appconfig.set("", "last_saved_file_type", filter_index == 0 ? ".gcode" : ".csv");
+    }
 }
 
 void Plater::export_stl(bool extended, bool selection_only)

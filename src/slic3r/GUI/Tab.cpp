@@ -1570,20 +1570,6 @@ void TabPrint::build()
         //option.opt.set_default_value(new ConfigOptionInt(100000));
         optgroup->append_single_option_line(option);
         
-        // Retraction params
-        optgroup = page->new_optgroup(L("Retraction"), 20);
-        option = optgroup->get_option("largix_retraction");
-        optgroup->append_single_option_line(option);
-        //delta
-        option = optgroup->get_option("largix_retraction_delta");
-        optgroup->append_single_option_line(option);
-        //extra
-        option = optgroup->get_option("largix_retraction_extra");
-        optgroup->append_single_option_line(option);
-        //return length
-        option = optgroup->get_option("largix_retraction_return_length");
-        optgroup->append_single_option_line(option);
-
         // Angle pattern params
         optgroup = page->new_optgroup(L("Angle Pattern"), 20);
         // bool use angle pattern
@@ -1664,8 +1650,22 @@ void TabPrint::build()
         //option = optgroup->get_option("largix_max_rotation_angle");
         //option.opt.set_default_value(new ConfigOptionFloat(90.0));
         //optgroup->append_single_option_line(option);
-
-        // end Largix 3 settings
+        
+        // Retraction params
+        optgroup = page->new_optgroup(L("Retraction"), 20);
+        option = optgroup->get_option("largix_retraction");
+        optgroup->append_single_option_line(option);
+        //delta
+        option = optgroup->get_option("largix_retraction_delta");
+        optgroup->append_single_option_line(option);
+        //extra
+        option = optgroup->get_option("largix_retraction_extra");
+        optgroup->append_single_option_line(option);
+        //return length
+        option = optgroup->get_option("largix_retraction_return_length");
+        optgroup->append_single_option_line(option);
+        
+        // end Largix settings
 
         page = add_options_page(L("Support material"), "support");
         category_path = "support-material_1698#";

@@ -51,7 +51,8 @@ Source: "{#LargixPath}\ProgramBuilder\x64\Release\ProgramBuilder.dll"; DestDir: 
 Source: "{#PrusaPath}\build\src\Release\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#PrusaDepPath}\usr\local\bin\libgmp-10.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaDepPath}\usr\local\bin\libmpfr-4.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#PrusaPath}\installer\LargixConvertConfig.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\installer\PathNavigator.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#PrusaPath}\installer\ProgramBuilder.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#PrusaPath}\installer\Largix.ini"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]

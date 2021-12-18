@@ -66,14 +66,15 @@ namespace Slic3r
             return; 
         }
         Largix::PolygonValidator pv(pol);
-        if (!pv.correct(pol)) {
-            assert(!"Failed to correct polygon, it is not valid.");
-            return;
-        }
 
         pv.simplify(pol);
         if (pol.outer().empty()) {
             assert(!"Failed to build path for empty polygon!");
+            return;
+        }
+
+        if (!pv.correct(pol)) {
+            assert(!"Failed to correct polygon, it is not valid.");
             return;
         }
 

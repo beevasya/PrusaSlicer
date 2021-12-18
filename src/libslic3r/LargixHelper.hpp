@@ -3,7 +3,7 @@
 
 #include <polygon.h>
 
-namespace Largix {
+namespace LargixNavigator {
 class Layer;
 }
 
@@ -17,21 +17,21 @@ class LargixHelper
 {
 public:
 
-	static bool convert_polygon_2_largix(const ExPolygon &src, Largix::Polygon &dst);
-    static bool convert_layer_2_prusa(const Largix::Layer &src, Polylines &dst, double strandWidth);
-    static bool convert_layer_2_prusa_1(const Largix::Layer &src, Polylines &dst);
+	static bool convert_polygon_2_largix(const ExPolygon &src, LargixNavigator::Polygon &dst);
+    static bool convert_layer_2_prusa(const LargixNavigator::Layer &src, Polylines &dst, double strandWidth);
+    static bool convert_layer_2_prusa_1(const LargixNavigator::Layer &src, Polylines &dst);
 
-    static bool convertPolylineToLargix(const Polyline& pLine, std::vector<Largix::Point2D> &pLineOut);
-    static bool convertPolylineToLargixShift(const Point& shift, const Polyline &pLine, std::vector<Largix::Point2D> &pLineOut);
+    static bool convertPolylineToLargix(const Polyline& pLine, std::vector<LargixNavigator::Point2D> &pLineOut);
+    static bool convertPolylineToLargixShift(const Point& shift, const Polyline &pLine, std::vector<LargixNavigator::Point2D> &pLineOut);
 
     static bool convertPolylineToLargix(
         const Polyline &                                   pLine1,
         const Polyline &                                   pLine2,
         const Polyline &                                   pLine3,
         const Polyline &                                   pLine4,
-        std::vector<std::array<Largix::Point2D, 4>> &pLineOut);
+        std::vector<std::array<LargixNavigator::Point2D, 4>> &pLineOut);
     static void saveLargixStrand(
-        const std::vector<std::array<Largix::Point2D, 4>> &strand);
+        const std::vector<std::array<LargixNavigator::Point2D, 4>> &strand);
 };
 
 }; // namespace Slic3r

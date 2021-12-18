@@ -30,7 +30,7 @@
 namespace Slic3r 
 {
 
-    void FillLargix::fillSettings(const PrintObjectConfig& config, Largix::Settings& set) const
+    void FillLargix::fillSettings(const PrintObjectConfig& config, LargixNavigator::Settings& set) const
     {
         set.maxNumbersStrandsPerLayer = config.largix_strands_number;
         set.minStrandRadius = config.largix_min_radius;
@@ -58,14 +58,14 @@ namespace Slic3r
         ExPolygon                        expolygon,
         Polylines                       &polylines_out)
     {
-        Largix::Polygon pol;
+        LargixNavigator::Polygon pol;
         LargixHelper::convert_polygon_2_largix(expolygon, pol);
         if (pol.outer().size() == 0) 
         { 
             assert(!"Empty polygon for filling");
             return; 
         }
-        Largix::PolygonValidator pv(pol);
+        LargixNavigator::PolygonValidator pv(pol);
         if (!pv.correct(pol)) {
             assert(!"Failed to correct polygon, it is not valid.");
             return;
@@ -77,31 +77,31 @@ namespace Slic3r
             return;
         }
 
-        Largix::Settings set;
+        LargixNavigator::Settings set;
         if (params.print_options)
             fillSettings(params.print_options->config(), set);
 
  //     size_t layerNum = (size_t) (z /params.print_options->config().largix_strands_height + 0.5);
         size_t layerNum = layer_id + 1;
 
-        Largix::Layer layer;
+        LargixNavigator::Layer layer;
         if (set.bUseAnglePattern) 
         {
             Point prusaPoint = bounding_box.center();
-            Largix::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
+            LargixNavigator::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
 
             size_t index;
         
-            Largix::FirstPolygonPoint pointFinder(pol, set);
+            LargixNavigator::FirstPolygonPoint pointFinder(pol, set);
             if (pointFinder.find(center, layerNum, index)) 
             { 
-                Largix::BuildLayer buider(pol, set);
+                LargixNavigator::BuildLayer buider(pol, set);
                 buider.build(index, layer);
             }
         } 
         else 
         {
-            Largix::BuildLayerMgr buider(pol, set);
+            LargixNavigator::BuildLayerMgr buider(pol, set);
             buider.build(layer);
         }
 
@@ -109,13 +109,13 @@ namespace Slic3r
         // polygons
         //if (layer.getNumBins() == 0 ||
         //    std::any_of(layer.strands().begin(), layer.strands().end(),
-        //        [](const Largix::Strand& item) { return !item.isClosed(); }))
+        //        [](const LargixNavigator::Strand& item) { return !item.isClosed(); }))
         static bool bSavePolygons_ = false;
         if (bSavePolygons_) 
         {
             std::stringstream ss;
             ss << "C:\\Temp\\Polygons\\polygon" << layerNum << ".wkt";
-            Largix::PolygonIO::saveToWktFile(pol, ss.str());
+            LargixNavigator::PolygonIO::saveToWktFile(pol, ss.str());
         }
 
         static bool bSaveStrands_ = false;
@@ -126,7 +126,7 @@ namespace Slic3r
             {
                 std::stringstream ss;
                 ss << "C:\\Temp\\Strands\\strand" << layerNum << '_' << ++countStrand << ".csv";
-                Largix::StrandIO::saveToCsvFile(s, ss.str());
+                LargixNavigator::StrandIO::saveToCsvFile(s, ss.str());
             }
         }
         LargixHelper::convert_layer_2_prusa_1(layer, polylines_out);

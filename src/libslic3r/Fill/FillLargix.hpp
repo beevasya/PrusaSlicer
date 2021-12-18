@@ -12,7 +12,7 @@
 
 #include "Polygon.h"
 
-namespace Largix 
+namespace LargixNavigator
 {
 	struct Settings;
 }
@@ -35,7 +35,7 @@ protected:
 	    ExPolygon    		             expolygon,
 	    Polylines                       &polylines_out) override;
 
-	void fillSettings(const PrintObjectConfig& config,  Largix::Settings &set) const;
+	void fillSettings(const PrintObjectConfig& config, LargixNavigator::Settings &set) const;
 };
 
 }; // namespace Slic3r

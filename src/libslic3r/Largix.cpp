@@ -3,7 +3,7 @@
 #include <ConvertSettings.h>
 #include <vector>
 #include <array>
-#include <Point.h>
+//#include <Point.h>
 
 #include "libslic3r.h"
 #include "I18N.hpp"
@@ -22,9 +22,9 @@
 namespace Slic3r 
 {
 
-    void LargixExport::fillSettings(const PrintObjectConfig &config, Largix::ConvertSettings &set)
+    void LargixExport::fillSettings(const PrintObjectConfig &config, LargixProgram::ConvertSettings &set)
     {
-        set = Largix::DefaultSettings::getDefaultSettings();
+        set = LargixProgram::DefaultSettings::getDefaultSettings();
 
         set.laserRotationAxisOffset = config.largix_laser_rotation_axis_offset;
         set.laserRotationRadius = config.largix_laser_rotation_radius;
@@ -65,7 +65,7 @@ namespace Slic3r
         if (num == 0) 
             throw Slic3r::ExportError(std::string("CSV export failed. No slices found for writing!"));
 
-        Largix::Slices slices(num);
+        LargixProgram::Slices slices(num);
 
         const auto& objects = print->objects();
         size_t i = 0;
@@ -78,7 +78,7 @@ namespace Slic3r
                 {
                     slices[i].setZ(objects.front()->print()->config().z_offset + layer->print_z - layer->height);
                     auto pLines = region->fills.as_polylines();
-                    std::vector<Largix::Point2D> line_out;
+                    std::vector<LargixProgram::Point2D> line_out;
                     for (const auto& line : pLines) 
                     {
                         LargixHelper::convertPolylineToLargixShift(sh, line, line_out);
@@ -90,10 +90,10 @@ namespace Slic3r
 
         }
 
-        Largix::ConvertSettings settings;
+        LargixProgram::ConvertSettings settings;
         fillSettings(objects.front()->config(), settings);
 
-        Largix::TeddyConvert convert(slices, settings);
+        LargixProgram::TeddyConvert convert(slices, settings);
         if (!convert.convert())
             throw Slic3r::ExportError(std::string("Fail to convert slices to program!"));
 

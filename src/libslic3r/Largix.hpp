@@ -10,7 +10,7 @@
 #include <vector>
 #include <Point.h>
 
-namespace Largix 
+namespace LargixProgram
 {
     struct ConvertSettings;
 }
@@ -29,7 +29,7 @@ namespace Slic3r
 
     protected: 
 
-        void fillSettings(const PrintObjectConfig& config, Largix::ConvertSettings &set);
+        void fillSettings(const PrintObjectConfig& config, LargixProgram::ConvertSettings &set);
 
         size_t getNumOfSlices(const Print *print);
     };

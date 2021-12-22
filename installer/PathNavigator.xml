@@ -1,19 +1,19 @@
 <ser class_id="0" tracking_level="0" version="0">
-	<_set.MaxAngle>359.9</_set.MaxAngle>
-	<_set.AngleJump>300</_set.AngleJump>
-	<_set.XOffset>0</_set.XOffset>
-	<_set.YOffset>0</_set.YOffset>
-	<_set.ZOffset>0</_set.ZOffset>
-	<_set.AngleJumpLR>4</_set.AngleJumpLR>
-	<_set.StrandHeight>3.35</_set.StrandHeight>
-	<_set.StrandWidth>3.4</_set.StrandWidth>
-	<_set.laserRotationAxisOffset>14.5</_set.laserRotationAxisOffset>
-	<_set.laserRotationRadius>260</_set.laserRotationRadius>
-	<_set.laserSpotOffset>0</_set.laserSpotOffset>
-	<_set.wheelAxisOffset>45.8</_set.wheelAxisOffset>
-	<_set.wheelRotationRadius>38</_set.wheelRotationRadius>
-	<_set.minRotationAngle>-90</_set.minRotationAngle>
-	<_set.maxRotationAngle>90</_set.maxRotationAngle>
-	<_set.toolOffset>-0.6</_set.toolOffset>
+	<_set.strandWidth>3.4</_set.strandWidth>
+	<_set.minStrandLength>10</_set.minStrandLength>
+	<_set.minStrandRadius>5</_set.minStrandRadius>
+	<_set.maxNumbersStrandsPerLayer>1</_set.maxNumbersStrandsPerLayer>
+	<_set.maxNumberOfStrandCombinations>100000</_set.maxNumberOfStrandCombinations>
+	<_set.clockwiseFlag>0</_set.clockwiseFlag>
+	<_set.bUseAnglePattern>0</_set.bUseAnglePattern>
+	<_set.angleStart>1.20000000000000000e+01</_set.angleStart>
+	<_set.angleShift>
+		<count>4</count>
+		<item>1.00000000000000000e+01</item>
+		<item>2.00000000000000000e+01</item>
+		<item>3.00000000000000000e+01</item>
+		<item>4.00000000000000000e+01</item>
+	</_set.angleShift>
+	<_set.shiftFromStart>10</_set.shiftFromStart>
 </ser>
 

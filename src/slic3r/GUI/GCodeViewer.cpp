@@ -618,6 +618,11 @@ void GCodeViewer::init()
                 buffer.model.color = option_color(type);
                 buffer.model.instances.format = InstanceVBuffer::EFormat::BatchedModel;
             }
+            if (type == EMoveType::StrandStart || type == EMoveType::StrandEnd)
+            {
+                m_buffers[static_cast<size_t>(buffer_id(type))].visible = true;
+            }
+
             break;
 #else
             if (wxGetApp().is_gl_version_greater_or_equal_to(3, 3)) {

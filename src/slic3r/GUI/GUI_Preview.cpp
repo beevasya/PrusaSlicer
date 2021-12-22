@@ -256,7 +256,7 @@ bool Preview::init(wxWindow* parent, Model* model)
     m_combochecklist_options = new wxComboCtrl();
     m_combochecklist_options->Create(m_bottom_toolbar_panel, wxID_ANY, _L("Options"), wxDefaultPosition, wxDefaultSize, combo_style);
     std::string options_items = GUI::into_u8(
-        get_option_type_string(OptionType::Travel) + "|0|" +
+        get_option_type_string(OptionType::Travel) + "|1|" +
         get_option_type_string(OptionType::Wipe) + "|0|" +
         get_option_type_string(OptionType::Retractions) + "|0|" +
         get_option_type_string(OptionType::Unretractions) + "|0|" +
@@ -268,8 +268,8 @@ bool Preview::init(wxWindow* parent, Model* model)
         get_option_type_string(OptionType::Shells) + "|0|" +
         get_option_type_string(OptionType::ToolMarker) + "|1|" +
         get_option_type_string(OptionType::Legend) + "|1|" +
-        get_option_type_string(OptionType::StrandStart) + "|0|" +
-        get_option_type_string(OptionType::StrandEnd) + "|0"
+        get_option_type_string(OptionType::StrandStart) + "|1|" +
+        get_option_type_string(OptionType::StrandEnd) + "|1"
     );
     Slic3r::GUI::create_combochecklist(m_combochecklist_options, GUI::into_u8(_L("Options")), options_items);
 

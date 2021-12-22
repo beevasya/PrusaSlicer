@@ -661,6 +661,8 @@ void BackgroundSlicingProcess::finalize_gcode()
 	// Perform the final post-processing of the export path by applying the print statistics over the file name.
 	std::string export_path = m_fff_print->print_statistics().finalize_output_path(m_export_path);
 	std::string output_path = m_temp_output_path;
+	std::string output_xml_path = output_path;
+	std::string export_xml_path = export_path;
 	// Both output_path and export_path ar in-out parameters.
 	// If post processed, output_path will differ from m_temp_output_path as run_post_process_scripts() will make a copy of the G-code to not
 	// collide with the G-code viewer memory mapping of the unprocessed G-code. G-code viewer maps unprocessed G-code, because m_gcode_result 
@@ -675,6 +677,14 @@ void BackgroundSlicingProcess::finalize_gcode()
 				BOOST_LOG_TRIVIAL(error) << "Failed to remove temp file " << output_path << ": " << ex.what();
 			}
 	};
+	auto remove_temp_file = [](boost::filesystem::path output_path) {
+		try {
+			boost::filesystem::remove(output_path);
+		}
+		catch (const std::exception& ex) {
+			BOOST_LOG_TRIVIAL(error) << "Failed to remove temp file " << output_path << ": " << ex.what();
+		}
+	};
 
 	//FIXME localize the messages
 	std::string error_message;
@@ -683,17 +693,34 @@ void BackgroundSlicingProcess::finalize_gcode()
 	{
         boost::filesystem::path in_csv(output_path);
         boost::filesystem::path out_csv(export_path);
-        in_csv.replace_extension(LARGIX_EXTESION);
-        if (boost::filesystem::exists(in_csv) &&
-            out_csv.extension() == ("." + std::string(LARGIX_EXTESION))) {
-            output_path = in_csv.string();
-        }
-		copy_ret_val = copy_file(output_path, export_path, error_message, m_export_path_on_removable_media);
+		boost::filesystem::path in_xml = in_csv;
+		boost::filesystem::path out_xml = out_csv;
+		in_xml.replace_extension(".xml");
+		out_xml.replace_extension(".xml");
+		output_xml_path = in_xml.string();
+		export_xml_path = out_xml.string();
+		if (out_csv.extension().string() == "." + std::string(LARGIX_EXTESION))
+		{
+			in_csv.replace_extension(LARGIX_EXTESION);
+		}
+		if (boost::filesystem::exists(in_csv) /* &&
+			out_csv.extension() == ("." + std::string(LARGIX_EXTESION))*/) {
+			copy_ret_val = copy_file(in_csv.string(), export_path, error_message, m_export_path_on_removable_media);
+			if (out_csv.extension() == ("." + std::string(LARGIX_EXTESION)))
+				remove_temp_file(in_csv);
+		}
+		if (boost::filesystem::exists(in_xml))
+		{
+			copy_ret_val = copy_ret_val | copy_file(output_xml_path, export_xml_path, error_message, m_export_path_on_removable_media);
+			remove_temp_file(in_xml);
+		}
 		remove_post_processed_temp_file();
 	}
 	catch (...)
 	{
 		remove_post_processed_temp_file();
+		if (boost::filesystem::exists(output_xml_path))
+			remove_temp_file(output_xml_path);
 		throw Slic3r::ExportError(_utf8(L("Unknown error occured during exporting G-code.")));
 	}
 	switch (copy_ret_val) {

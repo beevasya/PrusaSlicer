@@ -1,23 +1,11 @@
-#include <TeddyConvert.h>
-#include <Exports.h>
-#include <ConvertSettings.h>
-#include <vector>
-#include <array>
-//#include <Point.h>
-
-#include "libslic3r.h"
-#include "I18N.hpp"
-#include "GCode.hpp"
 #include "Largix.hpp"
-#include "Exception.hpp"
-#include "ExtrusionEntity.hpp"
-#include "Print.hpp"
 #include "Layer.hpp"
 #include "LargixHelper.hpp"
-#include "DefaultSettings.h"
-#include "Slice.h"
-#include <TeddySliceConvert.h>
 
+#include <ProgramBuilder/DefaultSettings.h>
+#include <ProgramBuilder/Slice.h>
+#include <ProgramBuilder/TeddyConvert.h>
+#include <ProgramBuilder/Exports.h>
 
 namespace Slic3r 
 {

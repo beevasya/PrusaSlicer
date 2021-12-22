@@ -1665,6 +1665,10 @@ void TabPrint::build()
         option = optgroup->get_option("largix_retraction_return_length");
         optgroup->append_single_option_line(option);
         
+        // ProgramInfo group
+        optgroup = page->new_optgroup(L("Program Info"), 20);
+        option = optgroup->get_option("largix_program_info_flag");
+        optgroup->append_single_option_line(option);
         // end Largix settings
 
         page = add_options_page(L("Support material"), "support");

@@ -1,3 +1,4 @@
+
 #include "Largix.hpp"
 #include "Layer.hpp"
 #include "LargixHelper.hpp"
@@ -6,6 +7,13 @@
 #include <ProgramBuilder/Slice.h>
 #include <ProgramBuilder/TeddyConvert.h>
 #include <ProgramBuilder/Exports.h>
+#include <ProgramBuilder/ProgramInfo.h>
+#include <ProgramBuilder/ProgramAnalyzer.h>
+#include <ProgramBuilder/ProgramInfoSer.h>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/operations.hpp>
+
+namespace fs = boost::filesystem;
 
 namespace Slic3r 
 {
@@ -13,7 +21,7 @@ namespace Slic3r
     void LargixExport::fillSettings(const PrintObjectConfig &config, LargixProgram::ConvertSettings &set)
     {
         set = LargixProgram::DefaultSettings::getDefaultSettings();
-
+        
         set.laserRotationAxisOffset = config.largix_laser_rotation_axis_offset;
         set.laserRotationRadius = config.largix_laser_rotation_radius;
         set.laserSpotOffset = config.largix_laser_spot_offset;
@@ -81,13 +89,26 @@ namespace Slic3r
         LargixProgram::ConvertSettings settings;
         fillSettings(objects.front()->config(), settings);
 
-        LargixProgram::TeddyConvert convert(slices, settings);
+       LargixProgram::TeddyConvert convert(slices, settings);
         if (!convert.convert())
             throw Slic3r::ExportError(std::string("Fail to convert slices to program!"));
 
-        if (!writeTeddyCSV(path, convert.getProgram())) 
+        auto teddyProgram = convert.getProgram();
+        if (!writeTeddyCSV(path, teddyProgram))
             throw Slic3r::RuntimeError(std::string("Fail to export program to file ") + path);
+    
+        if (objects.front()->config().largix_program_info_flag)
+        {
+            LargixProgram::ProgramInfo programInfo;
+            LargixProgram::ProgramAnalyzer programAnalizer(settings);
+            if (!programAnalizer.getInfo(teddyProgram, programInfo))
+                throw Slic3r::RuntimeError(std::string("Fail to get program information") + path);
 
+            fs::path xmlFile = fs::path(path).replace_extension(".xml");
+
+            if (!LargixProgram::ProgramInfoSer::writeToFile(xmlFile.string(), programInfo))
+                throw Slic3r::ExportError(std::string("Fail to export program information to xml file ") + xmlFile.string());
+        }
         return true;
     }
 

@@ -267,6 +267,13 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(0.3));
 
     //  Configuring settings for Largix tab
+    def = this->add("largix_program_info_flag", coBool); // use const laser angle 
+    def->label = L("Program Info");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Activate/Deactivate Program Info building and saving to XML format");
+    def->set_default_value(new ConfigOptionBool(false));
+
     def = this->add("largix_retraction", coBool); // use const laser angle 
     def->label = L("Retraction");
     def->category = L("Largix");

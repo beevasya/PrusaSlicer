@@ -1,31 +1,20 @@
-#include <boost/geometry.hpp>
-#include <boost/geometry/geometries/point.hpp>
-#include <boost/geometry/geometries/polygon.hpp>
-
-#include <PolygonValidator.h>
-#include <PolygonHelper.h>
-#include <Size.h>
-#include <TeddyDef.h>
-#include <Settings.h>
-
 #include "../ClipperUtils.hpp"
 #include "../ExPolygon.hpp"
 #include "../ShortestPath.hpp"
 #include "../Surface.hpp"
 
-#include <sstream> 
-
 #include "FillLargix.hpp"
 #include "LargixHelper.hpp"
 
-#include <Layer.h>
-#include <PolygonValidator.h>
-#include <PolygonIO.h>
-#include <StrandIO.h>
-#include <BuildLayerMgr.h>
-#include <FirstPolygonPoint.h>
-#include <Size.h>
-#include <TeddyDef.h>
+#include <sstream> 
+
+#include <PathNavigator/PolygonValidator.h>
+#include <PathNavigator/Settings.h>
+#include <PathNavigator/Layer.h>
+#include <PathNavigator/PolygonIO.h>
+#include <PathNavigator/StrandIO.h>
+#include <PathNavigator/BuildLayerMgr.h>
+#include <PathNavigator/FirstPolygonPoint.h>
 
 namespace Slic3r 
 {
@@ -66,14 +55,15 @@ namespace Slic3r
             return; 
         }
         LargixNavigator::PolygonValidator pv(pol);
-        if (!pv.correct(pol)) {
-            assert(!"Failed to correct polygon, it is not valid.");
+
+        pv.simplify();
+        if (pol.outer().empty()) {
+            assert(!"Failed to build path for empty polygon!");
             return;
         }
 
-        pv.simplify(pol);
-        if (pol.outer().empty()) {
-            assert(!"Failed to build path for empty polygon!");
+        if (!pv.correct()) {
+            assert(!"Failed to correct polygon, it is not valid.");
             return;
         }
 

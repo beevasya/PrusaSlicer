@@ -1,25 +1,15 @@
-#include <TeddyConvert.h>
-#include <Exports.h>
-#include <ConvertSettings.h>
-#include <vector>
-#include <array>
-#include <TeddySliceConvert.h>
-//#include <Point.h>
 
-#include "libslic3r.h"
-#include "I18N.hpp"
-#include "GCode.hpp"
 #include "Largix.hpp"
-#include "Exception.hpp"
-#include "ExtrusionEntity.hpp"
-#include "Print.hpp"
 #include "Layer.hpp"
 #include "LargixHelper.hpp"
-#include "Slice.h"
-#include "..\..\ProgramBuilder\ProgramBuilder\DefaultSettings.h"
-#include "ProgramInfo.h"
-#include "ProgramAnalyzer.h"
-#include "ProgramInfoSer.h"
+
+#include <ProgramBuilder/DefaultSettings.h>
+#include <ProgramBuilder/Slice.h>
+#include <ProgramBuilder/TeddyConvert.h>
+#include <ProgramBuilder/Exports.h>
+#include <ProgramBuilder/ProgramInfo.h>
+#include <ProgramBuilder/ProgramAnalyzer.h>
+#include <ProgramBuilder/ProgramInfoSer.h>
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/operations.hpp>
 

@@ -1,6 +1,6 @@
 #include "LargixHelper.hpp"
 
-#include <Layer.h>
+#include <PathNavigator/Layer.h>
 
 namespace Slic3r {
 

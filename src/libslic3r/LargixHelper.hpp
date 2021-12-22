@@ -1,7 +1,7 @@
 #ifndef slic3r_LargixHelper_hpp_
 #define slic3r_LargixHelper_hpp_
 
-#include <polygon.h>
+#include <PathNavigator/Polygon.h>
 
 namespace LargixNavigator {
 class Layer;

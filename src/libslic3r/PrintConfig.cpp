@@ -267,6 +267,23 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(0.3));
 
     //  Configuring settings for Largix tab
+    def = this->add("largix_next_point_flag", coBool); // use const laser angle 
+    def->label = L("Use Next Points");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Activate/Deactivate Next points algorithm");
+    def->set_default_value(new ConfigOptionBool(false));
+
+    def = this->add("largix_next_point_length", coFloat); // bin length
+    def->label = L("Delta");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Next point distance");
+    def->sidetext = L("mm");
+    def->min = 0;
+    def->max = 1000;
+    def->set_default_value(new ConfigOptionFloat(80));
+
     def = this->add("largix_program_info_flag", coBool); // use const laser angle 
     def->label = L("Program Info");
     def->category = L("Largix");

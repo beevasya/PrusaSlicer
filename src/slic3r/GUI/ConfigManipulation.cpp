@@ -342,6 +342,9 @@ void ConfigManipulation::toggle_print_fff_options(DynamicPrintConfig* config)
     for (auto el : { "largix_retraction_delta", "largix_retraction_extra","largix_retraction_return_length" })
         toggle_field(el, use_retraction);
 
+    bool use_next_points = config->opt_bool("largix_next_point_flag");
+    for (auto el : { "largix_next_point_length" })
+        toggle_field(el, use_next_points);
 }
 
 void ConfigManipulation::update_print_sla_config(DynamicPrintConfig* config, const bool is_global_config/* = false*/)

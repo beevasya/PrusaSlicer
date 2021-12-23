@@ -16,6 +16,7 @@
 #include <PathNavigator/BuildLayerMgr.h>
 #include <PathNavigator/FirstPolygonPoint.h>
 #include <PathNavigator/DefaultSettings.h>
+#include <PathNavigator/Navigator.h>
 
 namespace Slic3r 
 {
@@ -78,7 +79,11 @@ namespace Slic3r
         size_t layerNum = layer_id + 1;
 
         LargixNavigator::Layer layer;
-        if (set.bUseAnglePattern) 
+        LargixNavigator::Navigator navigator(pol, set);
+        Point prusaPoint = bounding_box.center();
+        LargixNavigator::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
+        navigator.build(layerNum, center, layer);
+        /*if (set.bUseAnglePattern)
         {
             Point prusaPoint = bounding_box.center();
             LargixNavigator::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
@@ -96,7 +101,7 @@ namespace Slic3r
         {
             LargixNavigator::BuildLayerMgr buider(pol, set);
             buider.build(layer);
-        }
+        }*/
 
 
         // polygons

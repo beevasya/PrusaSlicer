@@ -43,6 +43,11 @@ namespace Slic3r
             set.retractionExtra = config.largix_retraction_extra;
             set.retractionReturnLength = config.largix_retraction_return_length;
         }     
+        set.bNextPoints = config.largix_next_point_flag;
+        if (set.bNextPoints)
+        {
+            set.nextPointsLength = config.largix_next_point_length;
+        }
     }
 
     size_t LargixExport::getNumOfSlices(const Print* print) 

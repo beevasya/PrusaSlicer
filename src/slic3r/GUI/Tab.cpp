@@ -1669,6 +1669,13 @@ void TabPrint::build()
         optgroup = page->new_optgroup(L("Program Info"), 20);
         option = optgroup->get_option("largix_program_info_flag");
         optgroup->append_single_option_line(option);
+
+        // Next points group
+        optgroup = page->new_optgroup(L("Next Points"), 20);
+        option = optgroup->get_option("largix_next_point_flag");
+        optgroup->append_single_option_line(option);
+        option = optgroup->get_option("largix_next_point_length");
+        optgroup->append_single_option_line(option);
         // end Largix settings
 
         page = add_options_page(L("Support material"), "support");

@@ -15,12 +15,15 @@
 #include <PathNavigator/StrandIO.h>
 #include <PathNavigator/BuildLayerMgr.h>
 #include <PathNavigator/FirstPolygonPoint.h>
+#include <PathNavigator/DefaultSettings.h>
 
 namespace Slic3r 
 {
 
     void FillLargix::fillSettings(const PrintObjectConfig& config, LargixNavigator::Settings& set) const
     {
+        set = LargixNavigator::DefaultSettings::getDefaultSettings();
+ 
         set.maxNumbersStrandsPerLayer = config.largix_strands_number;
         set.minStrandRadius = config.largix_min_radius;
         set.minStrandLength = config.largix_min_strand_length;

@@ -16,6 +16,7 @@ if (TARGET OpenVDB::openvdb)
     set(OpenVDBUtils_SOURCES OpenVDBUtils.cpp OpenVDBUtils.hpp)
 endif()
 
+include_directories(libslic3r PUBLIC ${LARGIX_PATH})
 include_directories(libslic3r PUBLIC ${LARGIX_PATH}/PathNavigator)
 include_directories(libslic3r PUBLIC ${LARGIX_PATH}/ProgramBuilder)
 

@@ -284,13 +284,23 @@ void Bed3D::calc_triangles(const ExPolygon& poly)
 void Bed3D::calc_gridlines(const ExPolygon& poly, const BoundingBox& bed_bbox)
 {
     Polylines axes_lines;
-    for (coord_t x = bed_bbox.min.x(); x <= bed_bbox.max.x(); x += scale_(10.0)) {
+    coord_t _max = std::max(bed_bbox.max.x(), bed_bbox.max.y());
+    float scaleStep;
+
+    if (_max > 1250000000)
+        scaleStep = 250.;
+    else if (_max > 50000000)
+        scaleStep = 100.;
+    else
+        scaleStep = 10.;
+
+    for (coord_t x = bed_bbox.min.x(); x <= bed_bbox.max.x(); x += scale_(scaleStep)) {
         Polyline line;
         line.append(Point(x, bed_bbox.min.y()));
         line.append(Point(x, bed_bbox.max.y()));
         axes_lines.push_back(line);
     }
-    for (coord_t y = bed_bbox.min.y(); y <= bed_bbox.max.y(); y += scale_(10.0)) {
+    for (coord_t y = bed_bbox.min.y(); y <= bed_bbox.max.y(); y += scale_(scaleStep)) {
         Polyline line;
         line.append(Point(bed_bbox.min.x(), y));
         line.append(Point(bed_bbox.max.x(), y));

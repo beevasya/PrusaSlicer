@@ -11,12 +11,11 @@
 #include <PathNavigator/PolygonValidator.h>
 #include <PathNavigator/Settings.h>
 #include <PathNavigator/Layer.h>
-#include <PathNavigator/PolygonIO.h>
-#include <PathNavigator/StrandIO.h>
-#include <PathNavigator/BuildLayerMgr.h>
-#include <PathNavigator/FirstPolygonPoint.h>
 #include <PathNavigator/DefaultSettings.h>
 #include <PathNavigator/Navigator.h>
+
+#include <PathNavigator/PolygonIO.h>
+#include <PathNavigator/StrandIO.h>
 
 namespace Slic3r 
 {
@@ -75,7 +74,6 @@ namespace Slic3r
         if (params.print_options)
             fillSettings(params.print_options->config(), set);
 
- //     size_t layerNum = (size_t) (z /params.print_options->config().largix_strands_height + 0.5);
         size_t layerNum = layer_id + 1;
 
         LargixNavigator::Layer layer;
@@ -83,31 +81,6 @@ namespace Slic3r
         Point prusaPoint = bounding_box.center();
         LargixNavigator::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
         navigator.build(layerNum, center, layer);
-        /*if (set.bUseAnglePattern)
-        {
-            Point prusaPoint = bounding_box.center();
-            LargixNavigator::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
-
-            size_t index;
-        
-            LargixNavigator::FirstPolygonPoint pointFinder(pol, set);
-            if (pointFinder.find(center, layerNum, index)) 
-            { 
-                LargixNavigator::BuildLayer buider(pol, set);
-                buider.build(index, layer);
-            }
-        } 
-        else 
-        {
-            LargixNavigator::BuildLayerMgr buider(pol, set);
-            buider.build(layer);
-        }*/
-
-
-        // polygons
-        //if (layer.getNumBins() == 0 ||
-        //    std::any_of(layer.strands().begin(), layer.strands().end(),
-        //        [](const LargixNavigator::Strand& item) { return !item.isClosed(); }))
         static bool bSavePolygons_ = false;
         if (bSavePolygons_) 
         {
@@ -124,7 +97,7 @@ namespace Slic3r
             {
                 std::stringstream ss;
                 ss << "C:\\Temp\\Strands\\strand" << layerNum << '_' << ++countStrand << ".csv";
-                LargixNavigator::StrandIO::saveToCsvFile(s, ss.str());
+                LargixNavigator::StrandIO::saveToCsvFile(s->getStrand(), ss.str());
             }
         }
         LargixHelper::convert_layer_2_prusa_1(layer, polylines_out);

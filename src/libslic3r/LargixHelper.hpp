@@ -18,7 +18,7 @@ class LargixHelper
 public:
 
 	static bool convert_polygon_2_largix(const ExPolygon &src, LargixBase::Polygon &dst);
-    static bool convert_layer_2_prusa(const LargixNavigator::Layer &src, Polylines &dst, double strandWidth);
+  //  static bool convert_layer_2_prusa(const LargixNavigator::Layer &src, Polylines &dst, double strandWidth);
     static bool convert_layer_2_prusa_1(const LargixNavigator::Layer &src, Polylines &dst);
 
     static bool convertPolylineToLargix(const Polyline& pLine, std::vector<LargixBase::Point2D> &pLineOut);

@@ -46,33 +46,33 @@ bool LargixHelper::convert_polygon_2_largix(const ExPolygon &src, LargixNavigato
     return true;
 }
 
-bool LargixHelper::convert_layer_2_prusa(const LargixNavigator::Layer &src, Polylines &dst, double strandWidth)
-{
-    for (auto strand : src.strands()) 
-    {
-        std::vector<std::array<LargixNavigator::Point2D, 4>> points;
-        strand.get4StrandPoints(points, strandWidth);
-
-        std::array<Polyline, 4> pline;
-        for (auto point : points) 
-        {
-            pline[0].points.push_back(
-                Point::new_scale(point[0].x(), point[0].y()));
-            pline[1].points.push_back(
-                Point::new_scale(point[1].x(), point[1].y()));
-            pline[2].points.push_back(
-                Point::new_scale(point[2].x(), point[2].y()));
-            pline[3].points.push_back(
-                Point::new_scale(point[3].x(), point[3].y()));
-        }
-        dst.push_back(pline[0]);
-        dst.push_back(pline[1]);
-        dst.push_back(pline[2]);
-        dst.push_back(pline[3]);
-    }
-
-    return true;
-}
+//bool LargixHelper::convert_layer_2_prusa(const LargixNavigator::Layer &src, Polylines &dst, double strandWidth)
+//{
+//    for (auto strand : src.strands()) 
+//    {
+//        std::vector<std::array<LargixNavigator::Point2D, 4>> points;
+//        strand.get4StrandPoints(points, strandWidth);
+//
+//        std::array<Polyline, 4> pline;
+//        for (auto point : points) 
+//        {
+//            pline[0].points.push_back(
+//                Point::new_scale(point[0].x(), point[0].y()));
+//            pline[1].points.push_back(
+//                Point::new_scale(point[1].x(), point[1].y()));
+//            pline[2].points.push_back(
+//                Point::new_scale(point[2].x(), point[2].y()));
+//            pline[3].points.push_back(
+//                Point::new_scale(point[3].x(), point[3].y()));
+//        }
+//        dst.push_back(pline[0]);
+//        dst.push_back(pline[1]);
+//        dst.push_back(pline[2]);
+//        dst.push_back(pline[3]);
+//    }
+//
+//    return true;
+//}
 
 bool LargixHelper::convert_layer_2_prusa_1(const LargixNavigator::Layer &src, Polylines &dst)
 {
@@ -80,8 +80,7 @@ bool LargixHelper::convert_layer_2_prusa_1(const LargixNavigator::Layer &src, Po
     auto it = dst.begin();
     for (const auto& strand : src.strands()) 
     {
-        std::vector<LargixNavigator::Point2D> points;
-        strand.getStrandPoints(points);
+        const std::vector<LargixNavigator::Point2D>& points = strand->getStrandPoints();
 
         Polyline &pline = *it;
         pline.points.resize(points.size());

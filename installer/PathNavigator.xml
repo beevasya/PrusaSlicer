@@ -1,19 +1,21 @@
 <ser class_id="0" tracking_level="0" version="0">
 	<_set.strandWidth>3.4</_set.strandWidth>
-	<_set.minStrandLength>10</_set.minStrandLength>
-	<_set.minStrandRadius>5</_set.minStrandRadius>
+	<_set.minStrandLength>4.0</_set.minStrandLength>
+	<_set.minStrandRadius>3.00000000000000000e+00</_set.minStrandRadius>
 	<_set.maxNumbersStrandsPerLayer>1</_set.maxNumbersStrandsPerLayer>
 	<_set.maxNumberOfStrandCombinations>100000</_set.maxNumberOfStrandCombinations>
-	<_set.clockwiseFlag>0</_set.clockwiseFlag>
-	<_set.bUseAnglePattern>0</_set.bUseAnglePattern>
-	<_set.angleStart>1.20000000000000000e+01</_set.angleStart>
+	<_set.clockwiseFlag>2</_set.clockwiseFlag>
+	<_set.bUseAnglePattern>1</_set.bUseAnglePattern>
+	<_set.angleStart>8.00000000000000000e+01</_set.angleStart>
 	<_set.angleShift>
 		<count>4</count>
-		<item>1.00000000000000000e+01</item>
-		<item>2.00000000000000000e+01</item>
-		<item>3.00000000000000000e+01</item>
-		<item>4.00000000000000000e+01</item>
+		<item>9.00000000000000000e+01</item>
+		<item>0.00000000000000000e+00</item>
+		<item>0.00000000000000000e+00</item>
+		<item>0.00000000000000000e+00</item>
 	</_set.angleShift>
-	<_set.shiftFromStart>10</_set.shiftFromStart>
+	<_set.shiftFromStart>2.00000000000000000e+01</_set.shiftFromStart>
+	<_set.bBuildBySpline>1</_set.bBuildBySpline>
+	<_set.logFileName></_set.logFileName>
 </ser>
 

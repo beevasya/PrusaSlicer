@@ -267,6 +267,13 @@ void PrintConfigDef::init_common_params()
     def->set_default_value(new ConfigOptionFloat(0.3));
 
     //  Configuring settings for Largix tab
+    def = this->add("largix_spline_interpolation_flag", coBool); // use const laser angle 
+    def->label = L("Use Spline Interpolation");
+    def->category = L("Largix");
+    def->tooltip = L(
+        "Activate/Deactivate Spline Interpolation mode");
+    def->set_default_value(new ConfigOptionBool(false));
+
     def = this->add("largix_next_point_flag", coBool); // use const laser angle 
     def->label = L("Use Next Points");
     def->category = L("Largix");

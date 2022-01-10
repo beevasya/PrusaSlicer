@@ -516,6 +516,7 @@ PRINT_CONFIG_CLASS_DEFINE(
     ((ConfigOptionFloat,               xy_size_compensation))
     ((ConfigOptionBool,                wipe_into_objects))
     //options for largix settings 
+    ((ConfigOptionBool,                largix_spline_interpolation_flag))
     ((ConfigOptionBool,                largix_next_point_flag))
     ((ConfigOptionFloat,               largix_next_point_length))
     ((ConfigOptionBool,                largix_program_info_flag))

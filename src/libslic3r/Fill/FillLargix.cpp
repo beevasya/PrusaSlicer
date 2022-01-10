@@ -32,6 +32,7 @@ namespace Slic3r
         set.szBin[1] = config.largix_bin_length;
         set.maxNumberOfStrandCombinations = config.largix_maximal_combinations_number;
         set.bUseAnglePattern = config.largix_angle_pattern;
+        set.bBuildBySpline = config.largix_spline_interpolation_flag;
         if (set.bUseAnglePattern) 
         {
             set.clockwiseFlag = config.largix_anticlockwise_param;

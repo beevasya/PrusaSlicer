@@ -1676,6 +1676,12 @@ void TabPrint::build()
         optgroup->append_single_option_line(option);
         option = optgroup->get_option("largix_next_point_length");
         optgroup->append_single_option_line(option);
+
+        //Spline Interpolation group
+        optgroup = page->new_optgroup(L("Spline Interpolation"), 20);
+        option = optgroup->get_option("largix_spline_interpolation_flag");
+        optgroup->append_single_option_line(option);
+
         // end Largix settings
 
         page = add_options_page(L("Support material"), "support");

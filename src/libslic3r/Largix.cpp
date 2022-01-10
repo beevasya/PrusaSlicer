@@ -10,6 +10,8 @@
 #include <ProgramBuilder/ProgramInfo.h>
 #include <ProgramBuilder/ProgramAnalyzer.h>
 #include <ProgramBuilder/ProgramInfoSer.h>
+#include <ProgramBuilder/SliceIO.h>
+
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/operations.hpp>
 
@@ -85,6 +87,21 @@ namespace Slic3r
                         LargixHelper::convertPolylineToLargixShift(sh, line, line_out);
                     }
                     slices[i].swapPoints(line_out);
+
+                    static bool bSaveStrands_ = false;
+                    if (bSaveStrands_) 
+                    {
+                        std::vector<LargixProgram::Point2D> line_out_noshift;
+                        for (const auto &line : pLines) 
+                        {
+                            LargixHelper::convertPolylineToLargix(line, line_out_noshift);
+                        }
+
+                        LargixProgram::Slice slice(0.0, line_out_noshift);
+                        std::stringstream ss;
+                        ss << "C:\\Temp\\StrandsBeforeBuild\\strand" << i + 1  << "_1" << ".csv";
+                        LargixProgram::SliceIO::saveToCsvFile(slice, ss.str());
+                    }
                     i++;
                 }
             }

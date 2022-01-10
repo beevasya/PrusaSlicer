@@ -112,7 +112,7 @@ bool LargixHelper::convertPolylineToLargixShift(const Point& shift, const Polyli
 {
     pLineOut.resize(pLine.points.size());
     auto it = pLineOut.begin();
-    for (auto point : pLine.points) 
+    for (const auto& point : pLine.points) 
     {
         convert(shift + point, *it);
         it++;

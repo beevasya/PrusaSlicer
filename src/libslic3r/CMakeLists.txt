@@ -364,18 +364,20 @@ if (SLIC3R_PCH AND NOT SLIC3R_SYNTAXONLY)
     add_precompiled_header(libslic3r pchheader.hpp FORCEINCLUDE)
 endif ()
 
-add_library(PathNavigator STATIC IMPORTED)
-set_property(TARGET PathNavigator PROPERTY
-             IMPORTED_LOCATION ${LARGIX_PATH}/PathNavigator/x64/Release/PathNavigator.lib)
+#largix_libs()
 
-add_library(ProgramBuilder STATIC IMPORTED)
-set_property(TARGET ProgramBuilder PROPERTY
-             IMPORTED_LOCATION ${LARGIX_PATH}/ProgramBuilder/x64/Release/ProgramBuilder.lib)
+#add_library(PathNavigator STATIC IMPORTED)
+#set_property(TARGET PathNavigator PROPERTY
+#             IMPORTED_LOCATION ${LARGIX_PATH}/PathNavigator/x64/${CONFIG}/PathNavigator.lib)
+
+#add_library(ProgramBuilder STATIC IMPORTED)
+#set_property(TARGET ProgramBuilder PROPERTY
+#             IMPORTED_LOCATION ${LARGIX_PATH}/ProgramBuilder/x64/${CONFIG}/ProgramBuilder.lib)
 
 
-target_link_libraries(libslic3r PathNavigator ProgramBuilder)
+#target_link_libraries(libslic3r PathNavigator ProgramBuilder)
 
-add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/PathNavigator/x64/Release/PathNavigator.dll ${CMAKE_CURRENT_BINARY_DIR}/../Release/PathNavigator.dll)
-add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/ProgramBuilder/x64/Release/ProgramBuilder.dll ${CMAKE_CURRENT_BINARY_DIR}/../Release/ProgramBuilder.dll)
+#add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/PathNavigator/x64/Release/PathNavigator.dll ${CMAKE_CURRENT_BINARY_DIR}/../Release/PathNavigator.dll)
+#add_custom_command(TARGET libslic3r POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${LARGIX_PATH}/ProgramBuilder/x64/Release/ProgramBuilder.dll ${CMAKE_CURRENT_BINARY_DIR}/../Release/ProgramBuilder.dll)
 
 

@@ -226,6 +226,7 @@ if (WIN32)
     # This has to be a separate target due to the windows command line lenght limits
     add_custom_target(PrusaSlicerDllsCopy ALL DEPENDS PrusaSlicer)
     prusaslicer_copy_dlls(PrusaSlicerDllsCopy)
+    largix_libs(PrusaSlicerDllsCopy)
 
 else ()
     if (APPLE)

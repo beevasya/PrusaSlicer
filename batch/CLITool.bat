@@ -4,6 +4,7 @@ rem on the next line, you can specify the path to the prusa-slicer-console.exe f
 rem if it is not specified in the PATH environment variable
 set PRUSA_CONSOLE_PATH=C:\src\PrusaSlicer\build\src\Release
 set CSVEXT=.csv
+set LOGEXT=.log
 if "%~2"=="" (
 	echo Usage: clitool file_with_models_list file_with_settings_list "prusa_options"
 	echo Example: clitool models.txt settings.txt "--center 40,40"
@@ -31,6 +32,17 @@ for /f "delims=" %%I in (%2) do (
 				)
 				rem ren %%~nF%CSVEXT% %%~nF_%%~nI%CSVEXT%
 				ren output.csv %%~nF_%%~nI%CSVEXT%
+				echo Checking program...
+				ProgramCheckerTool.exe %%~nF_%%~nI%CSVEXT% %%I >nul
+				if ERRORLEVEL 2 (
+					echo Program %%~nF_%%~nI%CSVEXT% is invalid. See log file %%~nF_%%~nI%LOGEXT% for details.
+				) else (
+					if ERRORLEVEL 1 (
+						echo Error opening %%~nF_%%~nI%CSVEXT%
+					) else (
+						echo Program %%~nF_%%~nI%CSVEXT% has no errors. See log file %%~nF_%%~nI%LOGEXT% for program summary.
+					)
+				)
 			)
 		)
 	)

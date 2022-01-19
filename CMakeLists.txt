@@ -549,6 +549,35 @@ function(prusaslicer_copy_dlls target)
 
 endfunction()
 
+function(largix_libs target)
+    get_property(_is_multi GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
+    get_target_property(_alt_out_dir ${target} RUNTIME_OUTPUT_DIRECTORY)
+
+    if (_alt_out_dir)
+        set (_out_dir "${_alt_out_dir}")
+    elseif (_is_multi)
+        set (_out_dir "$<TARGET_PROPERTY:${target},BINARY_DIR>/$<CONFIG>")
+    else ()
+        set (_out_dir "$<TARGET_PROPERTY:${target},BINARY_DIR>")
+    endif ()
+
+    set(_config "$<CONFIG>")
+    set(_largix $ENV{LARGIX_PATH})
+    
+    add_custom_command(TARGET ${target} POST_BUILD 
+        COMMAND ${CMAKE_COMMAND} -E copy ${_largix}/PathNavigator/x64/${_config}/PathNavigator.dll ${_out_dir}
+        COMMENT "Copy PathNavigator"
+        VERBATIM)
+
+    add_custom_command(TARGET ${target} POST_BUILD 
+        COMMAND ${CMAKE_COMMAND} -E copy ${_largix}/ProgramBuilder/x64/${_config}/ProgramBuilder.dll ${_out_dir}
+        COMMENT "Copy ProgramBuilder"
+        VERBATIM)
+
+     add_library(PathNavigator STATIC IMPORTED)
+     add_library(ProgramBuilder STATIC IMPORTED)
+     target_link_libraries(libslic3r ${_largix}/ProgramBuilder/x64/${_config}/ProgramBuilder.lib ${_largix}/PathNavigator/x64/${_config}/PathNavigator.lib)
+endfunction()
 
 # libslic3r, PrusaSlicer GUI and the PrusaSlicer executable.
 add_subdirectory(src)

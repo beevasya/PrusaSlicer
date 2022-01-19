@@ -20,6 +20,8 @@ public:
     Fill *clone() const override { return new FillLargix(*this); };
     ~FillLargix() override = default;
 
+	 bool no_sort() const override { return true; }
+
 protected:
 	void _fill_surface_single(
 	    const FillParams                &params, 

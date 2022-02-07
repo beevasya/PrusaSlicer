@@ -7,10 +7,12 @@
 #include <ProgramBuilder/Slice.h>
 #include <ProgramBuilder/TeddyConvert.h>
 #include <ProgramBuilder/Exports.h>
-#include <ProgramBuilder/ProgramInfo.h>
-#include <ProgramBuilder/ProgramAnalyzer.h>
-#include <ProgramBuilder/ProgramInfoSer.h>
 #include <ProgramBuilder/SliceIO.h>
+
+#include <ProgramChecker/ProgramInfo.h>
+#include <ProgramChecker/ProgramAnalyzer.h>
+#include <ProgramChecker/ProgramInfoSer.h>
+#include <ProgramChecker/CheckerSettings.h>
 
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/operations.hpp>
@@ -30,8 +32,8 @@ namespace Slic3r
         set.wheelAxisOffset = config.largix_wheel_axis_offset;
         set.wheelRotationRadius = config.largix_wheel_rotation_radius;
 
-        set.StrandHeight = config.largix_strands_height;
-        set.StrandWidth  = config.largix_strands_width;
+        set.strandHeight = config.largix_strands_height;
+        set.strandWidth  = config.largix_strands_width;
         set.toolOffset   = config.largix_tool_offset;
         set.stairMode   = config.largix_stair_mode;
         set.constWheelAngleParams.useConstValue = config.largix_use_const_wheel_angle;
@@ -121,14 +123,21 @@ namespace Slic3r
     
         if (objects.front()->config().largix_program_info_flag)
         {
-            LargixProgram::ProgramInfo programInfo;
-            LargixProgram::ProgramAnalyzer programAnalizer(settings);
+            LargixChecker::ProgramInfo programInfo;
+            //
+            // no we use default setting
+            // implement loading from file
+            LargixChecker::CheckerSettings set; 
+            LargixChecker::ProgramAnalyzer programAnalizer(set);
+
+
             if (!programAnalizer.getInfo(teddyProgram, programInfo))
                 throw Slic3r::RuntimeError(std::string("Fail to get program information") + path);
 
             fs::path xmlFile = fs::path(path).replace_extension(".xml");
 
-            if (!LargixProgram::ProgramInfoSer::writeToFile(xmlFile.string(), programInfo))
+            if (!LargixChecker::ProgramInfoSer::writeToFile(xmlFile.string(),
+                                                            programInfo))
                 throw Slic3r::ExportError(std::string("Fail to export program information to xml file ") + xmlFile.string());
         }
         return true;

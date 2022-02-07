@@ -51,37 +51,27 @@ namespace Slic3r
         ExPolygon                        expolygon,
         Polylines                       &polylines_out)
     {
+        // prepare polygon
         LargixNavigator::Polygon pol;
         LargixHelper::convert_polygon_2_largix(expolygon, pol);
-        if (pol.outer().size() == 0) 
-        { 
-            assert(!"Empty polygon for filling");
-            return; 
-        }
-        LargixNavigator::PolygonValidator pv(pol);
 
-        pv.simplify();
-        if (pol.outer().empty()) {
-            assert(!"Failed to build path for empty polygon!");
-            return;
-        }
-
-        if (!pv.correct()) {
-            assert(!"Failed to correct polygon, it is not valid.");
-            return;
-        }
-
+        // prepare settings
         LargixNavigator::Settings set;
         if (params.print_options)
             fillSettings(params.print_options->config(), set);
 
+        // define layer number
         size_t layerNum = layer_id + 1;
 
-        LargixNavigator::Layer layer;
-        LargixNavigator::Navigator navigator(pol, set);
+        // define center point
         Point prusaPoint = bounding_box.center();
         LargixNavigator::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
+
+        // build layer path
+        LargixNavigator::Navigator navigator(pol, set);
+        LargixNavigator::Layer     layer;
         navigator.build(layerNum, center, layer);
+
         static bool bSavePolygons_ = false;
         if (bSavePolygons_) 
         {

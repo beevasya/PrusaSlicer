@@ -574,9 +574,15 @@ function(largix_libs target)
         COMMENT "Copy ProgramBuilder"
         VERBATIM)
 
+    add_custom_command(TARGET ${target} POST_BUILD 
+        COMMAND ${CMAKE_COMMAND} -E copy ${_largix}/ProgramBuilder/x64/${_config}/ProgramChecker.dll ${_out_dir}
+        COMMENT "Copy ProgramBuilder"
+        VERBATIM)
+
      add_library(PathNavigator STATIC IMPORTED)
      add_library(ProgramBuilder STATIC IMPORTED)
-     target_link_libraries(libslic3r ${_largix}/ProgramBuilder/x64/${_config}/ProgramBuilder.lib ${_largix}/PathNavigator/x64/${_config}/PathNavigator.lib)
+     add_library(ProgramChecker STATIC IMPORTED)
+     target_link_libraries(libslic3r ${_largix}/ProgramBuilder/x64/${_config}/ProgramBuilder.lib ${_largix}/ProgramBuilder/x64/${_config}/ProgramChecker.lib ${_largix}/PathNavigator/x64/${_config}/PathNavigator.lib)
 endfunction()
 
 # libslic3r, PrusaSlicer GUI and the PrusaSlicer executable.

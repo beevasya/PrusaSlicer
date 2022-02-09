@@ -74,13 +74,13 @@ bool LargixHelper::convert_polygon_2_largix(const ExPolygon &src, LargixNavigato
 //    return true;
 //}
 
-bool LargixHelper::convert_layer_2_prusa_1(const LargixNavigator::Layer &src, Polylines &dst)
+bool LargixHelper::convert_layer_2_prusa_1(const LargixBase::Strands &src, Polylines &dst)
 {
     dst.resize(src.size());
     auto it = dst.begin();
-    for (const auto& strand : src.strands()) 
+    for (const auto& strand : src) 
     {
-        const std::vector<LargixNavigator::Point2D>& points = strand->getStrandPoints();
+        const std::vector<LargixBase::Point2D>& points = strand->points;
 
         Polyline &pline = *it;
         pline.points.resize(points.size());

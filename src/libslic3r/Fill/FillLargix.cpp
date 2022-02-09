@@ -10,7 +10,6 @@
 
 #include <PathNavigator/PolygonValidator.h>
 #include <PathNavigator/Settings.h>
-#include <PathNavigator/Layer.h>
 #include <PathNavigator/DefaultSettings.h>
 #include <PathNavigator/Navigator.h>
 
@@ -68,9 +67,9 @@ namespace Slic3r
         LargixNavigator::Point2D center(prusaPoint[0] * SCALING_FACTOR, prusaPoint[1] * SCALING_FACTOR);
 
         // build layer path
-        LargixNavigator::Navigator navigator(pol, set);
-        LargixNavigator::Layer     layer;
-        navigator.build(layerNum, center, layer);
+        LargixNavigator::Navigator navigator(set);
+        LargixBase::Strands  strands;
+        navigator.build(layerNum, pol, center, strands);
 
         static bool bSavePolygons_ = false;
         if (bSavePolygons_) 
@@ -84,14 +83,14 @@ namespace Slic3r
         if (bSaveStrands_) 
         {
             size_t countStrand = 0;
-            for (const auto &s : layer.strands()) 
+            for (const auto &s : strands) 
             {
                 std::stringstream ss;
                 ss << "C:\\Temp\\Strands\\strand" << layerNum << '_' << ++countStrand << ".csv";
-                LargixNavigator::StrandIO::saveToCsvFile(s->getStrand(), ss.str());
+                LargixNavigator::StrandIO::saveToCsvFile(*s, ss.str());
             }
         }
-        LargixHelper::convert_layer_2_prusa_1(layer, polylines_out);
+        LargixHelper::convert_layer_2_prusa_1(strands, polylines_out);
     }
 
 } // namespace Slic3r
